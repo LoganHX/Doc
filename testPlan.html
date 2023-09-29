@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Test Plan - BiblioNet</title>
+      <style>
+
+
+     body {
+     margin: 0 auto;
+     max-width: 100%;
+     padding: 20px;
+     background-color: #f7f7f7;
+     font-family: Helvetica, Arial, sans-serif;
+     font-size: large;
+}
+ h2 {
+     color: #29689e;
+}
+ h3 {
+     color: #29689e;
+}
+ table {
+     border-collapse: collapse;
+     margin: 0 auto;
+     border: 0px solid #f7f7f7;
+     width: 100%;
+     margin-bottom: 20px;
+}
+ th, td {
+     border: 1px solid #f7f7f7;
+     padding: 8px;
+     text-align: left;
+}
+ th {
+     background-color: #29689e;
+     color: #fff;
+     font-weight: bold;
+}
+ th:first-child, td:first-child {
+     background-color: #29689e;
+     color: #fff;
+     font-weight: bold;
+}
+ td:first-child {
+     background-color: #29689e;
+     color: #fff;
+     font-weight: bold;
+     width: 14%;
+}
+ ol {
+     list-style-type: decimal;
+     margin-left: 20px;
+}
+ li {
+     margin-bottom: 5px;
+     margin-left: 20px;
+}
+ ul {
+     text-align: left;
+}
+ tr:nth-child(odd) {
+     background-color: #ffffff;
+}
+ tr:nth-child(even) {
+     background-color: #dfe3ee;
+}
+/* Stile del menu a sinistra */
+ div{
+     display: inline-block;
+}
+ .menu-container {
+     width: 17%;
+    /* Larghezza del menu */
+     background-color: #29689e;
+     color: #fff;
+     padding: 20px;
+     height: 100vh;
+    /* Imposta l'altezza al 100% della viewport */
+}
+ .fixed {
+     position: fixed;
+    /* Rende il div fisso nella finestra del browser */
+     top: 0;
+    /* Fissato in alto */
+     left: 0;
+    /* Fissato a sinistra */
+}
+ .scrollable {
+     margin-left:22%;
+}
+ .menu {
+     background-color: #29689e;
+     padding: 0;
+}
+ .menu-item {
+     margin-bottom: 10px;
+}
+ .menu-item a {
+     color: #fff;
+     text-decoration: none;
+}
+/* Stile del contenuto a destra */
+ .content {
+     display: inline-block;
+     width: 70%;
+    /* Larghezza del menu */
+     padding: 20px;
+     background-color: #f5f5f5;
+    /* Sfondo del contenuto */
+     color: #333;
+    /* Colore del testo del contenuto */
+}
+/* Stile per gli anchor link nel contenuto */
+ .content a {
+     color: #007bff;
+    /* Colore dei link nel contenuto */
+}
+
+      </style>
+   </head>
+   <body>
+      <!-- Menu a sinistra -->
+      <div class="menu-container fixed">
+         <ol class="menu">
+            <h1>Indice</h1>
+            <li class="menu-item"><a href="#introduzione">Introduzione</a></li>
+            <li class="menu-item"><a href="#relazione">Relazione con altri documenti</a></li>
+            <li class="menu-item"><a href="#panoramica">Panoramica del sistema</a></li>
+            <li class="menu-item"><a href="#features">Features da testare/da non testare</a></li>
+            <li class="menu-item"><a href="#passfail">Pass/Fail criteria</a></li>
+            <li class="menu-item"><a href="#approccio">Approccio</a></li>
+            <li class="menu-item"><a href="#sospensione">Sospensione e ripristino</a></li>
+            <li class="menu-item"><a href="#materiale">Materiale di testing</a></li>
+            <li class="menu-item"><a href="#testcases">Test cases</a></li>
+            <li class="menu-item"><a href="#schedule">Testing schedule</a></li>
+         </ol>
+      </div>
+      <!-- Contenuto a destra -->
+      <div class="content scrollable">
+         <h1 style="text-align: center;">Test Plan BiblioNet</h1>
+         <p  style="text-align: center;"><img  src="C07.html_files/rId5.png" title="" alt="" align="center"></p>
+
+         <table border="1">
+            <tr>
+               <th>Riferimento</th>
+               <th>Versione</th>
+               <th>Data</th>
+               <th>Destinatario</th>
+               <th>Presentato da</th>
+               <th>Approvato da</th>
+            </tr>
+            <tr>
+               <td>C07_TP_ver.1</td>
+               <td>2.0</td>
+               <td>18/01/2021</td>
+               <td>Prof.ssa Filomena Ferrucci</td>
+               <td>C07 Team BK</td>
+               <td>Stefano Lambiase</td>
+            </tr>
+         </table>
+         <h2>Revision History</h2>
+         <table border="1">
+            <tr>
+               <th>Data</th>
+               <th>Versione</th>
+               <th>Descrizione</th>
+               <th>Autori</th>
+            </tr>
+            <tr>
+               <td>18/11/2020</td>
+               <td>0.1</td>
+               <td>Prima stesura</td>
+               <td>SL</td>
+            </tr>
+            <tr>
+               <td>02/12/2020</td>
+               <td>0.2</td>
+               <td>Creazione Test Frame</td>
+               <td>CM, GT, ADP, AC</td>
+            </tr>
+            <tr>
+               <td>03/12/2020</td>
+               <td>0.3</td>
+               <td>Stesura parti testuali</td>
+               <td>GV, VP</td>
+            </tr>
+            <tr>
+               <td>03/12/2020</td>
+               <td>0.4</td>
+               <td>Completamento Test Frame</td>
+               <td>LT, NP, GV, VP</td>
+            </tr>
+            <tr>
+               <td>04/12/2020</td>
+               <td>0.5</td>
+               <td>Prima revisione</td>
+               <td>Tutto il team</td>
+            </tr>
+            <tr>
+               <td>06/12/2020</td>
+               <td>1.0</td>
+               <td>Revisione finale e correzione degli errori</td>
+               <td>GV, VP</td>
+            </tr>
+            <tr>
+               <td>11/12/2020</td>
+               <td>1.1</td>
+               <td>Aggiunta sezione per il Test di Unità</td>
+               <td>SL</td>
+            </tr>
+            <tr>
+               <td>28/12/2020</td>
+               <td>1.2</td>
+               <td>Scrittura dei capitoli riguardanti il test di integrazione e dello schedule</td>
+               <td>SL</td>
+            </tr>
+            <tr>
+               <td>17/01/2021</td>
+               <td>1.3</td>
+               <td>Modifiche sezione 9.3.2 Accettazione ticket prestito</td>
+               <td>GT</td>
+            </tr>
+            <tr>
+               <td>18/01/2021</td>
+               <td>2.0</td>
+               <td>Revisione</td>
+               <td>SL</td>
+            </tr>
+         </table>
+         <h2>Team members</h2>
+         <table border="1">
+            <tr>
+               <th>Nome</th>
+               <th>Ruolo nel progetto</th>
+               <th>Acronimo</th>
+               <th>Informazioni di contatto</th>
+            </tr>
+            <tr>
+               <td>Stefano Lambiase</td>
+               <td>Project Manager</td>
+               <td>SL</td>
+               <td>s.lambiase7@studenti.unisa.it</td>
+            </tr>
+            <tr>
+               <td>Gianmario Voria</td>
+               <td>Team Member</td>
+               <td>GV</td>
+               <td>g.voria6@studenti.unisa.it</td>
+            </tr>
+            <tr>
+               <td>Ciro Maiorino</td>
+               <td>Team Member</td>
+               <td>CM</td>
+               <td>c.maiorino7@studenti.unisa.it</td>
+            </tr>
+            <tr>
+               <td>Alessio Casolaro</td>
+               <td>Team Member</td>
+               <td>AC</td>
+               <td>a.casolaro2@studenti.unisa.it</td>
+            </tr>
+            <tr>
+               <td>Giulio Triggiani</td>
+               <td>Team Member</td>
+               <td>GT</td>
+               <td>g.triggiani@studenti.unisa.it</td>
+            </tr>
+            <tr>
+               <td>Antonio Della Porta</td>
+               <td>Team Member</td>
+               <td>ADP</td>
+               <td>a.dellaporta26@studenti.unisa.it</td>
+            </tr>
+            <tr>
+               <td>Viviana Pentangelo</td>
+               <td>Team Member</td>
+               <td>VP</td>
+               <td>v.pentangelo4@studenti.unisa.it</td>
+            </tr>
+            <tr>
+               <td>Nicola Pagliara</td>
+               <td>Team Member</td>
+               <td>NP</td>
+               <td>n.pagliara1@studenti.unisa.it</td>
+            </tr>
+            <tr>
+               <td>Luca Topo</td>
+               <td>Team Member</td>
+               <td>LT</td>
+               <td>l.topo@studenti.unisa.it</td>
+            </tr>
+         </table>
+         <h2 id=introduzione>1. Introduzione</h2>
+         <p>
+            BiblioNet si propone di semplificare le interazioni tra biblioteche e lettori, al fine di rinvigorire il settore bibliotecario italiano creando uno strumento di comunicazione con persone interessate alla lettura.
+            Il documento di Test Plan ha l’obiettivo di descrivere ed analizzare le attività di Testing per la piattaforma BiblioNet. Il fine è quello di garantire che ogni aspetto funzioni in modo corretto.
+            All’interno del documento sono riportate le strategie di testing adottate, quali funzionalità saranno testate e gli strumenti scelti per la rilevazione degli errori, con lo scopo di presentare al cliente finale una piattaforma priva di malfunzionamenti. Sono state pianificate attività di testing per le seguenti gestioni:
+         </p>
+         <ul>
+            <li>
+               Gestione Utente
+               <ul>
+                  <li>Registrazione lettore</li>
+                  <li>Registrazione esperto</li>
+                  <li>Registrazione biblioteca</li>
+                  <li>Login</li>
+                  <li>Modifica dati account</li>
+               </ul>
+            </li>
+            <li>
+               Gestione Club del Libro
+               <ul>
+                  <li>Creazione Club del Libro</li>
+                  <li>Modifica dati Club del Libro</li>
+                  <li>Organizzazione evento</li>
+                  <li>Visualizzazione e modifica evento</li>
+               </ul>
+            </li>
+            <li>
+               Gestione Prestito Libri
+               <ul>
+                  <li>Inserimento nuovi libri</li>
+                  <li>Accettazione Ticket prestito</li>
+               </ul>
+            </li>
+         </ul>
+         <p>Le funzionalità di cui non si andrà ad effettuare le attività di testing riguardano requisiti funzionali di bassa o media priorità; sono inoltre escluse le funzionalità che non prevedono input manuale da parte dell’utente - ad esempio attività riguardanti esclusivamente visualizzazioni di dati.
+            Il requisito funzionale “Sottomissione questionario di supporto”, facente parte della Gestione Preferenze di Lettura, verrà testato in futuro con differenti tecniche e sarà quindi trattato in una diversa documentazione.
+         </p>
+         <h2 id=relazione>2. Relazione con altri documenti</h2>
+         <p>Per la corretta individuazione dei test case, si fa riferimento ad altri documenti prodotti.</p>
+         <h3>Relazioni con il Requirements Analysis Document (RAD)</h3>
+         <p>I test case pianificati nel Test Plan sono elaborati in relazione ai requisiti funzionali e non funzionali presentati nel RAD.</p>
+         <h3>Relazioni con il System Design Document (SDD)</h3>
+         <p>I test case pianificati nel Test Plan devono rispettare la suddivisione in sottosistemi presentata nell’SDD.</p>
+         <h3>Relazioni con il Object Design Document (ODD)</h3>
+         <p>Per ciò che concerne il test di unità e di integrazione, maggiormente legati allo ODD e alla divisione in package del sistema, essi saranno scritti e documentati unicamente all’interno del codice dell’applicativo. Per tale motivo, nel presente documento, non vi saranno riferimenti al loro design.</p>
+         <h2 id=panoramica>3. Panoramica del sistema</h2>
+         <p>Il sistema proposto basa la sua architettura sul sistema three-tier, in particolare usando Spring MVC e quindi un sistema Model View Control.
+            Verranno usati HTML5, CSS3 e Thymleaf per la parte di front-end e la generazione delle view.
+            Per la logica applicativa e quindi il back-end sarà utilizzato Java SPRING. Per la gestione del database saranno usati:
+         </p>
+         <ul>
+            <li>Spring JPA per il collegamento al database.</li>
+            <li>H2 come database in fase di produzione.</li>
+            <li>Azure e SQL per il database su cloud in fase di deployment.</li>
+         </ul>
+         <h2 id=features>4. Features da testare/da non testare</h2>
+         <p>Di seguito la lista delle features di cui si effettuerà il testing per le varie gestioni:</p>
+         <ul>
+            <li>
+               Gestione Utente
+               <ul>
+                  <li>Registrazione lettore</li>
+                  <li>Registrazione esperto</li>
+                  <li>Registrazione biblioteca</li>
+                  <li>Login</li>
+                  <li>Modifica dati account</li>
+               </ul>
+            </li>
+            <li>
+               Gestione Club del Libro
+               <ul>
+                  <li>Creazione Club del Libro</li>
+                  <li>Modifica dati Club del Libro</li>
+                  <li>Organizzazione evento</li>
+                  <li>Visualizzazione e modifica evento</li>
+               </ul>
+            </li>
+            <li>
+               Gestione Prestito Libri
+               <ul>
+                  <li>Inserimento nuovi libri</li>
+                  <li>Accettazione Ticket prestito</li>
+               </ul>
+            </li>
+         </ul>
+         <p>Le funzionalità di cui non si andrà ad effettuare le attività di testing riguardano requisiti funzionali di bassa o media priorità; sono inoltre escluse le funzionalità che non prevedono input manuale da parte dell’utente - ad esempio attività riguardanti esclusivamente visualizzazioni di dati.
+            Il requisito funzionale “Sottomissione questionario di supporto”, facente parte della Gestione Preferenze di Lettura, verrà testato in futuro con differenti tecniche e sarà quindi trattato in una diversa documentazione.
+         </p>
+         <h2 id=passfail>5. Pass/Fail criteria</h2>
+         <p>Le attività di testing sono mirate ad identificare la presenza di faults (errori) all'interno del sistema, per effettuarne un successivo intervento di eliminazione.
+            L’esito di un test case è valutato mediante un oracolo, inteso come il risultato atteso della sua esecuzione, basandosi sui requisiti.
+            Un test ha successo (pass) se, dato un input al sistema, l’output ottenuto è diverso dall’output atteso dall’oracolo.
+            Un test fallisce (fail) se, dato un input al sistema, l’output ottenuto è uguale all’output atteso dall’oracolo.
+            Tutto il testing sarà considerato valido se tutti i seguenti vincoli saranno rispettati:
+         </p>
+         <ul>
+            <li>Testare tutti i requisiti funzionali ad alta priorità;</li>
+            <li>Effettuare test di regressione ogni volta che si introducono nuove caratteristiche al sistema o vengono modificate quelle presenti;</li>
+            <li>Raggiungere un branch coverage non inferiore al 75%.</li>
+         </ul>
+         <h2 id=approccio>6. Approccio</h2>
+         <p>Il testing dell’intero sistema si compone di tre fasi: testing di sistema, testing di integrazione e testing di unità. Verranno progettati nell’ordine appena definito, ma verranno eseguiti in ordine inverso.
+            Prima della fase di implementazione del sistema, avverrà la progettazione dei casi di test di sistema, perfezionati in seguito nella loro fase di esecuzione; durante la fase implementativa avverrà la progettazione dei casi di test di unità.
+            Durante lo sviluppo saranno eseguite periodiche attività di revisione sul codice prodotto.
+            Poiché la progettazione è organizzata seguendo un modello simile al modello a V, il testing di sistema è stato pianificato in seguito alla stesura del documento Requirements Analysis Document, mentre la pianificazione del testing di integrazione avverrà dopo la stesura del System Design Document.
+         </p>
+         <h3>Testing di Sistema</h3>
+         <p>Per il testing di sistema sarà utilizzato il tool Selenium IDE, che permette di registrare le azioni che un utente può intraprendere sul browser, in modo da poter implementare ed eseguire i test case di sistema. Il server, per la fase di testing, verrà deployato in localhost.</p>
+         <h4>Functional Testing</h4>
+         <p>Il functional testing ha il fine di validare i requisiti funzionali. Consiste nell’individuare i possibili faults generati dagli input degli utenti.</p>
+         <h4>Performance Testing</h4>
+         <p>A causa del basso budget a disposizione, non si assicura l’esecuzione del performance testing.</p>
+         <h4>Pilot Testing</h4>
+         <p>A causa del basso budget a disposizione, non si assicura l’esecuzione del pilot testing.</p>
+         <h4>Acceptance Testing</h4>
+         <p>L’acceptance testing verrà effettuato solo sul functional testing, ed il Project Manager simulerà la figura del cliente.</p>
+         <h4>Installation Testing</h4>
+         <p>A causa del basso budget a disposizione, non si assicura l’esecuzione dell’installation testing.</p>
+         <h3>Testing di Integrazione</h3>
+         <p>Verrà utilizzato un approccio bottom-up, metodo ritenuto più adatto per un software basato sul paradigma Object Oriented. La definizione dei test case avverrà tramite il framework JUnit, mentre verrà usato Mockito per il mocking. Verrà valutato l’utilizzo di Github Actions per realizzare la Continuous Integration, in alternativa a Travis CI. L’automatizzazione del run dei test sarà gestita da Maven, ed infine come tool di misurazione e report coverage sarà utilizzato JaCoCo.</p>
+         <p>Il test di integrazione sarà il medesimo per tutte le componenti da testare. Nello specifico, si procederà prima con il test delle classi Service, e successivamente con il test delle classi Controller. Durante questa seconda esecuzione, la chiamata al controller sarà mockata usando Mockito.</p>
+         <p>Di seguito viene presentato un esempio grafico di test di integrazione diviso nei due steps.</p>
+         <h4>Primo step</h4>
+         <p><img style="width:74.8mm; height:16.3mm" src="C07.html_files/rId19.png" title="" alt="" align=""></p>
+         <h4>Secondo step</h4>
+         <p><img style="width:116.1mm; height:16.1mm" src="C07.html_files/rId20.png" title="" alt="" align=""></p>
+         <p>In generale, il test di integrazione sarà compreso nella stessa classe di test di quelli unitari. Solo per il sottosistema club del libro, si è scelto un approccio differente, separandoli.</p>
+         <p>Per ciò che concerne le dipendenze tra i sottosistemi, si riporta di seguito il diagramma architetturale.</p>
+         <p><img style="width:169.9mm; height:85.5mm" src="C07.html_files/rId21.jpg" title="" alt="" align=""></p>
+         <h3>Testing di Unità</h3>
+         <p>Per il testing di unità la strategia prevista consiste nel testare ogni metodo delle classi del sistema. Da esse, sono escluse le interfacce e le classi entity, poiché quest’ultime presentano solo metodi getters e setters. I casi di test saranno definiti attraverso un approccio black-box e saranno documentati direttamente nel codice, attraverso l’uso del framework per il testing di classi Java JUnit.</p>
+         <p>Per ogni Production Class sarà definita una Test Class che rispetterà il formato NomeProductionClassTest. Tali classi saranno scritte in parallelo alle Production class, per garantire una più facile copertura del codice. Le stesse classi saranno poi revisionate e modificate da sviluppatori differenti.</p>
+         <p>Altre tecnologie usate in tale fase saranno:</p>
+         <ul>
+            <li>Mockito: per la costruzione degli stub e l’isolamento della componente testata.</li>
+            <li>JaCoCo: per il calcolo di metriche tra le quali la Branch Coverage.</li>
+            <li>Maven: per la build e l’esecuzione automatica dei tests.</li>
+         </ul>
+         <h3>Ispezione del Codice</h3>
+         <p>Per aumentare la qualità del codice ci si affiderà principalmente ai controlli del tool Checkstyle e della CI/CD con Maven. Sebbene vi sia l’intenzione di fare ispezione del codice, anche se non costante e approfondita, a causa del basso budget non si può assicurare tale pratica.</p>
+         <h2 id=sospensione>7. Sospensione e Ripristino</h2>
+         <p><strong>Criteri di Sospensione</strong></p>
+         <p>Il testing non verrà sospeso fino alla sua terminazione, anche in caso di rilevazione di una failure. Il testing potrà essere momentaneamente sospeso nel caso venga restituito, al momento dell’esecuzione, un errore nella definizione di uno dei test stessi.</p>
+         <p><strong>Criteri di Ripristino</strong></p>
+         <p>Il testing verrà ripreso dopo aver risolto i fault individuati.</p>
+         <h2 id=materiale>8. Materiale di Testing</h2>
+         <p>L’hardware necessario per l’attività di test è un semplice computer, non necessariamente connesso ad internet, in quanto il sistema non è stato ancora rilasciato.</p>
+         <h2 id=testcases>9. Test Cases</h2>
+         <p>L’approccio per la definizione dei test frame sarà il category partition. Al fine di minimizzare il numero di test case, gli input saranno partizionati in classi di equivalenza. Per definire l'output atteso si userà un oracolo umano, per via dell'assenza di specifiche formali/semi-formali.</p>
+         <h3>Gestione Utente</h3>
+         <h4>Registrazione Lettore</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Nome utente</td>
+               <td>Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza &gt; 30 = false [error]</li>
+                     <li>Lunghezza &le; 30 = true [PROPERTY LN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Email</td>
+               <td>Formato [FE]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FE_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Password</td>
+               <td>Lunghezza [LP]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza &lt; 8 = false [error]</li>
+                     <li>Lunghezza &ge; 8 = true [PROPERTY LP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Conferma Password</td>
+               <td>Match [MCP]</td>
+               <td>
+                  <ol>
+                     <li>Match con password = false [error]</li>
+                     <li>Match con password = true [PROPERTY MCP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Nome</td>
+               <td>Formato [FNO]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Cognome</td>
+               <td>Formato [FCO]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FCO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Numero di telefono</td>
+               <td>Formato [FNT]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNT_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td  style="background-color: #EDA600;">Provincia</td>
+               <td>Formato ???</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY ???]</li>
+                  </ol>
+               </td>
+            </tr> 
+            <tr>
+               <td  style="background-color: #EDA600;">Città</td>
+               <td>Formato ???</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY ???]</li>
+                  </ol>
+               </td>
+            </tr> 
+            <tr>
+               <td>Via e numero civico</td>
+               <td>Formato [FVN]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FVN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <table border="1">
+            <th>Test Case ID</th>
+            <th>Test Frame</th>
+            <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_1.1_1</td>
+               <td>LN1</td>
+               <td>Errato: nome utente troppo lungo</td>
+            </tr>
+            <tr>
+               <td>TC_1.1_2</td>
+               <td>LN2, FE1</td>
+               <td>Errato: email non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.1_3</td>
+               <td>LN2, FE2, LP1</td>
+               <td>Errato: password non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.1_4</td>
+               <td>LN2, FE2, LP2, MCP1</td>
+               <td>Errato: conferma password errata</td>
+            </tr>
+            <tr>
+               <td>TC_1.1_5</td>
+               <td>LN2, FE2, LP2, MCP2, FNO1</td>
+               <td>Errato: nome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.1_6</td>
+               <td>LN2, FE2, LP2, MCP2, FNO2, FCO1</td>
+               <td>Errato: cognome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.1_7</td>
+               <td>LN2, FE2, LP2, MCP2, FNO2, FCO2, FNT1</td>
+               <td>Errato: numero di telefono non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.1_8</td>
+               <td>LN2, FE2, LP2, MCP2, FNO2, FCO2, FNT2, FVN1</td>
+               <td>Errato: Via e numero civico non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.1_9</td>
+               <td>LN2, FE2, LP2, MCP2, FNO2, FCO2, FNT2, FVN2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h4>Registrazione Esperto</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Nome utente</td>
+               <td>Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza > 30 = false [error]</li>
+                     <li>Lunghezza <= 30 = true [PROPERTY LN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Email</td>
+               <td>Formato [FE]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FE_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Password</td>
+               <td>Lunghezza [LP]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza < 8 = false [error]</li>
+                     <li>Lunghezza >= 8 = true [PROPERTY LP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Conferma Password</td>
+               <td>Match [MCP]</td>
+               <td>
+                  <ol>
+                     <li>Match con password = false [error]</li>
+                     <li>Match con password = true [PROPERTY MCP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Nome</td>
+               <td>Formato [FNO]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Cognome</td>
+               <td>Formato [FCO]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FCO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Numero di telefono</td>
+               <td>Formato [FNT]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNT_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan= 2, style="background-color: #EDA600;">Email Biblioteca</td>
+               <td>Match [MB]</td>
+               <td>
+                  <ol>
+                     <li>Match con biblioteca = false [error]</li>
+                     <li>Match con biblioteca = true [PROPERTY MB_OK] [IF PROPERTY_FEB_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;"></td>
+               <td>Formato [FEB]</td>
+               <td>
+                  <ol>
+                     <li>Biblioteca associata alla e-mail esistente [PROPERTY_FEB_OK]</li>
+                     <li>Biblioteca associata alla e-mail non esistente [error]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td  style="background-color: #EDA600;">Provincia</td>
+               <td>Formato ???</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY ???]</li>
+                  </ol>
+               </td>
+            </tr> 
+            <tr>
+               <td  style="background-color: #EDA600;">Città</td>
+               <td>Formato ???</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY ???]</li>
+                  </ol>
+               </td>
+            </tr> 
+            <tr>
+               <td>Via e numero civico</td>
+               <td>Formato [FVN]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FVN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <table border="1">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test Frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_1.2_1</td>
+               <td>LN1</td>
+               <td>Errato: nome utente troppo lungo</td>
+            </tr>
+            <tr>
+               <td>TC_1.2_2</td>
+               <td>LN2, FE1</td>
+               <td>Errato: email non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.2_3</td>
+               <td>LN2, FE2, LP1</td>
+               <td>Errato: password non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.2_4</td>
+               <td>LN2, FE2, LP2, MCP1</td>
+               <td>Errato: conferma password errata</td>
+            </tr>
+            <tr>
+               <td>TC_1.2_5</td>
+               <td>LN2, FE2, LP2, MCP2, FNO1</td>
+               <td>Errato: nome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.2_6</td>
+               <td>LN2, FE2, LP2, MCP2, FNO2, FCO1</td>
+               <td>Errato: cognome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.2_7</td>
+               <td>LN2, FE2, LP2, MCP2, FNO2, FCO2, FNT1</td>
+               <td>Errato: numero di telefono non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.2_8</td>
+               <td>LN2, FE2, LP2, MCP2, FNO2, FCO2, FNT2, MB1</td>
+               <td>Errato: biblioteca non trovata</td>
+            </tr>
+            <tr>
+               <td>TC_1.2_9</td>
+               <td>LN2, FE2, LP2, MCP2, FNO2, FCO2, FNT2, MB2, FVN1</td>
+               <td>Errato: via e numero civico errato</td>
+            </tr>
+            <tr>
+               <td>TC_1.2_10</td>
+               <td>LN2, FE2, LP2, MCP2, FNO2, FCO2, FNT2, MB2, FVN2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h4>Registrazione Biblioteca</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Email</td>
+               <td>Formato [FE]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FE_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Password</td>
+               <td>Lunghezza [LP]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza < 8 = false [error]</li>
+                     <li>Lunghezza >= 8 = true [PROPERTY LP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Conferma Password</td>
+               <td>Match [MCP]</td>
+               <td>
+                  <ol>
+                     <li>Match con password = false [error]</li>
+                     <li>Match con password = true [PROPERTY MCP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Nome Biblioteca</td>
+               <td>Formato [FNO]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Numero di telefono</td>
+               <td>Formato [FNT]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNT_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td  style="background-color: #EDA600;">Provincia</td>
+               <td>Formato ???</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY ???]</li>
+                  </ol>
+               </td>
+            </tr> 
+            <tr>
+               <td  style="background-color: #EDA600;">Città</td>
+               <td>Formato ???</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY ???]</li>
+                  </ol>
+               </td>
+            </tr> 
+            <tr>
+               <td>Via e numero civico</td>
+               <td>Formato [FVN]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FVN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <table border="1">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test Frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_1.3_1</td>
+               <td>FNO1</td>
+               <td>Errato: nome biblioteca non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.3_2</td>
+               <td>FNO2, FE1</td>
+               <td>Errato: email non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.3_3</td>
+               <td>FNO2, FE2, LP1</td>
+               <td>Errato: password non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.3_4</td>
+               <td>FNO2, FE2, LP2, MCP1</td>
+               <td>Errato: conferma password errata</td>
+            </tr>
+            <tr>
+               <td>TC_1.3_5</td>
+               <td>FNO2, FE2, LP2, MCP2, FNT1</td>
+               <td>Errato: numero di telefono non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.3_6</td>
+               <td>FNO2, FE2, LP2, MCP2, FNT2, FVN1</td>
+               <td>Errato: Via e Numero civico errato</td>
+            </tr>
+            <tr>
+               <td>TC_1.3_7</td>
+               <td>FNO2, FE2, LP2, MCP2, FNT2, FVN2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h4>Login</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Email</td>
+               <td>Match [ME]</td>
+               <td>
+                  <ol>
+                     <li>Match con email = false [error]</li>
+                     <li>Match con email = true [PROPERTY ME_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Password</td>
+               <td>Match [MP]</td>
+               <td>
+                  <ol>
+                     <li>Match con password = false [error]</li>
+                     <li>Match con password = true [PROPERTY MP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <table border="1">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test Frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_1.4_1</td>
+               <td>ME1</td>
+               <td>Errato: email errata</td>
+            </tr>
+            <tr>
+               <td>TC_1.4_2</td>
+               <td>ME2, MP1</td>
+               <td>Errato: password non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.4_3</td>
+               <td>ME2, MP2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h4>Modifica dati account Esperto</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Nome utente</td>
+               <td>Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza >30 = false [error]</li>
+                     <li>Lunghezza <=30 = true [PROPERTY LN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Password</td>
+               <td>Lunghezza [LP]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza < 8 = false [error]</li>
+                     <li>Lunghezza >= 8 = true [PROPERTY LP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Conferma Password</td>
+               <td>Match [MCP]</td>
+               <td>
+                  <ol>
+                     <li>Match con password = false [error]</li>
+                     <li>Match con password = true [PROPERTY MCP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Nome</td>
+               <td>Formato [FNO]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Cognome</td>
+               <td>Formato [FCO]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FCO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Numero di telefono</td>
+               <td>Formato [FNT]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNT_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="background-color: #EDA600;">Email Biblioteca</td>
+               <td>Formato [FNB]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNB_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Via e numero civico</td>
+               <td>Formato [FVN]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FVN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <table border="1" style="color: #EDA600;">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test Frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_1.5_1</td>
+               <td>LN1</td>
+               <td>Errato: nome troppo lungo</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_2</td>
+               <td>LN2, LP1</td>
+               <td>Errato: Lunghezza password non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_3</td>
+               <td>LN2, LP2, MCP1</td>
+               <td>Errato: conferma password errata</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_4</td>
+               <td>LN2, LP2, MCP2, FNO1</td>
+               <td>Errato: nome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_5</td>
+               <td>LN2, LP2, MCP2, FNO2, FCO1</td>
+               <td>Errato: cognome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_6</td>
+               <td>LN2, LP2, MCP2, FNO2, FCO2, FNT1</td>
+               <td>Errato: numero di telefono non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_7</td>
+               <td>LN2, LP2, MCP2, FNO2, FCO2, FNT2</td>
+               <td>Corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_8</td>
+               <td>FNB1</td>
+               <td>Errore: nome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_9</td>
+               <td>FNB2, LP1</td>
+               <td>Errato: Lunghezza password non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_10</td>
+               <td>FNB2, LP2, MCP1</td>
+               <td>Errato: conferma password errata</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_11</td>
+               <td>FNB2, LP2, MCP2, FNT1</td>
+               <td>Errato: numero di telefono non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_12</td>
+               <td>FNB2, LP2, MCP2, FNT2, FVN1</td>
+               <td>Errato: Via e numero civico errato</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_13</td>
+               <td>FNB2, LP2, MCP2, FNT2, FVN2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h4>Modifica dati account Lettore</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Nome utente</td>
+               <td>Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza >30 = false [error]</li>
+                     <li>Lunghezza <=30 = true [PROPERTY LN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Password</td>
+               <td>Lunghezza [LP]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza < 8 = false [error]</li>
+                     <li>Lunghezza >= 8 = true [PROPERTY LP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Conferma Password</td>
+               <td>Match [MCP]</td>
+               <td>
+                  <ol>
+                     <li>Match con password = false [error]</li>
+                     <li>Match con password = true [PROPERTY MCP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Nome</td>
+               <td>Formato [FNO]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Cognome</td>
+               <td>Formato [FCO]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FCO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Numero di telefono</td>
+               <td>Formato [FNT]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNT_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="background-color: #EDA600;">Email Biblioteca</td>
+               <td>Formato [FNB]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNB_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Via e numero civico</td>
+               <td>Formato [FVN]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FVN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <table border="1" style="color: #b50909;">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test Frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_1.5_1</td>
+               <td>LN1</td>
+               <td>Errato: nome troppo lungo</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_2</td>
+               <td>LN2, LP1</td>
+               <td>Errato: Lunghezza password non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_3</td>
+               <td>LN2, LP2, MCP1</td>
+               <td>Errato: conferma password errata</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_4</td>
+               <td>LN2, LP2, MCP2, FNO1</td>
+               <td>Errato: nome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_5</td>
+               <td>LN2, LP2, MCP2, FNO2, FCO1</td>
+               <td>Errato: cognome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_6</td>
+               <td>LN2, LP2, MCP2, FNO2, FCO2, FNT1</td>
+               <td>Errato: numero di telefono non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_7</td>
+               <td>LN2, LP2, MCP2, FNO2, FCO2, FNT2</td>
+               <td>Corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_8</td>
+               <td>FNB1</td>
+               <td>Errore: nome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_9</td>
+               <td>FNB2, LP1</td>
+               <td>Errato: Lunghezza password non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_10</td>
+               <td>FNB2, LP2, MCP1</td>
+               <td>Errato: conferma password errata</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_11</td>
+               <td>FNB2, LP2, MCP2, FNT1</td>
+               <td>Errato: numero di telefono non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_12</td>
+               <td>FNB2, LP2, MCP2, FNT2, FVN1</td>
+               <td>Errato: Via e numero civico errato</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_13</td>
+               <td>FNB2, LP2, MCP2, FNT2, FVN2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h4>Modifica dati account Biblioteca</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Nome utente</td>
+               <td>Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza >30 = false [error]</li>
+                     <li>Lunghezza <=30 = true [PROPERTY LN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Password</td>
+               <td>Lunghezza [LP]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza < 8 = false [error]</li>
+                     <li>Lunghezza >= 8 = true [PROPERTY LP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Conferma Password</td>
+               <td>Match [MCP]</td>
+               <td>
+                  <ol>
+                     <li>Match con password = false [error]</li>
+                     <li>Match con password = true [PROPERTY MCP_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Nome</td>
+               <td>Formato [FNO]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Cognome</td>
+               <td>Formato [FCO]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FCO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Numero di telefono</td>
+               <td>Formato [FNT]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNT_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="background-color: #EDA600;">Email Biblioteca</td>
+               <td>Formato [FNB]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FNB_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Via e numero civico</td>
+               <td>Formato [FVN]</td>
+               <td>
+                  <ol>
+                     <li>Rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY FVN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <table border="1" style="color: #b50909;">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test Frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_1.5_1</td>
+               <td>LN1</td>
+               <td>Errato: nome troppo lungo</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_2</td>
+               <td>LN2, LP1</td>
+               <td>Errato: Lunghezza password non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_3</td>
+               <td>LN2, LP2, MCP1</td>
+               <td>Errato: conferma password errata</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_4</td>
+               <td>LN2, LP2, MCP2, FNO1</td>
+               <td>Errato: nome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_5</td>
+               <td>LN2, LP2, MCP2, FNO2, FCO1</td>
+               <td>Errato: cognome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_6</td>
+               <td>LN2, LP2, MCP2, FNO2, FCO2, FNT1</td>
+               <td>Errato: numero di telefono non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_7</td>
+               <td>LN2, LP2, MCP2, FNO2, FCO2, FNT2</td>
+               <td>Corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_8</td>
+               <td>FNB1</td>
+               <td>Errore: nome non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_9</td>
+               <td>FNB2, LP1</td>
+               <td>Errato: Lunghezza password non corretta</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_10</td>
+               <td>FNB2, LP2, MCP1</td>
+               <td>Errato: conferma password errata</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_11</td>
+               <td>FNB2, LP2, MCP2, FNT1</td>
+               <td>Errato: numero di telefono non corretto</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_12</td>
+               <td>FNB2, LP2, MCP2, FNT2, FVN1</td>
+               <td>Errato: Via e numero civico errato</td>
+            </tr>
+            <tr>
+               <td>TC_1.5_13</td>
+               <td>FNB2, LP2, MCP2, FNT2, FVN2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h3>Gestione Club del Libro</h3>
+         <h4>Creazione Club del Libro</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Nome Club</td>
+               <td>Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza > 30 = false [error]</li>
+                     <li>Lunghezza <= 30 = true [PROPERTY LN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Descrizione</td>
+               <td>Lunghezza [LD]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza > 255 = false [error]</li>
+                     <li>Lunghezza <= 255 = true [PROPERTY LD_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="3" style="background-color: #b50909;">Copertina</td>             
+
+               <td>Grandezza File [GFC]</td>
+               <td>
+                  <ol>
+                     <li>Grandezza > 15MB = false [error]</li>
+                     <li>Grandezza <= 15MB = true [PROPERTY GFC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Copertina</td>
+               <td>Dimensione [DC]</td>
+               <td>
+                  <ol>
+                     <li>Larghezza > 1024px OR Altezza > 768 px = false [error]</li>
+                     <li>Larghezza <= 1024px AND Altezza <=768px = true [PROPERTY DC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Copertina</td>
+
+               <td>Esistenza File [EXC]</td>
+               <td>
+                  <ol>
+                     <li>Copertina non fornita [single]</li>
+                     <li>Copertina fornita [PROPERTY EXC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <!DOCTYPE html>
+         <table border="1">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test Frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_2.1_1</td>
+               <td>LN1</td>
+               <td>Errato: Nome troppo lungo</td>
+            </tr>
+            <tr>
+               <td>TC_2.1_2</td>
+               <td>LN2, LD1</td>
+               <td>Errato: Descrizione troppo lunga</td>
+            </tr>
+            <tr>
+               <td>TC_2.1_3</td>
+               <td>LN2, LD2, GFC1</td>
+               <td>Errato: Copertina troppo pesante</td>
+            </tr>
+            <tr>
+               <td>TC_2.1_4</td>
+               <td>LN2, LD2, GFC2, DC1</td>
+               <td>Errato: Copertina troppo grande</td>
+            </tr>
+            <tr>
+               <td>TC_2.1_5</td>
+               <td>LN2, LD2, GFC2, DC2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h4>Modifica dati Club del Libro</h4>
+
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Nome Club</td>
+               <td>Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza > 30 OR Lunghezza < 1 = false [error]</li>
+                     <li>Lunghezza <= 30 AND Lunghezza >= 1 = true [PROPERTY LN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Descrizione</td>
+               <td>Lunghezza [LD]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza > 255 = false [error]</li>
+                     <li>Lunghezza <= 255 = true [PROPERTY LD_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="3" style="background-color: #b50909;">Copertina</td>             
+
+               <td>Grandezza File [GFC]</td>
+               <td>
+                  <ol>
+                     <li>Grandezza > 15MB = false [error]</li>
+                     <li>Grandezza <= 15MB = true [PROPERTY GFC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Copertina</td>
+               <td>Dimensione [DC]</td>
+               <td>
+                  <ol>
+                     <li>Larghezza > 1024px OR Altezza > 768 px = false [error]</li>
+                     <li>Larghezza <= 1024px AND Altezza <=768px = true [PROPERTY DC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Copertina</td>
+
+               <td>Esistenza File [EXC]</td>
+               <td>
+                  <ol>
+                     <li>Copertina non fornita [single]</li>
+                     <li>Copertina fornita [PROPERTY EXC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <table border="1">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test Frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_2.2_1</td>
+               <td>LN1</td>
+               <td>Errato: Lunghezza nome invalida</td>
+            </tr>
+            <tr>
+               <td>TC_2.2_2</td>
+               <td>LN2, LD1</td>
+               <td>Errato: Descrizione troppo lunga</td>
+            </tr>
+            <tr>
+               <td>TC_2.2_3</td>
+               <td>LN2, LD2, GFC1</td>
+               <td>Errato: Copertina troppo pesante</td>
+            </tr>
+            <tr>
+               <td>TC_2.2_4</td>
+               <td>LN2, LD2, GFC2, DC1</td>
+               <td>Errato: Copertina troppo grande</td>
+            </tr>
+            <tr>
+               <td>TC_2.2_5</td>
+               <td>LN2, LD2, GFC2, DC2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h4>Organizzazione Evento</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Nome</td>
+               <td>Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza > 30 OR Lunghezza < 1 = false [error]</li>
+                     <li>Lunghezza <= 30 AND Lunghezza >= 1 = true [PROPERTY_LN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Data e Ora</td>
+               <td>Correttezza [CD]</td>
+               <td>
+                  <ol>
+                     <li>DataOra <= DataOraCorrente = false [error]</li>
+                     <li>DataOra > DataOraCorrente = true [PROPERTY_CD_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            
+            <tr>
+               <td>Descrizione</td>
+               <td>Lunghezza [LD]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza > 255 = false [error]</li>
+                     <li>Lunghezza <= 255 = true [PROPERTY_LD_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="background-color: #b50909;">ID Libro</td>
+               <td>Presente [PST]</td>
+               <td>
+                  <ol>
+                     <li>Id Libro Specificato = true [PROPERTY_PST_OK]</li>
+                     <li>Id Libro Non Specificato = false [PROPERTY_LD_NOT_OK][single]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <table border="1">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test Frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_2.3_1</td>
+               <td>LN1</td>
+               <td>Errato: Lunghezza del nome invalida</td>
+            </tr>
+            <tr>
+               <td>TC_2.3_2</td>
+               <td>LN2, CD1</td>
+               <td>Errato: Data nel passato</td>
+            </tr>
+            <tr>
+               <td>TC_2.3_3</td>
+               <td>LN2, CD2, LD1</td>
+               <td>Errato: Descrizione troppo lunga</td>
+            </tr>
+            <tr>
+               <td>TC_2.3_4</td>
+               <td>LN2, CD2, LD2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h4>Visualizzazione e modifica Evento</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Nome</td>
+               <td>Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza > 30 OR Lunghezza < 1 = false [error]</li>
+                     <li>Lunghezza <= 30 AND Lunghezza >= 1 = true [PROPERTY_LN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Data e Ora</td>
+               <td>Correttezza [CD]</td>
+               <td>
+                  <ol>
+                     <li>DataOra <= DataOraCorrente = false [error]</li>
+                     <li>DataOra > DataOraCorrente = true [PROPERTY_CD_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Descrizione</td>
+               <td>Lunghezza [LD]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza > 255 = false [error]</li>
+                     <li>Lunghezza <= 255 = true [PROPERTY_LD_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="background-color: #b50909;">ID Libro</td>
+               <td>Presente [PST]</td>
+               <td>
+                  <ol>
+                     <li>Id Libro Specificato = true [PROPERTY_PST_OK]</li>
+                     <li>Id Libro Non Specificato = false [PROPERTY_LD_NOT_OK][single]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <table border="1">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test Frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_2.4_1</td>
+               <td>LN1</td>
+               <td>Errato: Lunghezza del nome invalida</td>
+            </tr>
+            <tr>
+               <td>TC_2.4_2</td>
+               <td>LN2, CD1</td>
+               <td>Errato: Data nel passato</td>
+            </tr>
+            <tr>
+               <td>TC_2.4_3</td>
+               <td>LN2, CD2, LD1</td>
+               <td>Errato: Descrizione troppo lunga</td>
+            </tr>
+            <tr>
+               <td>TC_2.4_4</td>
+               <td>LN2, CD2, LD2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h3>Gestione prestiti Libri</h3>
+         <h4>Inserimento Manuale Nuovo Libro Prenotabile</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td rowspan="2">ISBN</td>
+               <td>Fornito [FO]</td>
+               <td>
+                  <ol>
+                     <li>ISBN Non Inserito = false [error]</li>
+                     <li>ISBN Inserito = true [PROPERTY_FO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">ISBN</td>
+               <td>Validità [VI]</td>
+               <td>
+                  <ol>
+                     <li>ISBN Non Valido = false [error]</li>
+                     <li>ISBN Valido = true [PROPERTY_VI_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Titolo</td>
+               <td>Lunghezza [LT]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza <= 0 OR Lunghezza > 90 = false [error]</li>
+                     <li>Lunghezza > 0 AND Lunghezza <= 90 = true [PROPERTY LT_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="3" style="background-color: #b50909;">Copertina Libro</td>
+               <td>Grandezza File [GFC]</td>
+               <td>
+                  <ol>
+                     <li>Grandezza > 15MB = false [error]</li>
+                     <li>Grandezza <= 15MB = true [PROPERTY GFC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Copertina Libro</td>
+               <td>Dimensione [DC]</td>
+               <td>
+                  <ol>
+                     <li>Dimensione > 1024x1024 pixel = false [error]</li>
+                     <li>Dimensione <= 1024x1024 pixel = true [PROPERTY DC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Copertina Libro</td>
+               <td>Esistenza File [EXC]	               </td>
+               <td>
+                  <ol>
+                     <li>Copertina non fornita [single]</li>
+                     <li>Copertina fornita [PROPERTY EXC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Autore</td>
+               <td>Lunghezza [LA]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza > 60 = false [error]</li>
+                     <li>Lunghezza <= 60 = true [PROPERTY LA_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Casa Editrice</td>
+               <td>Lunghezza [LC]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza <= 0 OR Lunghezza > 30 = false [error]</li>
+                     <li>Lunghezza > 0 AND Lunghezza <= 30 = true [PROPERTY LC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Anno di pubblicazione</td>
+               <td>Correttezza [CA]</td>
+               <td>
+                  <ol>
+                     <li>AnnoPubblicazione > AnnoCorrente + 1 = false [error]</li>
+                     <li>AnnoPubblicazione <= AnnoCorrente + 1 = true [PROPERTY CA_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td>Descrizione</td>
+               <td>Lunghezza [LD]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza > 255 = false [error]</li>
+                     <li>Lunghezza <= 255 = true [PROPERTY LD_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <h4>Inserimento tramite ISBN Nuovo Libro Prenotabile</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td rowspan="3" style="background-color: #b50909;">ISBN</td>
+               <td>Fornito [FO]</td>
+               <td>
+                  <ol>
+                     <li>ISBN Non Inserito = false [error]</li>
+                     <li>ISBN Inserito = true [PROPERTY_FO_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">ISBN</td>
+               <td>Validità [VI]</td>
+               <td>
+                  <ol>
+                     <li>ISBN Non Valido = false [error]</li>
+                     <li>ISBN Valido = true [PROPERTY_VI_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">ISBN</td>
+               <td>Presenza Catalogo Remoto [PCR]</td>
+               <td>
+                  <ol>
+                     <li>ISBN Non Presente nel Catalogo remoto = false [PROPERTY_PCR_NOT_OK]</li>
+                     <li>ISBN Presente nel Catalogo remoto = true [PROPERTY_VI_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+
+         <h4>Inserimento tramite ISBN Nuovo Libro Prenotabile</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td rowspan="3" style="background-color: #b50909;">ID Libro</td>
+               <td>Esistente [EI]</td>
+               <td>
+                  <ol>
+                     <li>Libro con ID fornito non presente nel database = false [error]</li>
+                     <li>Libro con ID fornito non presente nel database = true [PROPERTY_EI_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+
+         <table border="1">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_3.1_1</td>
+               <td>EI1</td>
+               <td>Errato: ISBN assente</td>
+            </tr>
+            <tr>
+               <td>TC_3.1_2</td>
+               <td>EI2, VI1</td>
+               <td>Errato: ISBN non riconosciuto</td>
+            </tr>
+            <tr>
+               <td>TC_3.1_3</td>
+               <td>EI2, VI2</td>
+               <td>Corretto</td>
+            </tr>
+            <tr>
+               <td>TC_3.1_4</td>
+               <td>LT1</td>
+               <td>Errato: Titolo non valido</td>
+            </tr>
+            <tr>
+               <td>TC_3.1_5</td>
+               <td>LT2, GFC1</td>
+               <td>Errato: Dimensione file copertina troppo grande</td>
+            </tr>
+            <tr>
+               <td>TC_3.1_6</td>
+               <td>LT2, GFC2, DC1</td>
+               <td>Errato: Risoluzione immagine copertina troppo elevata</td>
+            </tr>
+            <tr>
+               <td>TC_3.1_7</td>
+               <td>LT2, GFC2, DC2, LA1</td>
+               <td>Errato: Lunghezza autore errata</td>
+            </tr>
+            <tr>
+               <td>TC_3.1_8</td>
+               <td>LT2, GFC2, DC2, LA2, LC1</td>
+               <td>Errato: Lunghezza casa editrice troppo lunga</td>
+            </tr>
+            <tr>
+               <td>TC_3.1_9</td>
+               <td>LT2, GFC2, DC2, LA2, LC2, CA1</td>
+               <td>Errato: Anno di pubblicazione scorretto</td>
+            </tr>
+            <tr>
+               <td>TC_3.1_10</td>
+               <td>LT2, GFC2, DC2, LA2, LC2, CA2, LD1</td>
+               <td>Errato: Descrizione troppo lunga</td>
+            </tr>
+            <tr>
+               <td>TC_3.1_11</td>
+               <td>LT2, GFC2, DC2, LA2, LC2, CA2, LD2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h4>Accettazione ticket prestito</h4>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td>Data di restituzione</td>
+               <td>Formato [NG]</td>
+               <td>
+                  <ol>
+                     <li>Non rispetta il formato = false [error]</li>
+                     <li>Rispetta il formato = true [PROPERTY_NG_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+         </table>
+         <table border="1">
+            <tr>
+               <th>Test Case ID</th>
+               <th>Test frame</th>
+               <th>Esito</th>
+            </tr>
+            <tr>
+               <td>TC_3.2_1</td>
+               <td>NG1</td>
+               <td>Errato: errore numero giorni</td>
+            </tr>
+            <tr>
+               <td>TC_3.2_2</td>
+               <td>NG2</td>
+               <td>Corretto</td>
+            </tr>
+         </table>
+         <h2 id=schedule>10. Testing schedule</h2>
+         <p>Le attività di pianificazione del testing avverranno come definito nei capitoli precedenti, cioè subito dopo la fase di design necessaria per la pianificazione.</p>
+         <p>La scrittura dei casi di test avverrà in contemporanea con lo sviluppo del codice.</p>
+         <p>L’esecuzione dei test avverrà sia durante che dopo l’implementazione del sistema. Una volta concluso lo sviluppo, tutti i test saranno rieseguiti per garantirne il corretto funzionamento e produrre i report finali. Per altre informazioni si rimanda ai documenti di management sullo schedule.</p>
+      </div>
+   </body>
+</html>
