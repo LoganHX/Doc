@@ -448,17 +448,29 @@
                <th>Scelte per la categoria</th>
             </tr>
             <tr>
-               <td>Nome utente</td>
-               <td>Lunghezza [LN]</td>
+               <td rowspan="2">Nome utente</td>
+               <td >Lunghezza [LN]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 30 = false [error]</li>
-                     <li>Lunghezza &le; 30 = true [PROPERTY LN_OK]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &ge; 3 AND &le; 30 = true [PROPERTY LN_OK]</li>
                   </ol>
                </td>
             </tr>
             <tr>
-               <td>Email</td>
+               <td style="display: none;">Nome Utente</td>
+               <td>Fornito [FO_NOME_UTENTE]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_NOME_UTENTE] = false [error]</li>
+                     <li>Fornito [FO_NOME_UTENTE] = true [PROPERTY FO_NOME_UTENTE_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            
+            <tr>
+               <td rowspan="2">Email</td>
                <td>Formato [FE]</td>
                <td>
                   <ol>
@@ -468,7 +480,17 @@
                </td>
             </tr>
             <tr>
-               <td>Password</td>
+               <td style="display: none;">Email</td>
+               <td>Fornito [FO_EMAIL_LETTORE]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_EMAIL_LETTORE] = false [error]</li>
+                     <li>Fornito [FO_EMAIL_LETTORE] = true [PROPERTY FO_EMAIL_LETTORE_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2">Password</td>
                <td>Lunghezza [LP]</td>
                <td>
                   <ol>
@@ -478,7 +500,17 @@
                </td>
             </tr>
             <tr>
-               <td>Conferma Password</td>
+               <td style="display: none;">Password</td>
+               <td>Fornito [FO_PASSWORD]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_PASSWORD] = false [error]</li>
+                     <li>Fornito [FO_PASSWORD] = true [PROPERTY FO_PASSWORD]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2">Conferma Password</td>
                <td>Match [MCP]</td>
                <td>
                   <ol>
@@ -488,7 +520,17 @@
                </td>
             </tr>
             <tr>
-               <td>Nome</td>
+               <td style="display: none;">Conferma Password</td>
+               <td>Fornito [FO_CONFERMA_PASSWORD]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_CONFERMA_PASSWORD] = false [error]</li>
+                     <li>Fornito [FO_CONFERMA_PASSWORD] = true [PROPERTY FO_CONFERMA_PASSWORD]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2">Nome</td>
                <td>Formato [FNO]</td>
                <td>
                   <ol>
@@ -498,7 +540,17 @@
                </td>
             </tr>
             <tr>
-               <td>Cognome</td>
+               <td style="display: none;">Nome</td>
+               <td>Fornito [FO_NOME]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_NOME] = false [error]</li>
+                     <li>Fornito [FO_NOME] = true [PROPERTY FO_NOME]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2">Cognome</td>
                <td>Formato [FCO]</td>
                <td>
                   <ol>
@@ -508,7 +560,17 @@
                </td>
             </tr>
             <tr>
-               <td>Numero di telefono</td>
+               <td style="display: none;">Cognome</td>
+               <td>Fornito [FO_COGNOME]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_COGNOME] = false [error]</li>
+                     <li>Fornito [FO_COGNOME] = true [PROPERTY FO_COGNOME]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2">Numero di telefono</td>
                <td>Formato [FNT]</td>
                <td>
                   <ol>
@@ -518,32 +580,72 @@
                </td>
             </tr>
             <tr>
-               <td  style="background-color: #EDA600;">Provincia</td>
-               <td>Formato ???</td>
+               <td style="display: none;">Numero di Telefono</td>
+               <td>Fornito [FO_CONTATTO]</td>
                <td>
                   <ol>
-                     <li>Rispetta il formato = false [error]</li>
-                     <li>Rispetta il formato = true [PROPERTY ???]</li>
+                     <li>Fornito [FO_CONTATTO] = false [error]</li>
+                     <li>Fornito [FO_CONTATTO] = true [PROPERTY FO_CONTATTO]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2" style="background-color: #EDA600;">Provincia</td>
+               <td> Match [PRO]</td>
+               <td>
+                  <ol>
+                     <li>Match [PRO] = false [error]</li>
+                     <li>Match [PRO] = true [PROPERTY PRO_OK]</li>
                   </ol>
                </td>
             </tr> 
             <tr>
-               <td  style="background-color: #EDA600;">Città</td>
-               <td>Formato ???</td>
+               <td style="display: none;">Provincia</td>
+               <td>Fornito [FO_PROVINCIA]</td>
                <td>
                   <ol>
-                     <li>Rispetta il formato = false [error]</li>
-                     <li>Rispetta il formato = true [PROPERTY ???]</li>
+                     <li>Fornito [FO_PROVINCIA] = false [error]</li>
+                     <li>Fornito [FO_PROVINCIA] = true [PROPERTY FO_PROVINCIA]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2" style="background-color: #EDA600;">Città</td>
+               <td> Match [CIT]</td>
+               <td>
+                  <ol>
+                     <li>Match [CIT] = false [error]</li>
+                     <li>Match [CIT] = true [PROPERTY CIT_OK]</li>
                   </ol>
                </td>
             </tr> 
             <tr>
-               <td>Via e numero civico</td>
+               <td style="display: none;">Città</td>
+               <td>Fornito [FO_CITTÀ]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_CITTÀ] = false [error]</li>
+                     <li>Fornito [FO_CITTÀ] = true [PROPERTY FO_CITTÀ]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2">Via e numero civico</td>
                <td>Formato [FVN]</td>
                <td>
                   <ol>
                      <li>Rispetta il formato = false [error]</li>
                      <li>Rispetta il formato = true [PROPERTY FVN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Via e numero civico</td>
+               <td>Fornito [FO_INDIRIZZO]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_INDIRIZZO] = false [error]</li>
+                     <li>Fornito [FO_INDIRIZZO] = true [PROPERTY FO_INDIRIZZO]</li>
                   </ol>
                </td>
             </tr>
@@ -682,7 +784,7 @@
                <td>
                   <ol>
                      <li>Match con biblioteca = false [error]</li>
-                     <li>Match con biblioteca = true [PROPERTY MB_OK] [IF PROPERTY_FEB_OK]</li>
+                     <li>Match con biblioteca = true [PROPERTY MB_OK] [IF PROPERTY_FE_OK]</li>
                   </ol>
                </td>
             </tr>
