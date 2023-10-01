@@ -2315,17 +2315,28 @@
                <th>Scelte per la categoria</th>
             </tr>
             <tr>
-               <td>Nome</td>
-               <td>Lunghezza [LN]</td>
+               <td rowspan="2">Nome Evento</td>
+               <td >Lunghezza [LN]</td>
                <td>
                   <ol>
-                     <li>Lunghezza > 30 OR Lunghezza < 1 = false [error]</li>
-                     <li>Lunghezza <= 30 AND Lunghezza >= 1 = true [PROPERTY_LN_OK]</li>
+                     <li>Lunghezza &gt; 30 = false [error]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &ge; 3 AND &le; 30 = true [PROPERTY LN_OK]</li>
                   </ol>
                </td>
             </tr>
             <tr>
-               <td>Data e Ora</td>
+               <td style="display: none;">Nome Evento</td>
+               <td>Fornito [FO_NOME_EVENTO]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_NOME_EVENTO] = false [error]</li>
+                     <li>Fornito [FO_NOME_EVENTO] = true [PROPERTY FO_NOME_EVENTO]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr > 
+               <td rowspan="2">Data e Ora</td>
                <td>Correttezza [CD]</td>
                <td>
                   <ol>
@@ -2334,24 +2345,54 @@
                   </ol>
                </td>
             </tr>
-            
             <tr>
-               <td>Descrizione</td>
-               <td>Lunghezza [LD]</td>
+               <td style="display: none;">Data e Ora</td>
+               <td>Fornito [FO_DATA_ORA_EVENTO]</td>
                <td>
                   <ol>
-                     <li>Lunghezza > 255 = false [error]</li>
-                     <li>Lunghezza <= 255 = true [PROPERTY_LD_OK]</li>
+                     <li>Fornito [FO_DATA_ORA_EVENTO] = false [error]</li>
+                     <li>Fornito [FO_DATA_ORA_EVENTO] = true [PROPERTY FO_DATA_ORA_EVENTO]</li>
+                  </ol>
+               </td>
+            </tr>
+            
+            <tr>
+               <td rowspan="2">Descrizione</td>
+               <td >Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza &gt; 255 = false [error]</li>
+                     <li>Lunghezza &le; 255 = true [PROPERTY LN_OK]</li>
                   </ol>
                </td>
             </tr>
             <tr>
-               <td style="background-color: #b50909;">ID Libro</td>
+               <td style="display: none;">Descrizione</td>
+               <td>Fornito [FO_DESCRIZIONE_EVENTO]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_DESCRIZIONE_EVENTO] = false [error]</li>
+                     <li>Fornito [FO_DESCRIZIONE_EVENTO] = true [PROPERTY FO_DESCRIZIONE_EVENTO]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2" style="background-color: #b50909;">ID Libro</td>
                <td>Presente [PST]</td>
                <td>
                   <ol>
-                     <li>Id Libro Specificato = true [PROPERTY_PST_OK]</li>
-                     <li>Id Libro Non Specificato = false [PROPERTY_LD_NOT_OK][single]</li>
+                     <li>Id Libro Specificato presente nel db = true [PROPERTY_PST_OK]</li>
+                     <li>Id Libro Specificato Non presente nel db = false [PROPERTY_PST_NOT_OK][single]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Descrizione</td>
+               <td>Fornito [FO_ID_LIBRO_EVENTO]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_ID_LIBRO_EVENTO] = false [single]</li>
+                     <li>Fornito [FO_ID_LIBRO_EVENTO] = true [PROPERTY FO_ID_LIBRO_EVENTO]</li>
                   </ol>
                </td>
             </tr>
@@ -2391,17 +2432,28 @@
                <th>Scelte per la categoria</th>
             </tr>
             <tr>
-               <td>Nome</td>
-               <td>Lunghezza [LN]</td>
+               <td rowspan="2">Nome Evento</td>
+               <td >Lunghezza [LN]</td>
                <td>
                   <ol>
-                     <li>Lunghezza > 30 OR Lunghezza < 1 = false [error]</li>
-                     <li>Lunghezza <= 30 AND Lunghezza >= 1 = true [PROPERTY_LN_OK]</li>
+                     <li>Lunghezza &gt; 30 = false [error]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &ge; 3 AND &le; 30 = true [PROPERTY LN_OK]</li>
                   </ol>
                </td>
             </tr>
             <tr>
-               <td>Data e Ora</td>
+               <td style="display: none;">Nome Evento</td>
+               <td>Fornito [FO_NOME_EVENTO]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_NOME_EVENTO] = false [error]</li>
+                     <li>Fornito [FO_NOME_EVENTO] = true [PROPERTY FO_NOME_EVENTO]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr > 
+               <td rowspan="2">Data e Ora</td>
                <td>Correttezza [CD]</td>
                <td>
                   <ol>
@@ -2411,22 +2463,53 @@
                </td>
             </tr>
             <tr>
-               <td>Descrizione</td>
-               <td>Lunghezza [LD]</td>
+               <td style="display: none;">Data e Ora</td>
+               <td>Fornito [FO_DATA_ORA_EVENTO]</td>
                <td>
                   <ol>
-                     <li>Lunghezza > 255 = false [error]</li>
-                     <li>Lunghezza <= 255 = true [PROPERTY_LD_OK]</li>
+                     <li>Fornito [FO_DATA_ORA_EVENTO] = false [error]</li>
+                     <li>Fornito [FO_DATA_ORA_EVENTO] = true [PROPERTY FO_DATA_ORA_EVENTO]</li>
+                  </ol>
+               </td>
+            </tr>
+            
+            <tr>
+               <td rowspan="2">Descrizione</td>
+               <td >Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza &gt; 255 = false [error]</li>
+                     <li>Lunghezza &le; 255 = true [PROPERTY LN_OK]</li>
                   </ol>
                </td>
             </tr>
             <tr>
-               <td style="background-color: #b50909;">ID Libro</td>
+               <td style="display: none;">Descrizione</td>
+               <td>Fornito [FO_DESCRIZIONE_EVENTO]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_DESCRIZIONE_EVENTO] = false [error]</li>
+                     <li>Fornito [FO_DESCRIZIONE_EVENTO] = true [PROPERTY FO_DESCRIZIONE_EVENTO]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2" style="background-color: #b50909;">ID Libro</td>
                <td>Presente [PST]</td>
                <td>
                   <ol>
-                     <li>Id Libro Specificato = true [PROPERTY_PST_OK]</li>
-                     <li>Id Libro Non Specificato = false [PROPERTY_LD_NOT_OK][single]</li>
+                     <li>Id Libro Specificato presente nel db = true [PROPERTY_PST_OK]</li>
+                     <li>Id Libro Specificato Non presente nel db = false [PROPERTY_PST_NOT_OK][single]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Descrizione</td>
+               <td>Fornito [FO_ID_LIBRO_EVENTO]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_ID_LIBRO_EVENTO] = false [single]</li>
+                     <li>Fornito [FO_ID_LIBRO_EVENTO] = true [PROPERTY FO_ID_LIBRO_EVENTO]</li>
                   </ol>
                </td>
             </tr>
@@ -2487,12 +2570,22 @@
                </td>
             </tr>
             <tr>
-               <td>Titolo</td>
+               <td rowspan="2">Titolo</td>
                <td>Lunghezza [LT]</td>
                <td>
                   <ol>
                      <li>Lunghezza <= 0 OR Lunghezza > 90 = false [error]</li>
                      <li>Lunghezza > 0 AND Lunghezza <= 90 = true [PROPERTY LT_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Titolo</td>
+               <td>Fornito [FO_TITOLO_LIBRO]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_TITOLO_LIBRO] = false [error]</li>
+                     <li>Fornito [FO_TITOLO_LIBRO] = true [PROPERTY FO_TITOLO_LIBRO]</li>
                   </ol>
                </td>
             </tr>
@@ -2518,7 +2611,7 @@
             </tr>
             <tr>
                <td style="display: none;">Copertina Libro</td>
-               <td>Esistenza File [EXC]	               </td>
+               <td>Fornito File Copertina [EXC]	               </td>
                <td>
                   <ol>
                      <li>Copertina non fornita [single]</li>
@@ -2527,7 +2620,7 @@
                </td>
             </tr>
             <tr>
-               <td>Autore</td>
+               <td rowspan="2">Autore</td>
                <td>Lunghezza [LA]</td>
                <td>
                   <ol>
@@ -2537,7 +2630,17 @@
                </td>
             </tr>
             <tr>
-               <td>Casa Editrice</td>
+               <td style="display: none;">Autore</td>
+               <td>Fornito [FO_AUTORE_LIBRO]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_AUTORE_LIBRO] = false [error]</li>
+                     <li>Fornito [FO_AUTORE_LIBRO] = true [PROPERTY FO_AUTORE_LIBRO]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2">Casa Editrice</td>
                <td>Lunghezza [LC]</td>
                <td>
                   <ol>
@@ -2547,12 +2650,32 @@
                </td>
             </tr>
             <tr>
-               <td>Anno di pubblicazione</td>
+               <td style="display: none;">Casa Editrice</td>
+               <td>Fornito [FO_CASA_EDITRICE]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_CASA_EDITRICE] = false [error]</li>
+                     <li>Fornito [FO_CASA_EDITRICE] = true [PROPERTY FO_CASA_EDITRICE]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2">Anno di pubblicazione</td>
                <td>Correttezza [CA]</td>
                <td>
                   <ol>
                      <li>AnnoPubblicazione > AnnoCorrente + 1 = false [error]</li>
                      <li>AnnoPubblicazione <= AnnoCorrente + 1 = true [PROPERTY CA_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Casa Editrice</td>
+               <td>Fornito [FO_ANNO_PUBBLICAZIONE]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_ANNO_PUBBLICAZIONE] = false [error]</li>
+                     <li>Fornito [FO_ANNO_PUBBLICAZIONE] = true [PROPERTY FO_ANNO_PUBBLICAZIONE]</li>
                   </ol>
                </td>
             </tr>
@@ -2566,8 +2689,18 @@
                   </ol>
                </td>
             </tr>
+            <tr>
+               <td style="display: none;">Descrizione</td>
+               <td>Fornito [FO_DESCRIZIONE_LIBRO]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_DESCRIZIONE_LIBRO] = false [error]</li>
+                     <li>Fornito [FO_DESCRIZIONE_LIBRO] = true [PROPERTY FO_DESCRIZIONE_LIBRO]</li>
+                  </ol>
+               </td>
+            </tr>
          </table>
-         <h4>Inserimento tramite ISBN Nuovo Libro Prenotabile</h4>
+         <h4>Inserimento tramite ID Libro Prenotabile da database</h4>
          <table border="1">
             <tr>
                <th>Parametro</th>
@@ -2596,7 +2729,7 @@
             </tr>
             <tr>
                <td style="display: none;">ISBN</td>
-               <td>Presenza Catalogo Remoto [PCR]</td>
+               <td>Presenza ISBN nel Catalogo Remoto [PCR]</td>
                <td>
                   <ol>
                      <li>ISBN Non Presente nel Catalogo remoto = false [PROPERTY_PCR_NOT_OK]</li>
