@@ -1,0 +1,10 @@
+# Email
+    Match [ME]:
+        Match con email = false.                  [error]
+        Match con email = true.                   [PROPERTY ME_OK]
+
+# Password
+    Match [MP]:
+        Match con password = false.               [error]
+        Match con password = true.                [PROPERTY MP_OK]
+

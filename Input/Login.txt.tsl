@@ -1,0 +1,13 @@
+
+Test Case 1  		<error>
+   Match [ME] :  Match con email = false
+
+
+Test Case 2  		<error>
+   Match [MP] :  Match con password = false
+
+
+Test Case 3  		(Key = 2.2.)
+   Match [ME] :  Match con email = true
+   Match [MP] :  Match con password = true
+
