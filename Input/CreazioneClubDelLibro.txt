@@ -1,0 +1,29 @@
+# Nome Club del Libro
+    Lunghezza [LN]:
+        Lunghezza > 30 = false.                  [error]
+        Lunghezza < 3 = false.                   [error]
+        Lunghezza ≥ 3 AND ≤ 30 = true.           [PROPERTY LN_OK]
+    Fornito [FO_NOME_CLUB]:
+        Fornito [FO_NOME_CLUB] = false.          [error]
+        Fornito [FO_NOME_CLUB] = true.           [PROPERTY FO_NOME_CLUB]
+
+# Descrizione
+    Lunghezza [LN]:
+        Lunghezza > 255 = false.                 [error]
+        Lunghezza >= 3 AND Lunghezza ≤ 255 = true.                  [PROPERTY LN_OK]
+        Lunghezza < 3 = false.			[error]
+    Fornito [FO_DESCRIZIONE_CLUB]:
+        Fornito [FO_DESCRIZIONE_CLUB] = false.   [error]
+        Fornito [FO_DESCRIZIONE_CLUB] = true.    [PROPERTY FO_DESCRIZIONE_CLUB]
+
+# Copertina
+    Grandezza File [GFC]:
+        Grandezza > 15MB = false.                [error]
+        Grandezza ≤ 15MB = true.                 [PROPERTY GFC_OK]
+    Dimensione [DC]:
+        Larghezza > 1024px OR Altezza > 768px = false. [error]
+        Larghezza ≤ 1024px AND Altezza ≤ 768px = true. [PROPERTY DC_OK]
+    Fornito File Copertina [FO_COPERTINA_CLUB]:
+        Fornito [FO_COPERTINA_CLUB] = false.   [single]
+        Fornito [FO_COPERTINA_CLUB] = true.    [PROPERTY FO_COPERTINA_CLUB]
+

@@ -2580,8 +2580,8 @@
                <td>Lunghezza [LT]</td>
                <td>
                   <ol>
-                     <li>Lunghezza <= 0 OR Lunghezza > 90 = false [error]</li>
-                     <li>Lunghezza > 0 AND Lunghezza <= 90 = true [PROPERTY LT_OK]</li>
+                     <li>Lunghezza &le; 0 OR Lunghezza &gt; 90 = false [error]</li>
+                     <li>Lunghezza &gt; 0 AND Lunghezza &le;90 = true [PROPERTY LT_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2630,8 +2630,8 @@
                <td>Lunghezza [LA]</td>
                <td>
                   <ol>
-                     <li>Lunghezza > 60 = false [error]</li>
-                     <li>Lunghezza <= 60 = true [PROPERTY LA_OK]</li>
+                     <li>Lunghezza &gt; 60 = false [error]</li>
+                     <li>Lunghezza &le; 60 = true [PROPERTY LA_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2650,8 +2650,8 @@
                <td>Lunghezza [LC]</td>
                <td>
                   <ol>
-                     <li>Lunghezza <= 0 OR Lunghezza > 30 = false [error]</li>
-                     <li>Lunghezza > 0 AND Lunghezza <= 30 = true [PROPERTY LC_OK]</li>
+                     <li>Lunghezza &le; 0 OR Lunghezza &gt; 30 = false [error]</li>
+                     <li>Lunghezza &gt; 0 AND Lunghezza &le; 30 = true [PROPERTY LC_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2686,12 +2686,13 @@
                </td>
             </tr>
             <tr>
-               <td>Descrizione</td>
+               <td rowspan="2">Descrizione</td>
                <td>Lunghezza [LD]</td>
                <td>
                   <ol>
-                     <li>Lunghezza > 255 = false [error]</li>
-                     <li>Lunghezza <= 255 = true [PROPERTY LD_OK]</li>
+                     <li>Lunghezza &gt; 255 = false [error]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &ge; 3 AND Lugnhezza &le; 255 = true [PROPERTY LD_OK]</li>
                   </ol>
                </td>
             </tr>
