@@ -42,11 +42,20 @@
     Fornito [FO_DESCRIZIONE_EVENTO] = true. [PROPERTY FO_DESCRIZIONE_EVENTO]
 
 # ID Libro
-  Presente [PST]:
-    Id Libro Specificato presente nel db = true. [PROPERTY_PST_OK]
+  Presente [PST_LIBRO]:
+    Id Libro Specificato presente nel db = true. [PROPERTY PST_LIBRO]
     Id Libro Specificato Non presente nel db = false. [error]
 
   Fornito [FO_ID_LIBRO_EVENTO]:
     Fornito [FO_ID_LIBRO_EVENTO] = false. [single]
     Fornito [FO_ID_LIBRO_EVENTO] = true. [PROPERTY FO_ID_LIBRO_EVENTO]
+
+# ID Club
+  Presente [PST_CLUB]:
+    Id Club Specificato presente nel db = true. [PROPERTY PST_CLUB]
+    Id Club Specificato Non presente nel db = false. [error]
+
+  Fornito [FO_ID_CLUB_EVENTO]:
+    Fornito [FO_ID_CLUB_EVENTO] = false. [error]
+    Fornito [FO_ID_CLUB_EVENTO] = true. [PROPERTY FO_ID_CLUB_EVENTO]
 

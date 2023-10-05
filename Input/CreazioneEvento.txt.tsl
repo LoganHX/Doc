@@ -15,6 +15,12 @@ Test Case 4  		<error>
    Match Token [MTC_TK] :  Il Token non è associato all'esperto associato al club (non autorizzato) = false
 
 
+Test Case 5  		<error>
+   Lunghezza [LN] :  Lunghezza > 30 = false
+
+
+Test Case 6  		<error>
+   Lunghezza [LN] :  Lunghezza < 3 = false
 
 
 Test Case 7  		<error>
@@ -41,13 +47,23 @@ Test Case 12 		<error>
    Fornito [FO_DESCRIZIONE_EVENTO] :  Fornito [FO_DESCRIZIONE_EVENTO] = false
 
 
-Test Case 13 		<single>
-   Presente [PST] :  Id Libro Specificato Non presente nel db = false
+Test Case 13 		<error>
+   Presente [PST_LIBRO] :  Id Libro Specificato Non presente nel db = false
 
 
+Test Case 14 		<single>
+   Fornito [FO_ID_LIBRO_EVENTO] :  Fornito [FO_ID_LIBRO_EVENTO] = false
 
 
-Test Case 15 		(Key = 3.2.2.3.2.2.2.3.2.1.2.)
+Test Case 15 		<error>
+   Presente [PST_CLUB] :  Id Club Specificato Non presente nel db = false
+
+
+Test Case 16 		<error>
+   Fornito [FO_ID_CLUB_EVENTO] :  Fornito [FO_ID_CLUB_EVENTO] = false
+
+
+Test Case 17 		(Key = 3.2.2.3.2.2.2.3.2.1.2.1.2.)
    Token [TK]                      :  Il token inviati è valido AND Il token inviato è della giusta tipologia (Espert
    Fornito [FO_TK]                 :  Fornito [FO_TK] = true
    Match Token [MTC_TK]            :  Il Token non è associato all'esperto associato al club (autorizzato) = true
@@ -57,6 +73,8 @@ Test Case 15 		(Key = 3.2.2.3.2.2.2.3.2.1.2.)
    Fornito [FO_DATA_ORA_EVENTO]    :  Fornito [FO_DATA_ORA_EVENTO] = true
    Lunghezza [LN]                  :  Lunghezza ≥ 3 AND ≤ 255 = true
    Fornito [FO_DESCRIZIONE_EVENTO] :  Fornito [FO_DESCRIZIONE_EVENTO] = true
-   Presente [PST]                  :  Id Libro Specificato presente nel db = true
+   Presente [PST_LIBRO]            :  Id Libro Specificato presente nel db = true
    Fornito [FO_ID_LIBRO_EVENTO]    :  Fornito [FO_ID_LIBRO_EVENTO] = true
+   Presente [PST_CLUB]             :  Id Club Specificato presente nel db = true
+   Fornito [FO_ID_CLUB_EVENTO]     :  Fornito [FO_ID_CLUB_EVENTO] = true
 

@@ -2472,21 +2472,41 @@
             </tr>
             <tr>
                <td rowspan="2" style="background-color: #b50909;">ID Libro</td>
-               <td>Presente [PST]</td>
+               <td>Presente [PST_LIBRO]</td>
                <td>
                   <ol>
-                     <li>Id Libro Specificato presente nel db = true [PROPERTY_PST_OK]</li>
+                     <li>Id Libro Specificato presente nel db = true [PROPERTY PST_LIBRO]</li>
                      <li>Id Libro Specificato Non presente nel db = false [error]</li>
                   </ol>
                </td>
             </tr>
             <tr>
-               <td style="display: none;">Descrizione</td>
+               <td style="display: none;">ID Libro</td>
                <td>Fornito [FO_ID_LIBRO_EVENTO]</td>
                <td>
                   <ol>
                      <li>Fornito [FO_ID_LIBRO_EVENTO] = false [single]</li>
                      <li>Fornito [FO_ID_LIBRO_EVENTO] = true [PROPERTY FO_ID_LIBRO_EVENTO]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2" style="background-color: #b50909;">ID Club</td>
+               <td>Presente [PST_CLUB]</td>
+               <td>
+                  <ol>
+                     <li>Id Club Specificato presente nel db = true [PROPERTY PST_CLUB]</li>
+                     <li>Id Club Specificato Non presente nel db = false [error]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">ID Club</td>
+               <td>Fornito [FO_ID_CLUB_EVENTO]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_ID_CLUB_EVENTO] = false [error]</li>
+                     <li>Fornito [FO_ID_CLUB_EVENTO] = true [PROPERTY FO_ID_CLUB_EVENTO]</li>
                   </ol>
                </td>
             </tr>
