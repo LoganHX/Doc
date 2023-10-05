@@ -2376,6 +2376,38 @@
                <th>Scelte per la categoria</th>
             </tr>
             <tr>
+               <td rowspan="3">Token</td>
+               <td >Token [TK]</td>
+               <td>
+                  <ol>
+                     <li>Il token inviato non è valido = false [error]</li>
+                     <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false [error]</li>
+                     <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true [PROPERTY_TK_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Fornito [FO_TK]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_TK] = false [error]</li>
+                     <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Match Token [MTC_TK]</td>
+               <td>
+                  <ol>
+                     <li>Il Token non è associato all'esperto associato al club (non autorizzato) = false [error]</li>
+                     <li>Il Token non è associato all'esperto associato al club (autorizzato) = true [PROPERTY MTC_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+            <tr>
                <td rowspan="2">Nome Evento</td>
                <td >Lunghezza [LN]</td>
                <td>
@@ -2444,7 +2476,7 @@
                <td>
                   <ol>
                      <li>Id Libro Specificato presente nel db = true [PROPERTY_PST_OK]</li>
-                     <li>Id Libro Specificato Non presente nel db = false [PROPERTY_PST_NOT_OK][single]</li>
+                     <li>Id Libro Specificato Non presente nel db = false [error]</li>
                   </ol>
                </td>
             </tr>

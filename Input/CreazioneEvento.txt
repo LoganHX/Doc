@@ -1,0 +1,52 @@
+# Token
+  Token [TK]:
+    Il token inviato non è valido = false. [error]
+    Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false. [error]
+    Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true. [PROPERTY_TK_OK]
+
+  Fornito [FO_TK]:
+    Fornito [FO_TK] = false. [error]
+    Fornito [FO_TK] = true. [PROPERTY FO_TK]
+
+  Match Token [MTC_TK]:
+    Il Token non è associato all'esperto associato al club (non autorizzato) = false. [error]
+    Il Token non è associato all'esperto associato al club (autorizzato) = true. [PROPERTY MTC_TK]
+
+# Nome Evento
+  Lunghezza [LN]:
+    Lunghezza > 30 = false. [error]
+    Lunghezza < 3 = false. [error]
+    Lunghezza ≥ 3 AND ≤ 30 = true. [PROPERTY LN_OK]
+
+  Fornito [FO_NOME_EVENTO]:
+    Fornito [FO_NOME_EVENTO] = false. [error]
+    Fornito [FO_NOME_EVENTO] = true. [PROPERTY FO_NOME_EVENTO]
+
+# Data e Ora
+  Correttezza [CD]:
+    DataOra ≤ DataOraCorrente = false. [error]
+    DataOra > DataOraCorrente = true. [PROPERTY_CD_OK]
+
+  Fornito [FO_DATA_ORA_EVENTO]:
+    Fornito [FO_DATA_ORA_EVENTO] = false. [error]
+    Fornito [FO_DATA_ORA_EVENTO] = true. [PROPERTY FO_DATA_ORA_EVENTO]
+
+# Descrizione
+  Lunghezza [LN]:
+    Lunghezza > 255 = false. [error]
+    Lunghezza < 3 = false. [error]
+    Lunghezza ≥ 3 AND ≤ 255 = true. [PROPERTY LN_OK]
+
+  Fornito [FO_DESCRIZIONE_EVENTO]:
+    Fornito [FO_DESCRIZIONE_EVENTO] = false. [error]
+    Fornito [FO_DESCRIZIONE_EVENTO] = true. [PROPERTY FO_DESCRIZIONE_EVENTO]
+
+# ID Libro
+  Presente [PST]:
+    Id Libro Specificato presente nel db = true. [PROPERTY_PST_OK]
+    Id Libro Specificato Non presente nel db = false. [error]
+
+  Fornito [FO_ID_LIBRO_EVENTO]:
+    Fornito [FO_ID_LIBRO_EVENTO] = false. [single]
+    Fornito [FO_ID_LIBRO_EVENTO] = true. [PROPERTY FO_ID_LIBRO_EVENTO]
+

@@ -1,0 +1,62 @@
+
+Test Case 1  		<error>
+   Token [TK] :  Il token inviato non è valido = false
+
+
+Test Case 2  		<error>
+   Token [TK] :  Il token inviati è valido AND Il token inviato non è della giusta tipologia (Es
+
+
+Test Case 3  		<error>
+   Fornito [FO_TK] :  Fornito [FO_TK] = false
+
+
+Test Case 4  		<error>
+   Match Token [MTC_TK] :  Il Token non è associato all'esperto associato al club (non autorizzato) = false
+
+
+
+
+Test Case 7  		<error>
+   Fornito [FO_NOME_EVENTO] :  Fornito [FO_NOME_EVENTO] = false
+
+
+Test Case 8  		<error>
+   Correttezza [CD] :  DataOra ≤ DataOraCorrente = false
+
+
+Test Case 9  		<error>
+   Fornito [FO_DATA_ORA_EVENTO] :  Fornito [FO_DATA_ORA_EVENTO] = false
+
+
+Test Case 10 		<error>
+   Lunghezza [LN] :  Lunghezza > 255 = false
+
+
+Test Case 11 		<error>
+   Lunghezza [LN] :  Lunghezza < 3 = false
+
+
+Test Case 12 		<error>
+   Fornito [FO_DESCRIZIONE_EVENTO] :  Fornito [FO_DESCRIZIONE_EVENTO] = false
+
+
+Test Case 13 		<single>
+   Presente [PST] :  Id Libro Specificato Non presente nel db = false
+
+
+
+
+Test Case 15 		(Key = 3.2.2.3.2.2.2.3.2.1.2.)
+   Token [TK]                      :  Il token inviati è valido AND Il token inviato è della giusta tipologia (Espert
+   Fornito [FO_TK]                 :  Fornito [FO_TK] = true
+   Match Token [MTC_TK]            :  Il Token non è associato all'esperto associato al club (autorizzato) = true
+   Lunghezza [LN]                  :  Lunghezza ≥ 3 AND ≤ 30 = true
+   Fornito [FO_NOME_EVENTO]        :  Fornito [FO_NOME_EVENTO] = true
+   Correttezza [CD]                :  DataOra > DataOraCorrente = true
+   Fornito [FO_DATA_ORA_EVENTO]    :  Fornito [FO_DATA_ORA_EVENTO] = true
+   Lunghezza [LN]                  :  Lunghezza ≥ 3 AND ≤ 255 = true
+   Fornito [FO_DESCRIZIONE_EVENTO] :  Fornito [FO_DESCRIZIONE_EVENTO] = true
+   Presente [PST]                  :  Id Libro Specificato presente nel db = true
+   Fornito [FO_ID_LIBRO_EVENTO]    :  Fornito [FO_ID_LIBRO_EVENTO] = true
+
