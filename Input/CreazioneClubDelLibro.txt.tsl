@@ -1,18 +1,18 @@
 
 Test Case 1  		<error>
-   Lunghezza [LN] :  Lunghezza > 30 = false
+   Token [TK] :  Il token inviato non è valido = false
 
 
 Test Case 2  		<error>
-   Lunghezza [LN] :  Lunghezza < 3 = false
+   Token [TK] :  Il token inviato è valido AND Il token inviato non è della giusta tipologia (Es
 
 
 Test Case 3  		<error>
-   Fornito [FO_NOME_CLUB] :  Fornito [FO_NOME_CLUB] = false
+   Fornito [FO_TK] :  Fornito [FO_TK] = false
 
 
 Test Case 4  		<error>
-   Lunghezza [LN] :  Lunghezza > 255 = false
+   Lunghezza [LN] :  Lunghezza > 30 = false
 
 
 Test Case 5  		<error>
@@ -20,27 +20,37 @@ Test Case 5  		<error>
 
 
 Test Case 6  		<error>
-   Fornito [FO_DESCRIZIONE_CLUB] :  Fornito [FO_DESCRIZIONE_CLUB] = false
+   Fornito [FO_NOME_CLUB] :  Fornito [FO_NOME_CLUB] = false
 
 
 Test Case 7  		<error>
-   Grandezza File [GFC] :  Grandezza > 15MB = false
+   Lunghezza [LN] :  Lunghezza > 255 = false
 
 
 Test Case 8  		<error>
+   Fornito [FO_DESCRIZIONE_CLUB] :  Fornito [FO_DESCRIZIONE_CLUB] = false
+
+
+Test Case 9  		<error>
+   Grandezza File [GFC] :  Grandezza > 15MB = false
+
+
+Test Case 10 		<error>
    Dimensione [DC] :  Larghezza > 1024px OR Altezza > 768px = false
 
 
-Test Case 9  		<single>
-   Fornito File Copertina [FO_COPERTINA_CLUB] :  Fornito [FO_COPERTINA_CLUB] = false
+Test Case 11 		<single>
+   Fornito File Copertina [FO_COPERTINA_CLUB] :  Copertina non fornita = false
 
 
-Test Case 10 		(Key = 3.2.2.2.2.2.2.)
+Test Case 12 		(Key = 3.2.3.2.2.2.2.2.2.)
+   Token [TK]                                 :  Il token inviato è valido AND Il token inviato è della giusta tipologia (Espert
+   Fornito [FO_TK]                            :  Fornito [FO_TK] = true
    Lunghezza [LN]                             :  Lunghezza ≥ 3 AND ≤ 30 = true
    Fornito [FO_NOME_CLUB]                     :  Fornito [FO_NOME_CLUB] = true
-   Lunghezza [LN]                             :  Lunghezza >= 3 AND Lunghezza ≤ 255 = true
+   Lunghezza [LN]                             :  Lunghezza ≤ 255 = true
    Fornito [FO_DESCRIZIONE_CLUB]              :  Fornito [FO_DESCRIZIONE_CLUB] = true
    Grandezza File [GFC]                       :  Grandezza ≤ 15MB = true
    Dimensione [DC]                            :  Larghezza ≤ 1024px AND Altezza ≤ 768px = true
-   Fornito File Copertina [FO_COPERTINA_CLUB] :  Fornito [FO_COPERTINA_CLUB] = true
+   Fornito File Copertina [FO_COPERTINA_CLUB] :  Copertina fornita = true
 

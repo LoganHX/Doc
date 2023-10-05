@@ -2086,6 +2086,30 @@
                <th>Nome Categoria</th>
                <th>Scelte per la categoria</th>
             </tr>
+
+            <tr>
+               <td rowspan="2">Token</td>
+               <td >Token [TK]</td>
+               <td>
+                  <ol>
+                     <li>Il token inviato non è valido = false [error]</li>
+                     <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false [error]</li>
+                     <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true [PROPERTY_TK_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Fornito [FO_TK]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_TK] = false [error]</li>
+                     <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+
+
             <tr>
                <td rowspan="2">Nome Club del Libro</td>
                <td >Lunghezza [LN]</td>
@@ -2136,8 +2160,8 @@
                <td>Grandezza File [GFC]</td>
                <td>
                   <ol>
-                     <li>Grandezza > 15MB = false [error]</li>
-                     <li>Grandezza <= 15MB = true [PROPERTY GFC_OK]</li>
+                     <li>Grandezza &gt; 15MB = false [error]</li>
+                     <li>Grandezza &le; 15MB = true [PROPERTY GFC_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2146,8 +2170,8 @@
                <td>Dimensione [DC]</td>
                <td>
                   <ol>
-                     <li>Larghezza > 1024px OR Altezza > 768 px = false [error]</li>
-                     <li>Larghezza <= 1024px AND Altezza <=768px = true [PROPERTY DC_OK]</li>
+                     <li>Larghezza &gt; 1024px OR Altezza &gt; 768 px = false [error]</li>
+                     <li>Larghezza &le; 1024px AND Altezza &le; 768px = true [PROPERTY DC_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2157,13 +2181,12 @@
                <td>Fornito File Copertina [FO_COPERTINA_CLUB]</td>
                <td>
                   <ol>
-                     <li>Copertina non fornita [single]</li>
-                     <li>Copertina fornita [PROPERTY FO_COPERTINA_CLUB]</li>
+                     <li>Copertina non fornita = false [single]</li>
+                     <li>Copertina fornita = true [PROPERTY FO_COPERTINA_CLUB]</li>
                   </ol>
                </td>
             </tr>
          </table>
-         <!DOCTYPE html>
          <table border="1">
             <tr>
                <th>Test Case ID</th>
@@ -2205,6 +2228,37 @@
                   <th>Scelte per la categoria</th>
                </tr>
                <tr>
+                  <td rowspan="3">Token</td>
+                  <td >Token [TK]</td>
+                  <td>
+                     <ol>
+                        <li>Il token inviato non è valido = false [error]</li>
+                        <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false [error]</li>
+                        <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true [PROPERTY_TK_OK]</li>
+                     </ol>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="display: none;">Token</td>
+                  <td>Fornito [FO_TK]</td>
+                  <td>
+                     <ol>
+                        <li>Fornito [FO_TK] = false [error]</li>
+                        <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+                     </ol>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="display: none;">Token</td>
+                  <td>Match Token [MTC_TK]</td>
+                  <td>
+                     <ol>
+                        <li>Il Token non è associato all'esperto associato al club (non autorizzato) = false [error]</li>
+                        <li>Il Token non è associato all'esperto associato al club (autorizzato) = true [PROPERTY MTC_TK]</li>
+                     </ol>
+                  </td>
+               </tr>
+               <tr>
                   <td rowspan="2">Nome Club del Libro</td>
                   <td >Lunghezza [LN]</td>
                   <td>
@@ -2233,7 +2287,8 @@
                   <td>
                      <ol>
                         <li>Lunghezza &gt; 255 = false [error]</li>
-                        <li>Lunghezza &le; 255 = true [PROPERTY LN_OK]</li>
+                        <li>Lunghezza &lt; 3 = false [error]</li>
+                        <li>Lunghezza &ge; 3 AND &le; 255 = true [PROPERTY LN_OK]</li>
                      </ol>
                   </td>
                </tr>
@@ -2254,8 +2309,8 @@
                   <td>Grandezza File [GFC]</td>
                   <td>
                      <ol>
-                        <li>Grandezza > 15MB = false [error]</li>
-                        <li>Grandezza <= 15MB = true [PROPERTY GFC_OK]</li>
+                        <li>Grandezza &gt; 15MB = false [error]</li>
+                        <li>Grandezza &le; 15MB = true [PROPERTY GFC_OK]</li>
                      </ol>
                   </td>
                </tr>
@@ -2264,8 +2319,8 @@
                   <td>Dimensione [DC]</td>
                   <td>
                      <ol>
-                        <li>Larghezza > 1024px OR Altezza > 768 px = false [error]</li>
-                        <li>Larghezza <= 1024px AND Altezza <=768px = true [PROPERTY DC_OK]</li>
+                        <li>Larghezza &gt; 1024px OR Altezza &gt; 768 px = false [error]</li>
+                        <li>Larghezza &le; 1024px AND Altezza &le; 768px = true [PROPERTY DC_OK]</li>
                      </ol>
                   </td>
                </tr>
@@ -2275,8 +2330,8 @@
                   <td>Fornito File Copertina [FO_COPERTINA_CLUB]</td>
                   <td>
                      <ol>
-                        <li>Copertina non fornita [single]</li>
-                        <li>Copertina fornita [PROPERTY FO_COPERTINA_CLUB]</li>
+                        <li>Copertina non fornita = false [single]</li>
+                        <li>Copertina fornita = true [PROPERTY FO_COPERTINA_CLUB]</li>
                      </ol>
                   </td>
                </tr>
@@ -2313,7 +2368,7 @@
                <td>Corretto</td>
             </tr>
          </table>
-         <h4>Organizzazione Evento</h4>
+         <h4>Creazione Evento</h4>
          <table border="1">
             <tr>
                <th>Parametro</th>
@@ -2346,8 +2401,8 @@
                <td>Correttezza [CD]</td>
                <td>
                   <ol>
-                     <li>DataOra <= DataOraCorrente = false [error]</li>
-                     <li>DataOra > DataOraCorrente = true [PROPERTY_CD_OK]</li>
+                     <li>DataOra &le; DataOraCorrente = false [error]</li>
+                     <li>DataOra &gt; DataOraCorrente = true [PROPERTY_CD_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2368,7 +2423,8 @@
                <td>
                   <ol>
                      <li>Lunghezza &gt; 255 = false [error]</li>
-                     <li>Lunghezza &le; 255 = true [PROPERTY LN_OK]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &ge; 3 AND &le; 255 = true [PROPERTY LN_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2463,8 +2519,8 @@
                <td>Correttezza [CD]</td>
                <td>
                   <ol>
-                     <li>DataOra <= DataOraCorrente = false [error]</li>
-                     <li>DataOra > DataOraCorrente = true [PROPERTY_CD_OK]</li>
+                     <li>DataOra &le; DataOraCorrente = false [error]</li>
+                     <li>DataOra &gt; DataOraCorrente = true [PROPERTY_CD_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2600,8 +2656,8 @@
                <td>Grandezza File [GFC]</td>
                <td>
                   <ol>
-                     <li>Grandezza > 15MB = false [error]</li>
-                     <li>Grandezza <= 15MB = true [PROPERTY GFC_OK]</li>
+                     <li>Grandezza &gt; 15MB = false [error]</li>
+                     <li>Grandezza &le; 15MB = true [PROPERTY GFC_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2610,8 +2666,8 @@
                <td>Dimensione [DC]</td>
                <td>
                   <ol>
-                     <li>Dimensione > 1024x1024 pixel = false [error]</li>
-                     <li>Dimensione <= 1024x1024 pixel = true [PROPERTY DC_OK]</li>
+                     <li>Dimensione &gt; 1024x1024 pixel = false [error]</li>
+                     <li>Dimensione &le; 1024x1024 pixel = ????????????????????????? true [PROPERTY DC_OK]</li>
                   </ol>
                </td>
             </tr>

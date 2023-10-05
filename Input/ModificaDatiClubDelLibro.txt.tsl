@@ -1,0 +1,65 @@
+
+Test Case 1  		<error>
+   Token [TK] :  - Il token inviato non è valido = false
+
+
+Test Case 2  		<error>
+   Token [TK] :  - Il token inviato è valido AND Il token inviato non è della giusta tipologia (
+
+
+Test Case 3  		<error>
+   Fornito [FO_TK] :  - Fornito [FO_TK] = false
+
+
+Test Case 4  		<error>
+   Match Token [MTC_TK] :  - Il Token non è associato all'esperto associato al club (non autorizzato) = fal
+
+
+Test Case 5  		<error>
+   Lunghezza [LN] :  - Lunghezza > 30 = false
+
+
+Test Case 6  		<error>
+   Lunghezza [LN] :  - Lunghezza < 3 = false
+
+
+Test Case 7  		<error>
+   Fornito [FO_NOME_CLUB] :  - Fornito [FO_NOME_CLUB] = false
+
+
+Test Case 8  		<error>
+   Lunghezza [LN] :  - Lunghezza > 255 = false
+
+
+Test Case 9  		<error>
+   Lunghezza [LN] :  - Lunghezza < 3 = false
+
+
+Test Case 10 		<error>
+   Fornito [FO_DESCRIZIONE_CLUB] :  - Fornito [FO_DESCRIZIONE_CLUB] = false
+
+
+Test Case 11 		<error>
+   Grandezza File [GFC] :  - Grandezza > 15MB = false
+
+
+Test Case 12 		<error>
+   Dimensione [DC] :  - Larghezza > 1024px OR Altezza > 768px = false
+
+
+Test Case 13 		<single>
+   Fornito File Copertina [FO_COPERTINA_CLUB] :  - Copertina non fornita = false
+
+
+Test Case 14 		(Key = 3.2.2.3.2.3.2.2.2.2.)
+   Token [TK]                                 :  - Il token inviato è valido AND Il token inviato è della giusta tipologia (Espe
+   Fornito [FO_TK]                            :  - Fornito [FO_TK] = true
+   Match Token [MTC_TK]                       :  - Il Token non è associato all'esperto associato al club (autorizzato) = true
+   Lunghezza [LN]                             :  - Lunghezza ≥ 3 AND ≤ 30 = true
+   Fornito [FO_NOME_CLUB]                     :  - Fornito [FO_NOME_CLUB] = true
+   Lunghezza [LN]                             :  - Lunghezza ≥ 3 AND ≤ 255 = true
+   Fornito [FO_DESCRIZIONE_CLUB]              :  - Fornito [FO_DESCRIZIONE_CLUB] = true
+   Grandezza File [GFC]                       :  - Grandezza ≤ 15MB = true
+   Dimensione [DC]                            :  - Larghezza ≤ 1024px AND Altezza ≤ 768px = true
+   Fornito File Copertina [FO_COPERTINA_CLUB] :  - Copertina fornita = true
+
