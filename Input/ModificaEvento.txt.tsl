@@ -1,0 +1,30 @@
+
+
+
+Test Case 4  		<error>
+   Token [TK] :  Il token inviato non è valido = false
+
+
+Test Case 5  		<error>
+   Token [TK] :  Il token inviati è valido AND Il token inviato non è della giusta tipologia (Es
+
+
+Test Case 6  		<error>
+   Fornito [FO_TK] :  Fornito [FO_TK] = false
+
+
+Test Case 7  		<error>
+   Match Token [MTC_TK] :  Il Token non è associato all'esperto associato al club (non autorizzato) = false
+
+
+
+
+Test Case 15 		<error>
+   Presente [PST_CLUB] :  Id Club Specificato Non presente nel db = false
+
+
+Test Case 16 		<error>
+   Fornito [FO_ID_CLUB_EVENTO] :  Fornito [FO_ID_CLUB_EVENTO] = false
+
+
+
