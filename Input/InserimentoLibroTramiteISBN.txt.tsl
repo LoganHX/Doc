@@ -1,0 +1,28 @@
+
+Test Case 1  		<error>
+   Fornito [FO] :  ISBN Non Inserito = false
+
+
+Test Case 2  		<error>
+   Validità [VI] :  ISBN Non Valido (non rispetta il formato) = false
+
+
+Test Case 3  		<error>
+   Presenza ISBN nel Catalogo Remoto [PCR] :  ISBN Non Presente nel Catalogo remoto = false
+
+
+Test Case 4  		<error>
+   Quantità [QU] :  Numero copie ≤ 0 = false
+
+
+Test Case 5  		<error>
+   Fornito [FO_NC] :  Numero copie non Fornito = false
+
+
+Test Case 6  		(Key = 2.2.2.2.2.)
+   Fornito [FO]                            :  ISBN Inserito = true
+   Validità [VI]                          :  ISBN Valido (rispetta il formato) = true
+   Presenza ISBN nel Catalogo Remoto [PCR] :  ISBN Presente nel Catalogo remoto = true
+   Quantità [QU]                          :  Numero copie > 0 = true
+   Fornito [FO_NC]                         :  Numero copie fornito = true
+

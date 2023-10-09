@@ -2896,6 +2896,26 @@
                <th>Nome Categoria</th>
                <th>Scelte per la categoria</th>
             </tr>
+            <td rowspan="2">Token</td>
+            <td >Token [TK]</td>
+            <td>
+               <ol>
+                  <li>Il token inviato non è valido = false [error]</li>
+                  <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false [error]</li>
+                  <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true [PROPERTY_TK_OK]</li>
+               </ol>
+            </td>
+         </tr>
+         <tr>
+            <td style="display: none;">Token</td>
+            <td>Fornito [FO_TK]</td>
+            <td>
+               <ol>
+                  <li>Fornito [FO_TK] = false [error]</li>
+                  <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+               </ol>
+            </td>
+         </tr>
             <tr>
                <td rowspan="3" style="background-color: #b50909;">ISBN</td>
                <td>Fornito [FO]</td>
@@ -2921,7 +2941,7 @@
                <td>Presenza ISBN nel Catalogo Remoto [PCR]</td>
                <td>
                   <ol>
-                     <li>ISBN Non Presente nel Catalogo remoto = false [PROPERTY_PCR_NOT_OK]</li>
+                     <li>ISBN Non Presente nel Catalogo remoto = false [error]</li>
                      <li>ISBN Presente nel Catalogo remoto = true [PROPERTY_VI_OK]</li>
                   </ol>
                </td>
@@ -2955,6 +2975,26 @@
                <th>Nome Categoria</th>
                <th>Scelte per la categoria</th>
             </tr>
+            <td rowspan="2">Token</td>
+            <td >Token [TK]</td>
+            <td>
+               <ol>
+                  <li>Il token inviato non è valido = false [error]</li>
+                  <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false [error]</li>
+                  <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true [PROPERTY_TK_OK]</li>
+               </ol>
+            </td>
+         </tr>
+         <tr>
+            <td style="display: none;">Token</td>
+            <td>Fornito [FO_TK]</td>
+            <td>
+               <ol>
+                  <li>Fornito [FO_TK] = false [error]</li>
+                  <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+               </ol>
+            </td>
+         </tr>
             <tr>
                <td rowspan="2" style="background-color: #b50909;">ID Libro</td>
                <td>Esistente [EI]</td>

@@ -1,0 +1,22 @@
+# ISBN
+    Fornito [FO]:
+        ISBN Non Inserito = false.                            [error]
+        ISBN Inserito = true.                                 [PROPERTY_FO_OK]
+
+    Validità [VI]:
+        ISBN Non Valido (non rispetta il formato) = false.    [error]
+        ISBN Valido (rispetta il formato) = true.             [PROPERTY_VI_OK]
+
+    Presenza ISBN nel Catalogo Remoto [PCR]:
+        ISBN Non Presente nel Catalogo remoto = false.        [error]
+        ISBN Presente nel Catalogo remoto = true.             [PROPERTY_PCR_OK]
+
+# Numero Copie
+    Quantità [QU]:
+        Numero copie ≤ 0 = false.                              [error]
+        Numero copie > 0 = true.                               [PROPERTY_QU_OK]
+
+    Fornito [FO_NC]:
+        Numero copie non Fornito = false.                      [error]
+        Numero copie fornito = true.                           [PROPERTY_FO_NC_OK]
+
