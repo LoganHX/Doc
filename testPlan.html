@@ -2688,8 +2688,8 @@
                <td>Validità [VI]</td>
                <td>
                   <ol>
-                     <li>ISBN Non Valido = false [error]</li>
-                     <li>ISBN Valido = true [PROPERTY_VI_OK]</li>
+                     <li>ISBN Non Valido (non rispetta il formato) = false [error]</li>
+                     <li>ISBN Valido (rispetta il formato) = true [PROPERTY_VI_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2698,8 +2698,9 @@
                <td>Lunghezza [LT]</td>
                <td>
                   <ol>
-                     <li>Lunghezza &le; 0 OR Lunghezza &gt; 90 = false [error]</li>
-                     <li>Lunghezza &gt; 0 AND Lunghezza &le;90 = true [PROPERTY LT_OK]</li>
+                     <li>Lunghezza &le; 3</li>
+                     <li>Lunghezza &gt; 90 = false [error]</li>
+                     <li>Lunghezza &gt; 0 AND Lunghezza &le; 90 = true [PROPERTY LT_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2728,8 +2729,8 @@
                <td>Dimensione [DC]</td>
                <td>
                   <ol>
-                     <li>Dimensione &gt; 1024x1024 pixel = false [error]</li>
-                     <li>Dimensione &le; 1024x1024 pixel = ????????????????????????? true [PROPERTY DC_OK]</li>
+                     <li>Larghezza &gt; 1024px OR Altezza &gt; 768 px = false [error]</li>
+                     <li>Larghezza &le; 1024px AND Altezza &le; 768px = true [PROPERTY DC_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2748,8 +2749,9 @@
                <td>Lunghezza [LA]</td>
                <td>
                   <ol>
-                     <li>Lunghezza &gt; 60 = false [error]</li>
-                     <li>Lunghezza &le; 60 = true [PROPERTY LA_OK]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &gt; 90 = false [error]</li>
+                     <li>Lunghezza &le; 90 = true [PROPERTY LA_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2765,11 +2767,12 @@
             </tr>
             <tr>
                <td rowspan="2">Casa Editrice</td>
-               <td>Lunghezza [LC]</td>
+               <td>Lunghezza [LCE]</td>
                <td>
                   <ol>
-                     <li>Lunghezza &le; 0 OR Lunghezza &gt; 30 = false [error]</li>
-                     <li>Lunghezza &gt; 0 AND Lunghezza &le; 30 = true [PROPERTY LC_OK]</li>
+                     <li>Lunghezza &gt; 144 = false [error]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &ge; 3 AND Lugnhezza &le; 144 = true [PROPERTY LCE_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2785,11 +2788,11 @@
             </tr>
             <tr>
                <td rowspan="2">Anno di pubblicazione</td>
-               <td>Correttezza [CA]</td>
+               <td>Rispetta Formato [FAP]</td>
                <td>
                   <ol>
-                     <li>AnnoPubblicazione > AnnoCorrente + 1 = false [error]</li>
-                     <li>AnnoPubblicazione <= AnnoCorrente + 1 = true [PROPERTY CA_OK]</li>
+                     <li>Rispetta formato [FAP] = false [error]</li>
+                     <li>Rispetta formato [FAP] = true [PROPERTY FAP_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2847,8 +2850,8 @@
                <td>Validità [VI]</td>
                <td>
                   <ol>
-                     <li>ISBN Non Valido = false [error]</li>
-                     <li>ISBN Valido = true [PROPERTY_VI_OK]</li>
+                     <li>ISBN Non Valido (non rispetta il formato) = false [error]</li>
+                     <li>ISBN Valido (rispetta il formato) = true [PROPERTY_VI_OK]</li>
                   </ol>
                </td>
             </tr>

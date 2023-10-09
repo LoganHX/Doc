@@ -1,0 +1,60 @@
+# ISBN
+    Fornito [FO]:
+        ISBN Non Inserito = false.         [error]
+        ISBN Inserito = true.              [PROPERTY_FO_OK]
+    Validità [VI]:
+        ISBN Non Valido = false.          [error]
+        ISBN Valido = true.               [PROPERTY_VI_OK]
+
+# Titolo
+    Lunghezza [LT]:
+        Lunghezza ≤ 0 OR Lunghezza > 90 = false.    [error]
+        Lunghezza > 0 AND Lunghezza ≤ 90 = true.    [PROPERTY LT_OK]
+    Fornito [FO_TITOLO_LIBRO]:
+        Fornito [FO_TITOLO_LIBRO] = false.         [error]
+        Fornito [FO_TITOLO_LIBRO] = true.          [PROPERTY FO_TITOLO_LIBRO]
+
+# Copertina Libro
+    Grandezza File [GFC]:
+        Grandezza > 15MB = false.                   [error]
+        Grandezza ≤ 15MB = true.                    [PROPERTY GFC_OK]
+    Dimensione [DC]:
+        Larghezza > 1024px OR Altezza > 768px = false.     [error]
+        Larghezza ≤ 1024px AND Altezza ≤ 768px = true.     [PROPERTY DC_OK]
+    Fornito File Copertina [EXC]:
+        Copertina non fornita [single].
+        Copertina fornita [PROPERTY EXC_OK]
+
+# Autore
+    Lunghezza [LA]:
+        Lunghezza > 90 = false.                    [error]
+        Lunghezza ≤ 90 = true.                     [PROPERTY LA_OK]
+    Fornito [FO_AUTORE_LIBRO]:
+        Fornito [FO_AUTORE_LIBRO] = false.          [error]
+        Fornito [FO_AUTORE_LIBRO] = true.           [PROPERTY FO_AUTORE_LIBRO]
+
+# Casa Editrice
+    Lunghezza [LC]:
+        Lunghezza ≤ 0 OR Lunghezza > 30 = false.    [error]
+        Lunghezza > 0 AND Lunghezza ≤ 30 = true.    [PROPERTY LC_OK]
+    Fornito [FO_CASA_EDITRICE]:
+        Fornito [FO_CASA_EDITRICE] = false.         [error]
+        Fornito [FO_CASA_EDITRICE] = true.          [PROPERTY FO_CASA_EDITRICE]
+
+# Anno di pubblicazione
+    Correttezza [CA]:
+        AnnoPubblicazione > AnnoCorrente + 1 = false.    [error]
+        AnnoPubblicazione ≤ AnnoCorrente + 1 = true.    [PROPERTY CA_OK]
+    Fornito [FO_ANNO_PUBBLICAZIONE]:
+        Fornito [FO_ANNO_PUBBLICAZIONE] = false.         [error]
+        Fornito [FO_ANNO_PUBBLICAZIONE] = true.          [PROPERTY FO_ANNO_PUBBLICAZIONE]
+
+# Descrizione
+    Lunghezza [LD]:
+        Lunghezza > 255 = false.                  [error]
+        Lunghezza < 3 = false.                   [error]
+        Lunghezza ≥ 3 AND Lunghezza ≤ 255 = true. [PROPERTY LD_OK]
+    Fornito [FO_DESCRIZIONE_LIBRO]:
+        Fornito [FO_DESCRIZIONE_LIBRO] = false.    [error]
+        Fornito [FO_DESCRIZIONE_LIBRO] = true.     [PROPERTY FO_DESCRIZIONE_LIBRO]
+

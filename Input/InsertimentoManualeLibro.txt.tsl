@@ -1,0 +1,17 @@
+
+
+Test Case 9  		<error>
+   Lunghezza [LC] :  Lunghezza ≤ 0 OR Lunghezza > 30 = false
+
+
+
+
+Test Case 13 		<error>
+   Lunghezza [LD] :  Lunghezza > 255 = false
+
+
+Test Case 14 		<error>
+   Lunghezza [LD] :  Lunghezza < 3 = false
+
+
+
