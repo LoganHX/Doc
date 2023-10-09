@@ -1,17 +1,120 @@
 
+Test Case 1  		<error>
+   Token [TK] :  Il token inviato non è valido = false
+
+
+Test Case 2  		<error>
+   Token [TK] :  Il token inviato è valido AND Il token inviato non è della giusta tipologia (Bi
+
+
+Test Case 3  		<error>
+   Fornito [FO_TK] :  Fornito [FO_TK] = false
+
+
+Test Case 4  		<error>
+   Fornito [FO] :  ISBN Non Inserito = false
+
+
+Test Case 5  		<error>
+   Validità [VI] :  ISBN Non Valido (non rispetta il formato) = false
+
+
+Test Case 6  		<error>
+   Lunghezza [LT] :  Lunghezza > 90 = false
+
+
+Test Case 7  		<error>
+   Fornito [FO_TITOLO_LIBRO] :  Fornito [FO_TITOLO_LIBRO] = false
+
+
+Test Case 8  		<error>
+   Grandezza File [GFC] :  Grandezza > 15MB = false
+
 
 Test Case 9  		<error>
-   Lunghezza [LC] :  Lunghezza ≤ 0 OR Lunghezza > 30 = false
+   Dimensione [DC] :  Larghezza > 1024px OR Altezza > 768px = false
 
 
+Test Case 10 		<error>
+   Lunghezza [LA] :  Lunghezza < 3 = false
+
+
+Test Case 11 		<error>
+   Lunghezza [LA] :  Lunghezza > 90 = false
+
+
+Test Case 12 		<error>
+   Fornito [FO_AUTORE_LIBRO] :  Fornito [FO_AUTORE_LIBRO] = false
 
 
 Test Case 13 		<error>
-   Lunghezza [LD] :  Lunghezza > 255 = false
+   Lunghezza [LCE] :  Lunghezza > 144 = false
 
 
 Test Case 14 		<error>
+   Lunghezza [LCE] :  Lunghezza < 3 = false
+
+
+Test Case 15 		<error>
+   Fornito [FO_CASA_EDITRICE] :  Fornito [FO_CASA_EDITRICE] = false
+
+
+Test Case 16 		<error>
+   Rispetta Formato [FAP] :  Rispetta formato [FAP] = false
+
+
+Test Case 17 		<error>
+   Fornito [FO_ANNO_PUBBLICAZIONE] :  Fornito [FO_ANNO_PUBBLICAZIONE] = false
+
+
+Test Case 18 		<error>
+   Lunghezza [LD] :  Lunghezza > 255 = false
+
+
+Test Case 19 		<error>
    Lunghezza [LD] :  Lunghezza < 3 = false
 
 
+Test Case 20 		<error>
+   Fornito [FO_DESCRIZIONE_LIBRO] :  Fornito [FO_DESCRIZIONE_LIBRO] = false
+
+
+Test Case 21 		(Key = 3.2.2.2.1.2.2.2.1.3.2.3.2.2.2.3.2.)
+   Token [TK]                      :  Il token inviato è valido AND Il token inviato è della giusta tipologia (Biblio
+   Fornito [FO_TK]                 :  Fornito [FO_TK] = true
+   Fornito [FO]                    :  ISBN Inserito = true
+   Validità [VI]                  :  ISBN Valido (rispetta il formato) = true
+   Lunghezza [LT]                  :  Lunghezza ≤ 3
+   Fornito [FO_TITOLO_LIBRO]       :  Fornito [FO_TITOLO_LIBRO] = true
+   Grandezza File [GFC]            :  Grandezza ≤ 15MB = true
+   Dimensione [DC]                 :  Larghezza ≤ 1024px AND Altezza ≤ 768px = true
+   Fornito File Copertina [EXC]    :  Copertina non fornita [single]
+   Lunghezza [LA]                  :  Lunghezza ≤ 90 = true
+   Fornito [FO_AUTORE_LIBRO]       :  Fornito [FO_AUTORE_LIBRO] = true
+   Lunghezza [LCE]                 :  Lunghezza ≥ 3 AND Lunghezza ≤ 144 = true
+   Fornito [FO_CASA_EDITRICE]      :  Fornito [FO_CASA_EDITRICE] = true
+   Rispetta Formato [FAP]          :  Rispetta formato [FAP] = true
+   Fornito [FO_ANNO_PUBBLICAZIONE] :  Fornito [FO_ANNO_PUBBLICAZIONE] = true
+   Lunghezza [LD]                  :  Lunghezza ≥ 3 AND Lunghezza ≤ 255 = true
+   Fornito [FO_DESCRIZIONE_LIBRO]  :  Fornito [FO_DESCRIZIONE_LIBRO] = true
+
+
+Test Case 22 		(Key = 3.2.2.2.3.2.2.2.1.3.2.3.2.2.2.3.2.)
+   Token [TK]                      :  Il token inviato è valido AND Il token inviato è della giusta tipologia (Biblio
+   Fornito [FO_TK]                 :  Fornito [FO_TK] = true
+   Fornito [FO]                    :  ISBN Inserito = true
+   Validità [VI]                  :  ISBN Valido (rispetta il formato) = true
+   Lunghezza [LT]                  :  Lunghezza > 0 AND Lunghezza ≤ 90 = true
+   Fornito [FO_TITOLO_LIBRO]       :  Fornito [FO_TITOLO_LIBRO] = true
+   Grandezza File [GFC]            :  Grandezza ≤ 15MB = true
+   Dimensione [DC]                 :  Larghezza ≤ 1024px AND Altezza ≤ 768px = true
+   Fornito File Copertina [EXC]    :  Copertina non fornita [single]
+   Lunghezza [LA]                  :  Lunghezza ≤ 90 = true
+   Fornito [FO_AUTORE_LIBRO]       :  Fornito [FO_AUTORE_LIBRO] = true
+   Lunghezza [LCE]                 :  Lunghezza ≥ 3 AND Lunghezza ≤ 144 = true
+   Fornito [FO_CASA_EDITRICE]      :  Fornito [FO_CASA_EDITRICE] = true
+   Rispetta Formato [FAP]          :  Rispetta formato [FAP] = true
+   Fornito [FO_ANNO_PUBBLICAZIONE] :  Fornito [FO_ANNO_PUBBLICAZIONE] = true
+   Lunghezza [LD]                  :  Lunghezza ≥ 3 AND Lunghezza ≤ 255 = true
+   Fornito [FO_DESCRIZIONE_LIBRO]  :  Fornito [FO_DESCRIZIONE_LIBRO] = true
 

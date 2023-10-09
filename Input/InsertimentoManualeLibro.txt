@@ -1,15 +1,25 @@
+# Token
+    Token [TK]:
+        Il token inviato non è valido = false.                                                    [error]
+        Il token inviato è valido AND Il token inviato non è della giusta tipologia (Biblioteca) = false. [error]
+        Il token inviato è valido AND Il token inviato è della giusta tipologia (Biblioteca) = true.  [PROPERTY_TK_OK]
+    Fornito [FO_TK]:
+        Fornito [FO_TK] = false.              [error]
+        Fornito [FO_TK] = true.               [PROPERTY FO_TK]
+
 # ISBN
     Fornito [FO]:
         ISBN Non Inserito = false.         [error]
         ISBN Inserito = true.              [PROPERTY_FO_OK]
     Validità [VI]:
-        ISBN Non Valido = false.          [error]
-        ISBN Valido = true.               [PROPERTY_VI_OK]
+        ISBN Non Valido (non rispetta il formato) = false.    [error]
+        ISBN Valido (rispetta il formato) = true.             [PROPERTY_VI_OK]
 
 # Titolo
     Lunghezza [LT]:
-        Lunghezza ≤ 0 OR Lunghezza > 90 = false.    [error]
-        Lunghezza > 0 AND Lunghezza ≤ 90 = true.    [PROPERTY LT_OK]
+        Lunghezza ≤ 3.
+        Lunghezza > 90 = false.                    [error]
+        Lunghezza > 0 AND Lunghezza ≤ 90 = true.   [PROPERTY LT_OK]
     Fornito [FO_TITOLO_LIBRO]:
         Fornito [FO_TITOLO_LIBRO] = false.         [error]
         Fornito [FO_TITOLO_LIBRO] = true.          [PROPERTY FO_TITOLO_LIBRO]
@@ -27,27 +37,29 @@
 
 # Autore
     Lunghezza [LA]:
-        Lunghezza > 90 = false.                    [error]
-        Lunghezza ≤ 90 = true.                     [PROPERTY LA_OK]
+        Lunghezza < 3 = false.                  [error]
+        Lunghezza > 90 = false.                [error]
+        Lunghezza ≤ 90 = true.                 [PROPERTY LA_OK]
     Fornito [FO_AUTORE_LIBRO]:
-        Fornito [FO_AUTORE_LIBRO] = false.          [error]
-        Fornito [FO_AUTORE_LIBRO] = true.           [PROPERTY FO_AUTORE_LIBRO]
+        Fornito [FO_AUTORE_LIBRO] = false.    [error]
+        Fornito [FO_AUTORE_LIBRO] = true.     [PROPERTY FO_AUTORE_LIBRO]
 
 # Casa Editrice
-    Lunghezza [LC]:
-        Lunghezza ≤ 0 OR Lunghezza > 30 = false.    [error]
-        Lunghezza > 0 AND Lunghezza ≤ 30 = true.    [PROPERTY LC_OK]
+    Lunghezza [LCE]:
+        Lunghezza > 144 = false.                    [error]
+        Lunghezza < 3 = false.                      [error]
+        Lunghezza ≥ 3 AND Lunghezza ≤ 144 = true.  [PROPERTY LCE_OK]
     Fornito [FO_CASA_EDITRICE]:
         Fornito [FO_CASA_EDITRICE] = false.         [error]
         Fornito [FO_CASA_EDITRICE] = true.          [PROPERTY FO_CASA_EDITRICE]
 
 # Anno di pubblicazione
-    Correttezza [CA]:
-        AnnoPubblicazione > AnnoCorrente + 1 = false.    [error]
-        AnnoPubblicazione ≤ AnnoCorrente + 1 = true.    [PROPERTY CA_OK]
+    Rispetta Formato [FAP]:
+        Rispetta formato [FAP] = false.             [error]
+        Rispetta formato [FAP] = true.              [PROPERTY FAP_OK]
     Fornito [FO_ANNO_PUBBLICAZIONE]:
-        Fornito [FO_ANNO_PUBBLICAZIONE] = false.         [error]
-        Fornito [FO_ANNO_PUBBLICAZIONE] = true.          [PROPERTY FO_ANNO_PUBBLICAZIONE]
+        Fornito [FO_ANNO_PUBBLICAZIONE] = false.    [error]
+        Fornito [FO_ANNO_PUBBLICAZIONE] = true.     [PROPERTY FO_ANNO_PUBBLICAZIONE]
 
 # Descrizione
     Lunghezza [LD]:

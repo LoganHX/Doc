@@ -1,0 +1,8 @@
+# ID Libro
+    Esistente [EI]:
+        Libro con ID fornito non presente nel database = false.           [error]
+        Libro con ID fornito non presente nel database = true.            [PROPERTY_EI_OK]
+
+    Fornito [FO_ID]:
+        ID non Fornito = false.                                           [error]
+        ID fornito = true.                                                [PROPERTY_FO_ID_OK]

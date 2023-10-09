@@ -1,0 +1,13 @@
+
+Test Case 1  		<error>
+   Esistente [EI] :  Libro con ID fornito non presente nel database = false
+
+
+Test Case 2  		<error>
+   Fornito [FO_ID] :  ID non Fornito = false
+
+
+Test Case 3  		(Key = 2.2.)
+   Esistente [EI]  :  Libro con ID fornito non presente nel database = true
+   Fornito [FO_ID] :  ID fornito = true
+

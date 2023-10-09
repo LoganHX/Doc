@@ -2108,6 +2108,16 @@
                   </ol>
                </td>
             </tr>
+            <tr style="display: none;">
+               <td style="display: none;">Token</td>
+               <td>Match Token [MTC_TK]</td>
+               <td>
+                  <ol>
+                     <li>Il Token non è associato all'esperto associato al club (non autorizzato) = false [error]</li>
+                     <li>Il Token è associato all'esperto associato al club (autorizzato) = true [PROPERTY MTC_TK]</li>
+                  </ol>
+               </td>
+            </tr>
 
 
             <tr>
@@ -2254,7 +2264,7 @@
                   <td>
                      <ol>
                         <li>Il Token non è associato all'esperto associato al club (non autorizzato) = false [error]</li>
-                        <li>Il Token non è associato all'esperto associato al club (autorizzato) = true [PROPERTY MTC_TK]</li>
+                        <li>Il Token è associato all'esperto associato al club (autorizzato) = true [PROPERTY MTC_TK]</li>
                      </ol>
                   </td>
                </tr>
@@ -2402,7 +2412,7 @@
                <td>
                   <ol>
                      <li>Il Token non è associato all'esperto associato al club (non autorizzato) = false [error]</li>
-                     <li>Il Token non è associato all'esperto associato al club (autorizzato) = true [PROPERTY MTC_TK]</li>
+                     <li>Il Token è associato all'esperto associato al club (autorizzato) = true [PROPERTY MTC_TK]</li>
                   </ol>
                </td>
             </tr>
@@ -2491,7 +2501,7 @@
                </td>
             </tr>
             <tr>
-               <td rowspan="2" style="background-color: #b50909;">ID Club</td>
+               <td rowspan="3" style="background-color: #b50909;">ID Club</td>
                <td>Presente [PST_CLUB]</td>
                <td>
                   <ol>
@@ -2501,7 +2511,7 @@
                </td>
             </tr>
             <tr>
-               <td rowspan="2" style="background-color: #b50909;">ID Club</td>
+               <td style="display: none;">ID Club</td>
                <td>Match ID Club [MTC_CLUB]</td>
                <td>
                   <ol>
@@ -2674,6 +2684,37 @@
                <th>Scelte per la categoria</th>
             </tr>
             <tr>
+               <td rowspan="2">Token</td>
+               <td >Token [TK]</td>
+               <td>
+                  <ol>
+                     <li>Il token inviato non è valido = false [error]</li>
+                     <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Biblioteca) = false [error]</li>
+                     <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Biblioteca) = true [PROPERTY_TK_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Fornito [FO_TK]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_TK] = false [error]</li>
+                     <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr style="display: none;">
+               <td style="display: none;">Token</td>
+               <td>Match Token [MTC_TK]</td>
+               <td>
+                  <ol>
+                     <li>Il Token non è associato alla Biblioteca a cui si vuole aggiungere il libro (non autorizzato) = false [error]</li>
+                     <li>Il Token è associato alla Biblioteca a cui si vuole aggiungere il libro (autorizzato) = true [PROPERTY MTC_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
                <td rowspan="2">ISBN</td>
                <td>Fornito [FO]</td>
                <td>
@@ -2827,8 +2868,28 @@
                   </ol>
                </td>
             </tr>
+            <tr>
+               <td rowspan="2" style="background-color: #b50909;">Numero Copie</td>
+               <td>Quantità [QU]</td>
+               <td>
+                  <ol>
+                     <li>Numero copie &le; 0 = false [error]</li>
+                     <li>Numero copie &gt; 0 = true [PROPERTY_QU_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Numero Copie</td>
+               <td>Fornito [FO_NC]</td>
+               <td>
+                  <ol>
+                     <li>Numero copie non Fornito = false [error]</li>
+                     <li>Numero copie fornito = true [PROPERTY_FO_NC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
          </table>
-         <h4>Inserimento tramite ID Libro Prenotabile da database</h4>
+         <h4>Inserimento tramite ISBN Libro</h4>
          <table border="1">
             <tr>
                <th>Parametro</th>
@@ -2865,9 +2926,29 @@
                   </ol>
                </td>
             </tr>
+            <tr>
+               <td rowspan="2" style="background-color: #b50909;">Numero Copie</td>
+               <td>Quantità [QU]</td>
+               <td>
+                  <ol>
+                     <li>Numero copie &le; 0 = false [error]</li>
+                     <li>Numero copie &gt; 0 = true [PROPERTY_QU_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Numero Copie</td>
+               <td>Fornito [FO_NC]</td>
+               <td>
+                  <ol>
+                     <li>Numero copie non Fornito = false [error]</li>
+                     <li>Numero copie fornito = true [PROPERTY_FO_NC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
          </table>
 
-         <h4>Inserimento tramite ISBN Nuovo Libro Prenotabile</h4>
+         <h4>Inserimento tramite ID Nuovo Libro Prenotabile</h4>
          <table border="1">
             <tr>
                <th>Parametro</th>
@@ -2875,12 +2956,42 @@
                <th>Scelte per la categoria</th>
             </tr>
             <tr>
-               <td rowspan="3" style="background-color: #b50909;">ID Libro</td>
+               <td rowspan="2" style="background-color: #b50909;">ID Libro</td>
                <td>Esistente [EI]</td>
                <td>
                   <ol>
                      <li>Libro con ID fornito non presente nel database = false [error]</li>
                      <li>Libro con ID fornito non presente nel database = true [PROPERTY_EI_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td  style="display: none;">ID Libro</td>
+               <td>Fornito [FO_ID]</td>
+               <td>
+                  <ol>
+                     <li>ID non Fornito = false [error]</li>
+                     <li>ID fornito = true [PROPERTY_FO_ID_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2" style="background-color: #b50909;">Numero Copie</td>
+               <td>Quantità [QU]</td>
+               <td>
+                  <ol>
+                     <li>Numero copie &le; 0 = false [error]</li>
+                     <li>Numero copie &gt; 0 = true [PROPERTY_QU_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Numero Copie</td>
+               <td>Fornito [FO_NC]</td>
+               <td>
+                  <ol>
+                     <li>Numero copie non Fornito = false [error]</li>
+                     <li>Numero copie fornito = true [PROPERTY_FO_NC_OK]</li>
                   </ol>
                </td>
             </tr>
