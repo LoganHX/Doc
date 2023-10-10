@@ -19,10 +19,60 @@ Test Case 5  		<error>
    Fornito [FO_NC] :  Numero copie non Fornito = false
 
 
-Test Case 6  		(Key = 2.2.2.2.2.)
+Test Case 6  		<error>
+   Quantità generi forniti [FO_GENERI] :  Forniti 0 generi = false
+
+
+Test Case 7  		<error>  (follows [if])
+   Esistenza Generi [ESI_GENERI] :  Generi non esistenti = false
+
+
+Test Case 8  		(Key = 2.2.2.2.2.2.2.)
    Fornito [FO]                            :  ISBN Inserito = true
    Validità [VI]                          :  ISBN Valido (rispetta il formato) = true
    Presenza ISBN nel Catalogo Remoto [PCR] :  ISBN Presente nel Catalogo remoto = true
    Quantità [QU]                          :  Numero copie > 0 = true
    Fornito [FO_NC]                         :  Numero copie fornito = true
+   Quantità generi forniti [FO_GENERI]    :  Fornito 1 genere = true
+   Esistenza Generi [ESI_GENERI]           :  Generi forniti non esistenti = false
+
+
+Test Case 9  		(Key = 2.2.2.2.2.2.4.)
+   Fornito [FO]                            :  ISBN Inserito = true
+   Validità [VI]                          :  ISBN Valido (rispetta il formato) = true
+   Presenza ISBN nel Catalogo Remoto [PCR] :  ISBN Presente nel Catalogo remoto = true
+   Quantità [QU]                          :  Numero copie > 0 = true
+   Fornito [FO_NC]                         :  Numero copie fornito = true
+   Quantità generi forniti [FO_GENERI]    :  Fornito 1 genere = true
+   Esistenza Generi [ESI_GENERI]           :  Generi forniti esistenti = true
+
+
+Test Case 10 		(Key = 2.2.2.2.2.3.2.)
+   Fornito [FO]                            :  ISBN Inserito = true
+   Validità [VI]                          :  ISBN Valido (rispetta il formato) = true
+   Presenza ISBN nel Catalogo Remoto [PCR] :  ISBN Presente nel Catalogo remoto = true
+   Quantità [QU]                          :  Numero copie > 0 = true
+   Fornito [FO_NC]                         :  Numero copie fornito = true
+   Quantità generi forniti [FO_GENERI]    :  Fornito 2 (n) generi = true
+   Esistenza Generi [ESI_GENERI]           :  Generi forniti non esistenti = false
+
+
+Test Case 11 		(Key = 2.2.2.2.2.3.3.)
+   Fornito [FO]                            :  ISBN Inserito = true
+   Validità [VI]                          :  ISBN Valido (rispetta il formato) = true
+   Presenza ISBN nel Catalogo Remoto [PCR] :  ISBN Presente nel Catalogo remoto = true
+   Quantità [QU]                          :  Numero copie > 0 = true
+   Fornito [FO_NC]                         :  Numero copie fornito = true
+   Quantità generi forniti [FO_GENERI]    :  Fornito 2 (n) generi = true
+   Esistenza Generi [ESI_GENERI]           :  Generi forniti esistenti e non esisteni = false
+
+
+Test Case 12 		(Key = 2.2.2.2.2.3.4.)
+   Fornito [FO]                            :  ISBN Inserito = true
+   Validità [VI]                          :  ISBN Valido (rispetta il formato) = true
+   Presenza ISBN nel Catalogo Remoto [PCR] :  ISBN Presente nel Catalogo remoto = true
+   Quantità [QU]                          :  Numero copie > 0 = true
+   Fornito [FO_NC]                         :  Numero copie fornito = true
+   Quantità generi forniti [FO_GENERI]    :  Fornito 2 (n) generi = true
+   Esistenza Generi [ESI_GENERI]           :  Generi forniti esistenti = true
 

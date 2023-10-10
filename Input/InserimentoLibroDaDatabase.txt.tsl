@@ -1,13 +1,37 @@
 
 Test Case 1  		<error>
-   Esistente [EI] :  Libro con ID fornito non presente nel database = false
+   Token [TK] :  Il token inviato non è valido = false
 
 
 Test Case 2  		<error>
+   Token [TK] :  Il token inviati è valido AND Il token inviato non è della giusta tipologia (Es
+
+
+Test Case 3  		<error>
+   Fornito [FO_TK] :  Fornito [FO_TK] = false
+
+
+Test Case 4  		<error>
+   Esistente [EI] :  Libro con ID fornito non presente nel database = false
+
+
+Test Case 5  		<error>
    Fornito [FO_ID] :  ID non Fornito = false
 
 
-Test Case 3  		(Key = 2.2.)
-   Esistente [EI]  :  Libro con ID fornito non presente nel database = true
-   Fornito [FO_ID] :  ID fornito = true
+Test Case 6  		<error>
+   Quantità [QU_NC] :  Numero copie ≤ 0 = false
+
+
+Test Case 7  		<error>
+   Fornito [FO_NC] :  Numero copie non Fornito = false
+
+
+Test Case 8  		(Key = 3.2.2.2.2.2.)
+   Token [TK]        :  Il token inviati è valido AND Il token inviato è della giusta tipologia (Espert
+   Fornito [FO_TK]   :  Fornito [FO_TK] = true
+   Esistente [EI]    :  Libro con ID fornito non presente nel database = true
+   Fornito [FO_ID]   :  ID fornito = true
+   Quantità [QU_NC] :  Numero copie > 0 = true
+   Fornito [FO_NC]   :  Numero copie fornito = true
 

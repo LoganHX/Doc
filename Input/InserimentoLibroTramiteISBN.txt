@@ -19,4 +19,14 @@
     Fornito [FO_NC]:
         Numero copie non Fornito = false.                      [error]
         Numero copie fornito = true.                           [PROPERTY_FO_NC_OK]
+# Generi
+    Quantità generi forniti [FO_GENERI]:
+        Forniti 0 generi = false. 				[error]
+        Fornito 1 genere = true. 				[property FO_GENERE_SINGOLO]
+        Fornito 2 (n) generi = true. 				[property FO_GENERI_MULTIPLI]
 
+    Esistenza Generi [ESI_GENERI]:
+        Generi non esistenti = false. 				[if FO_GENERE_SINGOLO || FO_GENERI_MULTIPLI] [error]
+        Generi forniti non esistenti = false. 			[if FO_GENERE_SINGOLO || FO_GENERI_MULTIPLI]] [PROPERTY FVN_OK]
+        Generi forniti esistenti e non esistenti = false. 	[if FO_GENERI_MULTIPLI]
+        Generi forniti esistenti = true. 			[PROPERTY FVN_OK]

@@ -1,8 +1,29 @@
+# Token
+    Token [TK]:
+        Il token inviato non è valido = false.                                [error]
+        Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false. [error]
+        Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true. [PROPERTY_TK_OK]
+
+    Fornito [FO_TK]:
+        Fornito [FO_TK] = false. [error]
+        Fornito [FO_TK] = true. [PROPERTY FO_TK]
+
 # ID Libro
     Esistente [EI]:
-        Libro con ID fornito non presente nel database = false.           [error]
-        Libro con ID fornito non presente nel database = true.            [PROPERTY_EI_OK]
+        Libro con ID fornito non presente nel database = false. [error]
+        Libro con ID fornito non presente nel database = true. [PROPERTY_EI_OK]
 
     Fornito [FO_ID]:
-        ID non Fornito = false.                                           [error]
-        ID fornito = true.                                                [PROPERTY_FO_ID_OK]
+        ID non Fornito = false. [error]
+        ID fornito = true. [PROPERTY_FO_ID_OK]
+
+# Numero Copie
+    Quantità [QU_NC]:
+        Numero copie ≤ 0 = false. [error]
+        Numero copie > 0 = true. [PROPERTY_QU_NC_OK]
+
+    Fornito [FO_NC]:
+        Numero copie non Fornito = false. [error]
+        Numero copie fornito = true. [PROPERTY_FO_NC_OK]
+
+
