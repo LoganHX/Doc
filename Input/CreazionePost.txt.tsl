@@ -35,12 +35,27 @@ Test Case 9  		<error>
    Fornito [FO_CON_POST] :  Fornito [FO_CON_POST] = false
 
 
-Test Case 10 		(Key = 2.2.2.3.2.3.2.)
-   Token [TK]               :  Il token inviato è valido = true
-   Fornito [FO_TK]          :  Fornito [FO_TK] = true
-   Tipologia Token [TIP_TK] :  Token Esperto = true
-   Lunghezza [LTIT]         :  Lunghezza ≥ 3 AND ≤ 255 = true
-   Fornito [FO_TIT_POST]    :  Fornito [FO_TIT_POST] = true
-   Lunghezza [LCON]         :  Lunghezza ≥ 3 AND ≤ 255 = true
-   Fornito [FO_CON_POST]    :  Fornito [FO_CON_POST] = true
+Test Case 10 		<error>
+   Presente [PST_CLUB] :  Id Club Specificato Non presente nel db = false
+
+
+Test Case 11 		<error>
+   Match ID Club [MTC_CLUB_ESPERTO] :  Id Club non è l'ID del Club a cui è associato l'esperto = false
+
+
+Test Case 12 		<error>
+   Fornito [FO_ID_CLUB_POST] :  Fornito [FO_ID_CLUB_POST] = false
+
+
+Test Case 13 		(Key = 2.2.2.3.2.3.2.1.1.2.)
+   Token [TK]                       :  Il token inviato è valido = true
+   Fornito [FO_TK]                  :  Fornito [FO_TK] = true
+   Tipologia Token [TIP_TK]         :  Token Esperto = true
+   Lunghezza [LTIT]                 :  Lunghezza ≥ 3 AND ≤ 255 = true
+   Fornito [FO_TIT_POST]            :  Fornito [FO_TIT_POST] = true
+   Lunghezza [LCON]                 :  Lunghezza ≥ 3 AND ≤ 255 = true
+   Fornito [FO_CON_POST]            :  Fornito [FO_CON_POST] = true
+   Presente [PST_CLUB]              :  Id Club Specificato presente nel db = true
+   Match ID Club [MTC_CLUB_ESPERTO] :  Id Club è l'ID del Club a cui è associato l'esperto = true
+   Fornito [FO_ID_CLUB_POST]        :  Fornito [FO_ID_CLUB_POST] = true
 

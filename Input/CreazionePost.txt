@@ -8,8 +8,8 @@ Fornito [FO_TK]:
 	Fornito [FO_TK] = true. [PROPERTY FO_TK]
 
 Tipologia Token [TIP_TK]:
-	Token non Esperto = false. [if PROPERTY_TK_OK] [error]
-	Token Esperto = true. [if PROPERTY_TK_OK] [PROPERTY TIP_TK]
+	Token non Esperto = false. [if PROPERTY_TK_OK][error]
+	Token Esperto = true. [if PROPERTY_TK_OK][PROPERTY TIP_TK]
 
 # Titolo
 Lunghezza [LTIT]:
@@ -30,3 +30,17 @@ Lunghezza [LCON]:
 Fornito [FO_CON_POST]:
 	Fornito [FO_CON_POST] = false. [error]
 	Fornito [FO_CON_POST] = true. [PROPERTY FO_CON_POST]
+
+# ID Club
+Presente [PST_CLUB]:
+	Id Club Specificato presente nel db = true. [PROPERTY PST_CLUB]
+	Id Club Specificato Non presente nel db = false. [error]
+
+Match ID Club [MTC_CLUB_ESPERTO]:
+	Id Club è l'ID del Club a cui è associato l'esperto = true. [PROPERTY MTC_CLUB_ESPERTO]
+	Id Club non è l'ID del Club a cui è associato l'esperto = false. [error]
+
+Fornito [FO_ID_CLUB_POST]:
+	Fornito [FO_ID_CLUB_POST] = false. [error]
+	Fornito [FO_ID_CLUB_POST] = true. [PROPERTY FO_ID_CLUB_POST]
+
