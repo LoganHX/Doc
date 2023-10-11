@@ -944,8 +944,8 @@
                <td>Formato [FEB]</td>
                <td>
                   <ol>
-                     <li>Biblioteca associata alla e-mail esistente [PROPERTY_FEB_OK]</li>
-                     <li>Biblioteca associata alla e-mail non esistente [error]</li>
+                     <li>Email rispetta il formato = true [PROPERTY_FEB_OK]</li>
+                     <li>Email non rispetta il formato = false [error]</li>
                   </ol>
                </td>
             </tr>
@@ -2110,15 +2110,13 @@
                <th>Nome Categoria</th>
                <th>Scelte per la categoria</th>
             </tr>
-
             <tr>
-               <td rowspan="2">Token</td>
+               <td rowspan="3">Token</td>
                <td >Token [TK]</td>
                <td>
                   <ol>
                      <li>Il token inviato non è valido = false [error]</li>
-                     <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false [error]</li>
-                     <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true [PROPERTY_TK_OK]</li>
+                     <li>Il token inviati è valido = true [PROPERTY_TK_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2132,13 +2130,13 @@
                   </ol>
                </td>
             </tr>
-            <tr style="display: none;">
+            <tr>
                <td style="display: none;">Token</td>
-               <td>Match Token [MTC_TK]</td>
+               <td>Tipologia Token [TIP_TK]</td>
                <td>
                   <ol>
-                     <li>Il Token non è associato all'esperto associato al club (non autorizzato) = false [error]</li>
-                     <li>Il Token è associato all'esperto associato al club (autorizzato) = true [PROPERTY MTC_TK]</li>
+                     <li>Token non Esperto = false [if PROPERTY_TK_OK][error]</li>
+                     <li>Token Esperto = true [if PROPERTY_TK_OK][PROPERTY TIP_TK]</li>
                   </ol>
                </td>
             </tr>
@@ -2267,8 +2265,7 @@
                   <td>
                      <ol>
                         <li>Il token inviato non è valido = false [error]</li>
-                        <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false [error]</li>
-                        <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true [PROPERTY_TK_OK]</li>
+                        <li>Il token inviati è valido = true [PROPERTY_TK_OK]</li>
                      </ol>
                   </td>
                </tr>
@@ -2279,6 +2276,16 @@
                      <ol>
                         <li>Fornito [FO_TK] = false [error]</li>
                         <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+                     </ol>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="display: none;">Token</td>
+                  <td>Tipologia Token [TIP_TK]</td>
+                  <td>
+                     <ol>
+                        <li>Token non Esperto = false [if PROPERTY_TK_OK][error]</li>
+                        <li>Token Esperto = true [if PROPERTY_TK_OK][PROPERTY TIP_TK]</li>
                      </ol>
                   </td>
                </tr>
@@ -2415,8 +2422,7 @@
                <td>
                   <ol>
                      <li>Il token inviato non è valido = false [error]</li>
-                     <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false [error]</li>
-                     <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true [PROPERTY_TK_OK]</li>
+                     <li>Il token inviati è valido = true [PROPERTY_TK_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2427,6 +2433,16 @@
                   <ol>
                      <li>Fornito [FO_TK] = false [error]</li>
                      <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Tipologia Token [TIP_TK]</td>
+               <td>
+                  <ol>
+                     <li>Token non Esperto = false [if PROPERTY_TK_OK][error]</li>
+                     <li>Token Esperto = true [if PROPERTY_TK_OK][PROPERTY TIP_TK]</li>
                   </ol>
                </td>
             </tr>
@@ -2525,12 +2541,22 @@
                </td>
             </tr>
             <tr>
-               <td rowspan="3" style="background-color: #b50909;">ID Club</td>
+               <td rowspan="4" style="background-color: #b50909;">ID Club</td>
                <td>Presente [PST_CLUB]</td>
                <td>
                   <ol>
                      <li>Id Club Specificato presente nel db = true [PROPERTY PST_CLUB]</li>
                      <li>Id Club Specificato Non presente nel db = false [error]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none; background-color: palegreen;">ID Club</td>
+               <td>Match ID Club [MTC_CLUB_ESPERTO]</td>
+               <td>
+                  <ol>
+                     <li>Id Club è l'ID del Club a cui è associato l'esperto = true [PROPERTY MTC_CLUB_ESPERTO]</li>
+                     <li>Id Club non è l'ID del Club a cui è associato l'esperto = false [error]</li>
                   </ol>
                </td>
             </tr>
@@ -2637,17 +2663,18 @@
                <td>
                   <ol>
                      <li>Lunghezza &gt; 255 = false [error]</li>
-                     <li>Lunghezza &le; 255 = true [PROPERTY LN_OK]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &ge; 3 AND &le; 255 = true [PROPERTY LN_OK]</li>
                   </ol>
                </td>
             </tr>
             <tr>
                <td style="display: none;">Descrizione</td>
-               <td>Fornito [FO_DESCRIZIONE_EVENTO]</td>
+               <td>Fornito [FO_DESCRIZIONE_CLUB]</td>
                <td>
                   <ol>
-                     <li>Fornito [FO_DESCRIZIONE_EVENTO] = false [error]</li>
-                     <li>Fornito [FO_DESCRIZIONE_EVENTO] = true [PROPERTY FO_DESCRIZIONE_EVENTO]</li>
+                     <li>Fornito [FO_DESCRIZIONE_CLUB] = false [error]</li>
+                     <li>Fornito [FO_DESCRIZIONE_CLUB] = true [PROPERTY FO_DESCRIZIONE_CLUB]</li>
                   </ol>
                </td>
             </tr>
@@ -2662,7 +2689,7 @@
                </td>
             </tr>
             <tr>
-               <td style="display: none;">Descrizione</td>
+               <td style="display: none;">ID Libro</td>
                <td>Fornito [FO_ID_LIBRO_EVENTO]</td>
                <td>
                   <ol>
@@ -2708,13 +2735,12 @@
                <th>Scelte per la categoria</th>
             </tr>
             <tr>
-               <td rowspan="2">Token</td>
+               <td rowspan="3">Token</td>
                <td >Token [TK]</td>
                <td>
                   <ol>
                      <li>Il token inviato non è valido = false [error]</li>
-                     <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Biblioteca) = false [error]</li>
-                     <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Biblioteca) = true [PROPERTY_TK_OK]</li>
+                     <li>Il token inviati è valido = true [PROPERTY_TK_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2725,6 +2751,16 @@
                   <ol>
                      <li>Fornito [FO_TK] = false [error]</li>
                      <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Tipologia Token [TIP_TK]</td>
+               <td>
+                  <ol>
+                     <li>Token non Esperto = false [if PROPERTY_TK_OK][error]</li>
+                     <li>Token Esperto = true [if PROPERTY_TK_OK][PROPERTY TIP_TK]</li>
                   </ol>
                </td>
             </tr>
@@ -2941,26 +2977,36 @@
                <th>Nome Categoria</th>
                <th>Scelte per la categoria</th>
             </tr>
-            <td rowspan="2">Token</td>
-            <td >Token [TK]</td>
-            <td>
-               <ol>
-                  <li>Il token inviato non è valido = false [error]</li>
-                  <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false [error]</li>
-                  <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true [PROPERTY_TK_OK]</li>
-               </ol>
-            </td>
-         </tr>
-         <tr>
-            <td style="display: none;">Token</td>
-            <td>Fornito [FO_TK]</td>
-            <td>
-               <ol>
-                  <li>Fornito [FO_TK] = false [error]</li>
-                  <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
-               </ol>
-            </td>
-         </tr>
+            <tr>
+               <td rowspan="3">Token</td>
+               <td >Token [TK]</td>
+               <td>
+                  <ol>
+                     <li>Il token inviato non è valido = false [error]</li>
+                     <li>Il token inviati è valido = true [PROPERTY_TK_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Fornito [FO_TK]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_TK] = false [error]</li>
+                     <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Tipologia Token [TIP_TK]</td>
+               <td>
+                  <ol>
+                     <li>Token non Esperto = false [if PROPERTY_TK_OK][error]</li>
+                     <li>Token Esperto = true [if PROPERTY_TK_OK][PROPERTY TIP_TK]</li>
+                  </ol>
+               </td>
+            </tr>
             <tr>
                <td rowspan="3" style="background-color: #b50909;">ISBN</td>
                <td>Fornito [FO]</td>
@@ -3041,26 +3087,36 @@
                <th>Nome Categoria</th>
                <th>Scelte per la categoria</th>
             </tr>
-            <td rowspan="2">Token</td>
-            <td >Token [TK]</td>
-            <td>
-               <ol>
-                  <li>Il token inviato non è valido = false [error]</li>
-                  <li>Il token inviati è valido AND Il token inviato non è della giusta tipologia (Esperto) = false [error]</li>
-                  <li>Il token inviati è valido AND Il token inviato è della giusta tipologia (Esperto) = true [PROPERTY_TK_OK]</li>
-               </ol>
-            </td>
-         </tr>
-         <tr>
-            <td style="display: none;">Token</td>
-            <td>Fornito [FO_TK]</td>
-            <td>
-               <ol>
-                  <li>Fornito [FO_TK] = false [error]</li>
-                  <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
-               </ol>
-            </td>
-         </tr>
+            <tr>
+               <td rowspan="3">Token</td>
+               <td >Token [TK]</td>
+               <td>
+                  <ol>
+                     <li>Il token inviato non è valido = false [error]</li>
+                     <li>Il token inviati è valido = true [PROPERTY_TK_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Fornito [FO_TK]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_TK] = false [error]</li>
+                     <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Tipologia Token [TIP_TK]</td>
+               <td>
+                  <ol>
+                     <li>Token non Esperto = false [if PROPERTY_TK_OK][error]</li>
+                     <li>Token Esperto = true [if PROPERTY_TK_OK][PROPERTY TIP_TK]</li>
+                  </ol>
+               </td>
+            </tr>
             <tr>
                <td rowspan="2" style="background-color: #b50909;">ID Libro</td>
                <td>Esistente [EI]</td>
@@ -3201,6 +3257,122 @@
                <td>Corretto</td>
             </tr>
          </table>
+
+
+         <h3>Gestione Post</h3>
+         <h4>Creazione Post</h4>
+         <table border="1" >
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td rowspan="3">Token</td>
+               <td >Token [TK]</td>
+               <td>
+                  <ol>
+                     <li>Il token inviato non è valido = false [error]</li>
+                     <li>Il token inviati è valido = true [PROPERTY_TK_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Fornito [FO_TK]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_TK] = false [error]</li>
+                     <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Tipologia Token [TIP_TK]</td>
+               <td>
+                  <ol>
+                     <li>Token non Esperto = false [if PROPERTY_TK_OK][error]</li>
+                     <li>Token Esperto = true [if PROPERTY_TK_OK][PROPERTY TIP_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2">Titolo</td>
+               <td >Lunghezza [LTIT]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza &gt; 255 = false [error]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &ge; 3 AND &le; 255 = true [PROPERTY LTIT_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Titolo</td>
+               <td>Fornito [FO_TIT_POST]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_TIT_POST] = false [error]</li>
+                     <li>Fornito [FO_TIT_POST] = true [PROPERTY FO_TIT_POST]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2">Contenuto</td>
+               <td >Lunghezza [LCON]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza &gt; 255 = false [error]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &ge; 3 AND &le; 255 = true [PROPERTY LCON_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Contenuto</td>
+               <td>Fornito [FO_CON_POST]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_CON_POST] = false [error]</li>
+                     <li>Fornito [FO_CON_POST] = true [PROPERTY FO_CON_POST]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="3" style="background-color: #b50909;">ID Club</td>
+               <td>Presente [PST_CLUB]</td>
+               <td>
+                  <ol>
+                     <li>Id Club Specificato presente nel db = true [PROPERTY PST_CLUB]</li>
+                     <li>Id Club Specificato Non presente nel db = false [error]</li>
+                  </ol>
+               </td>
+            </tr>
+            
+            <tr>
+               <td style="display: none; background-color: palegreen;">ID Club</td>
+               <td>Match ID Club [MTC_CLUB_ESPERTO]</td>
+               <td>
+                  <ol>
+                     <li>Id Club è l'ID del Club a cui è associato l'esperto = true [PROPERTY MTC_CLUB_ESPERTO]</li>
+                     <li>Id Club non è l'ID del Club a cui è associato l'esperto = false [error]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">ID Club</td>
+               <td>Fornito [FO_ID_CLUB_POST]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_ID_CLUB_POST] = false [error]</li>
+                     <li>Fornito [FO_ID_CLUB_POST] = true [PROPERTY FO_ID_CLUB_POST]</li>
+                  </ol>
+               </td>
+            </tr>
+            
+         </table>
+
          <h2 id=schedule>10. Testing schedule</h2>
          <p>Le attività di pianificazione del testing avverranno come definito nei capitoli precedenti, cioè subito dopo la fase di design necessaria per la pianificazione.</p>
          <p>La scrittura dei casi di test avverrà in contemporanea con lo sviluppo del codice.</p>

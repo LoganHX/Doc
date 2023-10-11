@@ -1,0 +1,46 @@
+
+Test Case 1  		<error>
+   Token [TK] :  Il token inviato non è valido = false
+
+
+Test Case 2  		<error>
+   Fornito [FO_TK] :  Fornito [FO_TK] = false
+
+
+Test Case 3  		<error>  (follows [if])
+   Tipologia Token [TIP_TK] :  Token non Esperto = false
+
+
+Test Case 4  		<error>
+   Lunghezza [LTIT] :  Lunghezza > 255 = false
+
+
+Test Case 5  		<error>
+   Lunghezza [LTIT] :  Lunghezza < 3 = false
+
+
+Test Case 6  		<error>
+   Fornito [FO_TIT_POST] :  Fornito [FO_TIT_POST] = false
+
+
+Test Case 7  		<error>
+   Lunghezza [LCON] :  Lunghezza > 255 = false
+
+
+Test Case 8  		<error>
+   Lunghezza [LCON] :  Lunghezza < 3 = false
+
+
+Test Case 9  		<error>
+   Fornito [FO_CON_POST] :  Fornito [FO_CON_POST] = false
+
+
+Test Case 10 		(Key = 2.2.2.3.2.3.2.)
+   Token [TK]               :  Il token inviato è valido = true
+   Fornito [FO_TK]          :  Fornito [FO_TK] = true
+   Tipologia Token [TIP_TK] :  Token Esperto = true
+   Lunghezza [LTIT]         :  Lunghezza ≥ 3 AND ≤ 255 = true
+   Fornito [FO_TIT_POST]    :  Fornito [FO_TIT_POST] = true
+   Lunghezza [LCON]         :  Lunghezza ≥ 3 AND ≤ 255 = true
+   Fornito [FO_CON_POST]    :  Fornito [FO_CON_POST] = true
+

@@ -1,0 +1,122 @@
+
+Test Case 1  		<error>
+   Lunghezza [LN] :  - Lunghezza > 30 = false
+
+
+Test Case 2  		<error>
+   Lunghezza [LN] :  - Lunghezza < 3 = false
+
+
+Test Case 3  		<error>
+   Fornito [FO_NOME_UTENTE] :  - Fornito [FO_NOME_UTENTE] = false
+
+
+Test Case 4  		<error>
+   Formato [FE] :  - Rispetta il formato = false
+
+
+Test Case 5  		<error>
+   Email Registrata [EMAIL_REG] :  - Email registrata [EMAIL_REG] = true
+
+
+Test Case 6  		<error>
+   Fornito [FO_EMAIL_LETTORE] :  - Fornito [FO_EMAIL_LETTORE] = false
+
+
+Test Case 7  		<error>
+   Lunghezza [LP] :  - Lunghezza < 8 = false
+
+
+Test Case 8  		<error>
+   Fornito [FO_PASSWORD] :  - Fornito [FO_PASSWORD] = false
+
+
+Test Case 9  		<error>
+   Match [MCP] :  - Match con password = false
+
+
+Test Case 10 		<error>
+   Fornito [FO_CONFERMA_PASSWORD] :  - Fornito [FO_CONFERMA_PASSWORD] = false
+
+
+Test Case 11 		<error>
+   Formato [FNO] :  - Rispetta il formato = false
+
+
+Test Case 12 		<error>
+   Fornito [FO_NOME] :  - Fornito [FO_NOME] = false
+
+
+Test Case 13 		<error>
+   Formato [FCO] :  - Rispetta il formato = false
+
+
+Test Case 14 		<error>
+   Fornito [FO_COGNOME] :  - Fornito [FO_COGNOME] = false
+
+
+Test Case 15 		<error>
+   Formato [FNT] :  - Rispetta il formato = false
+
+
+Test Case 16 		<error>
+   Fornito [FO_CONTATTO] :  - Fornito [FO_CONTATTO] = false
+
+
+Test Case 17 		<error>
+   Formato [FPRO] :  - Rispetta il formato [FPRO] = false
+
+
+Test Case 18 		<error>
+   Fornito [FO_PROVINCIA] :  - Fornito [FO_PROVINCIA] = false
+
+
+Test Case 19 		<error>
+   Formato [FCIT] :  - Rispetta il formato [FCIT] = false
+
+
+Test Case 20 		<error>
+   Fornito [FO_CITTÀ] :  - Fornito [FO_CITTÀ] = false
+
+
+Test Case 21 		<error>
+   Formato [FVN] :  - Rispetta il formato = false
+
+
+Test Case 22 		<error>
+   Fornito [FO_INDIRIZZO] :  - Fornito [FO_INDIRIZZO] = false
+
+
+Test Case 23 		<error>
+   Match [MB] :  - Match con biblioteca = false
+
+
+Test Case 24 		<error>
+   Formato [FEB] :  - Biblioteca associata alla e-mail non esistente = false
+
+
+Test Case 25 		(Key = 3.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.2.1.)
+   Lunghezza [LN]                 :  - Lunghezza ≥ 3 AND ≤ 30 = true
+   Fornito [FO_NOME_UTENTE]       :  - Fornito [FO_NOME_UTENTE] = true
+   Formato [FE]                   :  - Rispetta il formato = true
+   Email Registrata [EMAIL_REG]   :  - Email non registrata [EMAIL_REG] = false
+   Fornito [FO_EMAIL_LETTORE]     :  - Fornito [FO_EMAIL_LETTORE] = true
+   Lunghezza [LP]                 :  - Lunghezza ≥ 8 = true
+   Fornito [FO_PASSWORD]          :  - Fornito [FO_PASSWORD] = true
+   Match [MCP]                    :  - Match con password = true
+   Fornito [FO_CONFERMA_PASSWORD] :  - Fornito [FO_CONFERMA_PASSWORD] = true
+   Formato [FNO]                  :  - Rispetta il formato = true
+   Fornito [FO_NOME]              :  - Fornito [FO_NOME] = true
+   Formato [FCO]                  :  - Rispetta il formato = true
+   Fornito [FO_COGNOME]           :  - Fornito [FO_COGNOME] = true
+   Formato [FNT]                  :  - Rispetta il formato = true
+   Fornito [FO_CONTATTO]          :  - Fornito [FO_CONTATTO] = true
+   Formato [FPRO]                 :  - Rispetta il formato [FPRO] = true
+   Fornito [FO_PROVINCIA]         :  - Fornito [FO_PROVINCIA] = true
+   Formato [FCIT]                 :  - Rispetta il formato [FCIT] = true
+   Fornito [FO_CITTÀ]            :  - Fornito [FO_CITTÀ] = true
+   Formato [FVN]                  :  - Rispetta il formato = true
+   Fornito [FO_INDIRIZZO]         :  - Fornito [FO_INDIRIZZO] = true
+   Match [MB]                     :  - Match con biblioteca = true
+   Formato [FEB]                  :  - Biblioteca associata alla e-mail esistente = true
+

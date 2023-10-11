@@ -1,0 +1,32 @@
+# Token
+Token [TK]:
+	Il token inviato non è valido = false. [error]
+	Il token inviato è valido = true. [property PROPERTY_TK_OK]
+
+Fornito [FO_TK]:
+	Fornito [FO_TK] = false. [error]
+	Fornito [FO_TK] = true. [PROPERTY FO_TK]
+
+Tipologia Token [TIP_TK]:
+	Token non Esperto = false. [if PROPERTY_TK_OK] [error]
+	Token Esperto = true. [if PROPERTY_TK_OK] [PROPERTY TIP_TK]
+
+# Titolo
+Lunghezza [LTIT]:
+	Lunghezza > 255 = false. [error]
+	Lunghezza < 3 = false. [error]
+	Lunghezza ≥ 3 AND ≤ 255 = true. [PROPERTY LTIT_OK]
+
+Fornito [FO_TIT_POST]:
+	Fornito [FO_TIT_POST] = false. [error]
+	Fornito [FO_TIT_POST] = true. [PROPERTY FO_TIT_POST]
+
+# Contenuto
+Lunghezza [LCON]:
+	Lunghezza > 255 = false. [error]
+	Lunghezza < 3 = false. [error]
+	Lunghezza ≥ 3 AND ≤ 255 = true. [PROPERTY LCON_OK]
+
+Fornito [FO_CON_POST]:
+	Fornito [FO_CON_POST] = false. [error]
+	Fornito [FO_CON_POST] = true. [PROPERTY FO_CON_POST]
