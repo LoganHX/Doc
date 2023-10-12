@@ -1,0 +1,68 @@
+
+Test Case 1  		<error>
+   Token [TK] :  Il token inviato non è valido = false
+
+
+Test Case 2  		<error>
+   Fornito [FO_TK] :  Fornito [FO_TK] = false
+
+
+Test Case 3  		<error>  (follows [if])
+   Tipologia Token [TIP_TK] :  Token Biblioteca = false
+
+
+Test Case 4  		<error>
+   Lunghezza [LTIT] :  Lunghezza > 255 = false
+
+
+Test Case 5  		<error>
+   Lunghezza [LTIT] :  Lunghezza < 3 = false
+
+
+Test Case 6  		<error>
+   Fornito [FO_TIT_COMMENT] :  Fornito [FO_TIT_COMMENT] = false
+
+
+Test Case 7  		<error>
+   Lunghezza [LCON] :  Lunghezza > 255 = false
+
+
+Test Case 8  		<error>
+   Lunghezza [LCON] :  Lunghezza < 3 = false
+
+
+Test Case 9  		<error>
+   Fornito [FO_CON_COMMENT] :  Fornito [FO_CON_COMMENT] = false
+
+
+Test Case 10 		<error>
+   Presente [PST_POST] :  Id Post Specificato Non presente nel db = false
+
+
+Test Case 11 		<error>
+   Fornito [FO_ID_CLUB_POST] :  Fornito [FO_ID_CLUB_POST] = false
+
+
+Test Case 12 		(Key = 2.2.2.3.2.3.2.1.2.)
+   Token [TK]                :  Il token inviato è valido = true
+   Fornito [FO_TK]           :  Fornito [FO_TK] = true
+   Tipologia Token [TIP_TK]  :  Token Esperto = true
+   Lunghezza [LTIT]          :  Lunghezza ≥ 3 AND ≤ 255 = true
+   Fornito [FO_TIT_COMMENT]  :  Fornito [FO_TIT_COMMENT] = true
+   Lunghezza [LCON]          :  Lunghezza ≥ 3 AND ≤ 255 = true
+   Fornito [FO_CON_COMMENT]  :  Fornito [FO_CON_COMMENT] = true
+   Presente [PST_POST]       :  Id Post Specificato presente nel db = true
+   Fornito [FO_ID_CLUB_POST] :  Fornito [FO_ID_CLUB_POST] = true
+
+
+Test Case 13 		(Key = 2.2.3.3.2.3.2.1.2.)
+   Token [TK]                :  Il token inviato è valido = true
+   Fornito [FO_TK]           :  Fornito [FO_TK] = true
+   Tipologia Token [TIP_TK]  :  Token Lettore = true
+   Lunghezza [LTIT]          :  Lunghezza ≥ 3 AND ≤ 255 = true
+   Fornito [FO_TIT_COMMENT]  :  Fornito [FO_TIT_COMMENT] = true
+   Lunghezza [LCON]          :  Lunghezza ≥ 3 AND ≤ 255 = true
+   Fornito [FO_CON_COMMENT]  :  Fornito [FO_CON_COMMENT] = true
+   Presente [PST_POST]       :  Id Post Specificato presente nel db = true
+   Fornito [FO_ID_CLUB_POST] :  Fornito [FO_ID_CLUB_POST] = true
+

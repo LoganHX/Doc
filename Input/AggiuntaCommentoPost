@@ -1,0 +1,46 @@
+# Token
+Token [TK]:
+    Il token inviato non è valido = false. [error]
+    Il token inviato è valido = true. [property TK_OK]
+
+Fornito [FO_TK]:
+    Fornito [FO_TK] = false. [error]
+    Fornito [FO_TK] = true. [PROPERTY FO_TK]
+
+Tipologia Token [TIP_TK]:
+    Token Biblioteca = false. [if TK_OK][error]
+    Token Esperto = true. [if TK_OK][property TIP_TK_Esperto]
+    Token Lettore = true. [if TK_OK][property TIP_TK_Lettore]
+
+    Lettore appartiene al Club a cui è associato il post = true. [if TIP_TK_Lettore][PROPERTY LETT_CLUB]
+    Lettore NON appartiene al Club a cui è associato il post = fale [if TIP_TK_Lettore][error]
+
+# Titolo
+Lunghezza [LTIT]:
+    Lunghezza > 255 = false. [error]
+    Lunghezza < 3 = false. [error]
+    Lunghezza ≥ 3 AND ≤ 255 = true. [property LTIT_OK]
+
+Fornito [FO_TIT_COMMENT]:
+    Fornito [FO_TIT_COMMENT] = false. [error]
+    Fornito [FO_TIT_COMMENT] = true. [property FO_TIT_COMMENT]
+
+# Contenuto
+Lunghezza [LCON]:
+    Lunghezza > 255 = false. [error]
+    Lunghezza < 3 = false. [error]
+    Lunghezza ≥ 3 AND ≤ 255 = true. [property LCON_OK]
+
+Fornito [FO_CON_COMMENT]:
+    Fornito [FO_CON_COMMENT] = false. [error]
+    Fornito [FO_CON_COMMENT] = true. [property FO_CON_COMMENT]
+
+# ID Post
+Presente [PST_POST]:
+    Id Post Specificato presente nel db = true. [property PST_POST]
+    Id Post Specificato Non presente nel db = false. [error]
+
+Fornito [FO_ID_CLUB_POST]:
+    Fornito [FO_ID_CLUB_POST] = false. [error]
+    Fornito [FO_ID_CLUB_POST] = true. [property FO_ID_CLUB_POST]
+
