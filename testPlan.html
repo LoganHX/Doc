@@ -1,144 +1,167 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Test Plan - BiblioNet</title>
-      <style>
 
+<head>
+   <title>Test Plan - BiblioNet</title>
+   <style>
+      body {
+         margin: 0 auto;
+         max-width: 100%;
+         padding: 20px;
+         background-color: #f7f7f7;
+         font-family: Helvetica, Arial, sans-serif;
+         font-size: large;
+      }
 
-     body {
-     margin: 0 auto;
-     max-width: 100%;
-     padding: 20px;
-     background-color: #f7f7f7;
-     font-family: Helvetica, Arial, sans-serif;
-     font-size: large;
-}
- h2 {
-     color: #29689e;
-}
- h3 {
-     color: #29689e;
-}
- table {
-     border-collapse: collapse;
-     margin: 0 auto;
-     border: 0px solid #f7f7f7;
-     width: 100%;
-     margin-bottom: 20px;
-}
- th, td {
-     border: 1px solid #f7f7f7;
-     padding: 8px;
-     text-align: left;
-}
- th {
-     background-color: #29689e;
-     color: #fff;
-     font-weight: bold;
-}
- th:first-child, td:first-child {
-     background-color: #29689e;
-     color: #fff;
-     font-weight: bold;
-}
- td:first-child {
-     background-color: #29689e;
-     color: #fff;
-     font-weight: bold;
-     width: 14%;
-}
- ol {
-     list-style-type: decimal;
-     margin-left: 20px;
-}
- li {
-     margin-bottom: 5px;
-     margin-left: 20px;
-}
- ul {
-     text-align: left;
-}
- tr:nth-child(odd) {
-     background-color: #ffffff;
-}
- tr:nth-child(even) {
-     background-color: #dfe3ee;
-}
-/* Stile del menu a sinistra */
- div{
-     display: inline-block;
-}
- .menu-container {
-     width: 17%;
-    /* Larghezza del menu */
-     background-color: #29689e;
-     color: #fff;
-     padding: 20px;
-     height: 100vh;
-    /* Imposta l'altezza al 100% della viewport */
-}
- .fixed {
-     position: fixed;
-    /* Rende il div fisso nella finestra del browser */
-     top: 0;
-    /* Fissato in alto */
-     left: 0;
-    /* Fissato a sinistra */
-}
- .scrollable {
-     margin-left:22%;
-}
- .menu {
-     background-color: #29689e;
-     padding: 0;
-}
- .menu-item {
-     margin-bottom: 10px;
-}
- .menu-item a {
-     color: #fff;
-     text-decoration: none;
-}
-/* Stile del contenuto a destra */
- .content {
-     display: inline-block;
-     width: 70%;
-    /* Larghezza del menu */
-     padding: 20px;
-     background-color: #f5f5f5;
-    /* Sfondo del contenuto */
-     color: #333;
-    /* Colore del testo del contenuto */
-}
-/* Stile per gli anchor link nel contenuto */
- .content a {
-     color: #007bff;
-    /* Colore dei link nel contenuto */
-}
+      h2 {
+         color: #29689e;
+      }
 
-      </style>
-   </head>
-   <body>
-      <!-- Menu a sinistra -->
-      <div class="menu-container fixed">
-         <ol class="menu">
-            <h1>Indice</h1>
-            <li class="menu-item"><a href="#introduzione">Introduzione</a></li>
-            <li class="menu-item"><a href="#relazione">Relazione con altri documenti</a></li>
-            <li class="menu-item"><a href="#panoramica">Panoramica del sistema</a></li>
-            <li class="menu-item"><a href="#features">Features da testare/da non testare</a></li>
-            <li class="menu-item"><a href="#passfail">Pass/Fail criteria</a></li>
-            <li class="menu-item"><a href="#approccio">Approccio</a></li>
-            <li class="menu-item"><a href="#sospensione">Sospensione e ripristino</a></li>
-            <li class="menu-item"><a href="#materiale">Materiale di testing</a></li>
-            <li class="menu-item"><a href="#testcases">Test cases</a></li>
-            <li class="menu-item"><a href="#schedule">Testing schedule</a></li>
-         </ol>
-      </div>
-      <!-- Contenuto a destra -->
-      <div class="content scrollable">
-         <h1 style="text-align: center;">todo: in reg utenti check email registrata o non registrata</h1>
-         <p  style="text-align: center;"><img  src="C07.html_files/rId5.png" title="" alt="" align="center"></p>
+      h3 {
+         color: #29689e;
+      }
+
+      table {
+         border-collapse: collapse;
+         margin: 0 auto;
+         border: 0px solid #f7f7f7;
+         width: 100%;
+         margin-bottom: 20px;
+      }
+
+      th,
+      td {
+         border: 1px solid #f7f7f7;
+         padding: 8px;
+         text-align: left;
+      }
+
+      th {
+         background-color: #29689e;
+         color: #fff;
+         font-weight: bold;
+      }
+
+      th:first-child,
+      td:first-child {
+         background-color: #29689e;
+         color: #fff;
+         font-weight: bold;
+      }
+
+      td:first-child {
+         background-color: #29689e;
+         color: #fff;
+         font-weight: bold;
+         width: 14%;
+      }
+
+      ol {
+         list-style-type: decimal;
+         margin-left: 20px;
+      }
+
+      li {
+         margin-bottom: 5px;
+         margin-left: 20px;
+      }
+
+      ul {
+         text-align: left;
+      }
+
+      tr:nth-child(odd) {
+         background-color: #ffffff;
+      }
+
+      tr:nth-child(even) {
+         background-color: #dfe3ee;
+      }
+
+      /* Stile del menu a sinistra */
+      div {
+         display: inline-block;
+      }
+
+      .menu-container {
+         width: 17%;
+         /* Larghezza del menu */
+         background-color: #29689e;
+         color: #fff;
+         padding: 20px;
+         height: 100vh;
+         /* Imposta l'altezza al 100% della viewport */
+      }
+
+      .fixed {
+         position: fixed;
+         /* Rende il div fisso nella finestra del browser */
+         top: 0;
+         /* Fissato in alto */
+         left: 0;
+         /* Fissato a sinistra */
+      }
+
+      .scrollable {
+         margin-left: 22%;
+      }
+
+      .menu {
+         background-color: #29689e;
+         padding: 0;
+      }
+
+      .menu-item {
+         margin-bottom: 10px;
+      }
+
+      .menu-item a {
+         color: #fff;
+         text-decoration: none;
+      }
+
+      /* Stile del contenuto a destra */
+      .content {
+         display: inline-block;
+         width: 70%;
+         /* Larghezza del menu */
+         padding: 20px;
+         background-color: #f5f5f5;
+         /* Sfondo del contenuto */
+         color: #333;
+         /* Colore del testo del contenuto */
+      }
+
+      /* Stile per gli anchor link nel contenuto */
+      .content a {
+         color: #007bff;
+         /* Colore dei link nel contenuto */
+      }
+   </style>
+</head>
+
+<body>
+   <!-- Menu a sinistra -->
+   <div class="menu-container fixed">
+      <ol class="menu">
+         <h1>Indice</h1>
+         <li class="menu-item"><a href="#introduzione">Introduzione</a></li>
+         <li class="menu-item"><a href="#relazione">Relazione con altri documenti</a></li>
+         <li class="menu-item"><a href="#panoramica">Panoramica del sistema</a></li>
+         <li class="menu-item"><a href="#features">Features da testare/da non testare</a></li>
+         <li class="menu-item"><a href="#passfail">Pass/Fail criteria</a></li>
+         <li class="menu-item"><a href="#approccio">Approccio</a></li>
+         <li class="menu-item"><a href="#sospensione">Sospensione e ripristino</a></li>
+         <li class="menu-item"><a href="#materiale">Materiale di testing</a></li>
+         <li class="menu-item"><a href="#testcases">Test cases</a></li>
+         <li class="menu-item"><a href="#schedule">Testing schedule</a></li>
+      </ol>
+   </div>
+   <!-- Contenuto a destra -->
+   <div class="content scrollable">
+      <h1 style="text-align: center;">Biblionet Evolution</h1>
+      <h2 style="text-align: center;">Test Plan</h1>
+         <p style="text-align: center;"><img src="C07.html_files/rId5.png" title="" alt="" align="center"></p>
 
          <table border="1">
             <tr>
@@ -147,15 +170,13 @@
                <th>Data</th>
                <th>Destinatario</th>
                <th>Presentato da</th>
-               <th>Approvato da</th>
             </tr>
             <tr>
-               <td>C07_TP_ver.1</td>
+               <td>TP_ver.1</td>
                <td>2.0</td>
-               <td>18/01/2021</td>
-               <td>Prof.ssa Filomena Ferrucci</td>
-               <td>C07 Team BK</td>
-               <td>Stefano Lambiase</td>
+               <td>1/10/2023</td>
+               <td>Prof. Andrea De Lucia</td>
+               <td>Cosimo Stabile, Giuseppe De Filippo</td>
             </tr>
          </table>
          <h2>Revision History</h2>
@@ -165,54 +186,6 @@
                <th>Versione</th>
                <th>Descrizione</th>
                <th>Autori</th>
-            </tr>
-            <tr>
-               <td>18/11/2020</td>
-               <td>0.1</td>
-               <td>Prima stesura</td>
-               <td>SL</td>
-            </tr>
-            <tr>
-               <td>02/12/2020</td>
-               <td>0.2</td>
-               <td>Creazione Test Frame</td>
-               <td>CM, GT, ADP, AC</td>
-            </tr>
-            <tr>
-               <td>03/12/2020</td>
-               <td>0.3</td>
-               <td>Stesura parti testuali</td>
-               <td>GV, VP</td>
-            </tr>
-            <tr>
-               <td>03/12/2020</td>
-               <td>0.4</td>
-               <td>Completamento Test Frame</td>
-               <td>LT, NP, GV, VP</td>
-            </tr>
-            <tr>
-               <td>04/12/2020</td>
-               <td>0.5</td>
-               <td>Prima revisione</td>
-               <td>Tutto il team</td>
-            </tr>
-            <tr>
-               <td>06/12/2020</td>
-               <td>1.0</td>
-               <td>Revisione finale e correzione degli errori</td>
-               <td>GV, VP</td>
-            </tr>
-            <tr>
-               <td>11/12/2020</td>
-               <td>1.1</td>
-               <td>Aggiunta sezione per il Test di Unità</td>
-               <td>SL</td>
-            </tr>
-            <tr>
-               <td>28/12/2020</td>
-               <td>1.2</td>
-               <td>Scrittura dei capitoli riguardanti il test di integrazione e dello schedule</td>
-               <td>SL</td>
             </tr>
             <tr>
                <td>17/01/2021</td>
@@ -231,122 +204,73 @@
          <table border="1">
             <tr>
                <th>Nome</th>
-               <th>Ruolo nel progetto</th>
                <th>Acronimo</th>
                <th>Informazioni di contatto</th>
             </tr>
             <tr>
-               <td>Stefano Lambiase</td>
-               <td>Project Manager</td>
-               <td>SL</td>
-               <td>s.lambiase7@studenti.unisa.it</td>
+               <td>Cosimo Stabile</td>
+               <td>CS</td>
+               <td>c.stabile12@studenti.unisa.it</td>
             </tr>
             <tr>
-               <td>Gianmario Voria</td>
-               <td>Team Member</td>
-               <td>GV</td>
-               <td>g.voria6@studenti.unisa.it</td>
-            </tr>
-            <tr>
-               <td>Ciro Maiorino</td>
-               <td>Team Member</td>
-               <td>CM</td>
-               <td>c.maiorino7@studenti.unisa.it</td>
-            </tr>
-            <tr>
-               <td>Alessio Casolaro</td>
-               <td>Team Member</td>
-               <td>AC</td>
-               <td>a.casolaro2@studenti.unisa.it</td>
-            </tr>
-            <tr>
-               <td>Giulio Triggiani</td>
-               <td>Team Member</td>
-               <td>GT</td>
-               <td>g.triggiani@studenti.unisa.it</td>
-            </tr>
-            <tr>
-               <td>Antonio Della Porta</td>
-               <td>Team Member</td>
-               <td>ADP</td>
-               <td>a.dellaporta26@studenti.unisa.it</td>
-            </tr>
-            <tr>
-               <td>Viviana Pentangelo</td>
-               <td>Team Member</td>
-               <td>VP</td>
-               <td>v.pentangelo4@studenti.unisa.it</td>
-            </tr>
-            <tr>
-               <td>Nicola Pagliara</td>
-               <td>Team Member</td>
-               <td>NP</td>
-               <td>n.pagliara1@studenti.unisa.it</td>
-            </tr>
-            <tr>
-               <td>Luca Topo</td>
-               <td>Team Member</td>
-               <td>LT</td>
-               <td>l.topo@studenti.unisa.it</td>
+               <td>Giuseppe De Filippo</td>
+               <td>DF</td>
+               <td>g.defilippo@studenti.unisa.it</td>
             </tr>
          </table>
          <h2 id=introduzione>1. Introduzione</h2>
          <p>
-            BiblioNet si propone di semplificare le interazioni tra biblioteche e lettori, al fine di rinvigorire il settore bibliotecario italiano creando uno strumento di comunicazione con persone interessate alla lettura.
-            Il documento di Test Plan ha l’obiettivo di descrivere ed analizzare le attività di Testing per la piattaforma BiblioNet. Il fine è quello di garantire che ogni aspetto funzioni in modo corretto.
-            All’interno del documento sono riportate le strategie di testing adottate, quali funzionalità saranno testate e gli strumenti scelti per la rilevazione degli errori, con lo scopo di presentare al cliente finale una piattaforma priva di malfunzionamenti. Sono state pianificate attività di testing per le seguenti gestioni:
+            Il sistema Biblionet Evolution nasce dall'evoluzione del sistema Biblionet di partenza, ovvero uno strumento
+            che si propone di semplificare le interazioni tra biblioteche e lettori, al fine di rinvigorire il settore
+            bibliotecario italiano creando uno strumento di comunicazione con persone interessate alla lettura.
          </p>
-         <ul>
-            <li>
-               Gestione Utente
-               <ul>
-                  <li>Registrazione lettore</li>
-                  <li>Registrazione esperto</li>
-                  <li>Registrazione biblioteca</li>
-                  <li>Login</li>
-                  <li>Modifica dati account</li>
-               </ul>
-            </li>
-            <li>
-               Gestione Club del Libro
-               <ul>
-                  <li>Creazione Club del Libro</li>
-                  <li>Modifica dati Club del Libro</li>
-                  <li>Organizzazione evento</li>
-                  <li>Visualizzazione e modifica evento</li>
-               </ul>
-            </li>
-            <li>
-               Gestione Prestito Libri
-               <ul>
-                  <li>Inserimento nuovi libri</li>
-                  <li>Accettazione Ticket prestito</li>
-               </ul>
-            </li>
-         </ul>
-         <p>Le funzionalità di cui non si andrà ad effettuare le attività di testing riguardano requisiti funzionali di bassa o media priorità; sono inoltre escluse le funzionalità che non prevedono input manuale da parte dell’utente - ad esempio attività riguardanti esclusivamente visualizzazioni di dati.
-            Il requisito funzionale “Sottomissione questionario di supporto”, facente parte della Gestione Preferenze di Lettura, verrà testato in futuro con differenti tecniche e sarà quindi trattato in una diversa documentazione.
-         </p>
+
          <h2 id=relazione>2. Relazione con altri documenti</h2>
          <p>Per la corretta individuazione dei test case, si fa riferimento ad altri documenti prodotti.</p>
          <h3>Relazioni con il Requirements Analysis Document (RAD)</h3>
-         <p>I test case pianificati nel Test Plan sono elaborati in relazione ai requisiti funzionali e non funzionali presentati nel RAD.</p>
+         <p>I test case pianificati nel Test Plan sono elaborati in relazione ai requisiti funzionali e non funzionali
+            presentati nel RAD.</p>
          <h3>Relazioni con il System Design Document (SDD)</h3>
-         <p>I test case pianificati nel Test Plan devono rispettare la suddivisione in sottosistemi presentata nell’SDD.</p>
+         <p>I test case pianificati nel Test Plan devono rispettare la suddivisione in sottosistemi presentata nell’SDD.
+         </p>
          <h3>Relazioni con il Object Design Document (ODD)</h3>
-         <p>Per ciò che concerne il test di unità e di integrazione, maggiormente legati allo ODD e alla divisione in package del sistema, essi saranno scritti e documentati unicamente all’interno del codice dell’applicativo. Per tale motivo, nel presente documento, non vi saranno riferimenti al loro design.</p>
+         <p>Per ciò che concerne il test di unità e di integrazione, maggiormente legati allo ODD e alla divisione in
+            package del sistema, essi saranno scritti e documentati unicamente all’interno del codice dell’applicativo.
+            Per tale motivo, nel presente documento, non vi saranno riferimenti al loro design.</p>
          <h2 id=panoramica>3. Panoramica del sistema</h2>
-         <p>Il sistema proposto basa la sua architettura sul sistema three-tier, in particolare usando Spring MVC e quindi un sistema Model View Control.
+         <p>Il sistema Biblionet di partenza basa la sua architettura sul sistema three-tier, in particolare usando
+            Spring MVC e quindi un sistema Model View Control.
             Verranno usati HTML5, CSS3 e Thymleaf per la parte di front-end e la generazione delle view.
-            Per la logica applicativa e quindi il back-end sarà utilizzato Java SPRING. Per la gestione del database saranno usati:
+            Per la logica applicativa e quindi il back-end sarà utilizzato Java SPRING. Per la gestione del database
+            saranno usati:
          </p>
          <ul>
             <li>Spring JPA per il collegamento al database.</li>
             <li>H2 come database in fase di produzione.</li>
-            <li>Azure e SQL per il database su cloud in fase di deployment.</li>
          </ul>
+         <p>Il sistema Biblionet Evolution utilizza un'architettura di tipo monolite modulare. Il front-end è realizzato
+            ex-novo usando React JS. La comunicazione tra back-end e front-end avviene tramite controller di tipo REST.
+            Sono state, inoltre, aggiunte funzionalità di comunicazione all'interno della community; nella fattispecie
+            si è realizzato un sistema di creazione di post e aggiunta di commenti ai suddetti post all'interno dei
+            singoli club del libro (a beneficio degli iscritti al club). Per la gestione del database continueranno a
+            essere usati gli strumenti precedentemente indicati per la versione precedente di BiblioNet.</p>
+
+
+
          <h2 id=features>4. Features da testare/da non testare</h2>
-         <p>Di seguito la lista delle features di cui si effettuerà il testing per le varie gestioni:</p>
+         <p>Il documento di Test Plan ha l’obiettivo di descrivere ed analizzare le attività di Testing per la
+            piattaforma BiblioNet Evolution.
+            All’interno del documento sono riportate le strategie di testing adottate, quali funzionalità saranno
+            testate e gli strumenti scelti per la rilevazione degli errori, con lo scopo di presentare al cliente finale
+            una piattaforma quando più possibile esente da malfunzionamenti. L'insieme di funzionalità da testare
+            espande le funzionalità testate al tempo del rilascio della prima versione di BiblioNet. La scelta delle
+            funzionalità da testare è ricaduta su quelle funzionalità che si presuppone rivestano un ruolo cruciale per
+            gli utenti.
+         </p>
+
+
+         <p>Di seguito la lista delle features di cui si effettuerà il testing per le varie gestioni (in grassetto sono
+            indicate le funzionalità testate per la prima volta in quanto realizzate solo per BiblioNet Evolution):</p>
          <ul>
             <li>
                Gestione Utente
@@ -365,6 +289,8 @@
                   <li>Modifica dati Club del Libro</li>
                   <li>Organizzazione evento</li>
                   <li>Visualizzazione e modifica evento</li>
+                  <li><strong>Creazione Post</strong> </li>
+                  <li><strong>Aggiunta di un commento a un Post</strong></li>
                </ul>
             </li>
             <li>
@@ -375,70 +301,80 @@
                </ul>
             </li>
          </ul>
-         <p>Le funzionalità di cui non si andrà ad effettuare le attività di testing riguardano requisiti funzionali di bassa o media priorità; sono inoltre escluse le funzionalità che non prevedono input manuale da parte dell’utente - ad esempio attività riguardanti esclusivamente visualizzazioni di dati.
-            Il requisito funzionale “Sottomissione questionario di supporto”, facente parte della Gestione Preferenze di Lettura, verrà testato in futuro con differenti tecniche e sarà quindi trattato in una diversa documentazione.
+         <p>Le funzionalità di cui non si andrà ad effettuare le attività di testing riguardano requisiti funzionali di
+            bassa o media priorità; sono inoltre escluse le funzionalità che non prevedono input manuale da parte
+            dell’utente - ad esempio attività riguardanti esclusivamente visualizzazioni di dati.
          </p>
          <h2 id=passfail>5. Pass/Fail criteria</h2>
-         <p>Le attività di testing sono mirate ad identificare la presenza di faults (errori) all'interno del sistema, per effettuarne un successivo intervento di eliminazione.
-            L’esito di un test case è valutato mediante un oracolo, inteso come il risultato atteso della sua esecuzione, basandosi sui requisiti.
-            Un test ha successo (pass) se, dato un input al sistema, l’output ottenuto è diverso dall’output atteso dall’oracolo.
-            Un test fallisce (fail) se, dato un input al sistema, l’output ottenuto è uguale all’output atteso dall’oracolo.
+         <p>Le attività di testing sono mirate ad identificare la presenza di faults (errori) all'interno del sistema,
+            per effettuarne un successivo intervento di eliminazione.
+            L’esito di un test case è valutato mediante un oracolo, inteso come il risultato atteso della sua
+            esecuzione, basato sui requisiti.
+            Un test ha successo (pass) se, dato un input al sistema, l’output ottenuto è diverso dall’output atteso
+            dall’oracolo.
+            Un test fallisce (fail) se, dato un input al sistema, l’output ottenuto è uguale all’output atteso
+            dall’oracolo.
             Tutto il testing sarà considerato valido se tutti i seguenti vincoli saranno rispettati:
          </p>
          <ul>
             <li>Testare tutti i requisiti funzionali ad alta priorità;</li>
-            <li>Effettuare test di regressione ogni volta che si introducono nuove caratteristiche al sistema o vengono modificate quelle presenti;</li>
-            <li>Raggiungere un branch coverage non inferiore al 75%.</li>
+            <li>Effettuare test di non regressione ogni volta che si introducono nuove caratteristiche al sistema o
+               vengono modificate quelle presenti;</li>
+            <li style="display: none;">Raggiungere un branch coverage non inferiore al 75%.</li>
          </ul>
-         <h2 id=approccio>6. Approccio</h2>
-         <p>Il testing dell’intero sistema si compone di tre fasi: testing di sistema, testing di integrazione e testing di unità. Verranno progettati nell’ordine appena definito, ma verranno eseguiti in ordine inverso.
-            Prima della fase di implementazione del sistema, avverrà la progettazione dei casi di test di sistema, perfezionati in seguito nella loro fase di esecuzione; durante la fase implementativa avverrà la progettazione dei casi di test di unità.
-            Durante lo sviluppo saranno eseguite periodiche attività di revisione sul codice prodotto.
-            Poiché la progettazione è organizzata seguendo un modello simile al modello a V, il testing di sistema è stato pianificato in seguito alla stesura del documento Requirements Analysis Document, mentre la pianificazione del testing di integrazione avverrà dopo la stesura del System Design Document.
+         <p>Lo sviluppo del sistema BiblioNet Evolution consta di tre passi (in risposta ad altrettante change request):
          </p>
-         <h3>Testing di Sistema</h3>
-         <p>Per il testing di sistema sarà utilizzato il tool Selenium IDE, che permette di registrare le azioni che un utente può intraprendere sul browser, in modo da poter implementare ed eseguire i test case di sistema. Il server, per la fase di testing, verrà deployato in localhost.</p>
-         <h4>Functional Testing</h4>
-         <p>Il functional testing ha il fine di validare i requisiti funzionali. Consiste nell’individuare i possibili faults generati dagli input degli utenti.</p>
-         <h4>Performance Testing</h4>
-         <p>A causa del basso budget a disposizione, non si assicura l’esecuzione del performance testing.</p>
-         <h4>Pilot Testing</h4>
-         <p>A causa del basso budget a disposizione, non si assicura l’esecuzione del pilot testing.</p>
-         <h4>Acceptance Testing</h4>
-         <p>L’acceptance testing verrà effettuato solo sul functional testing, ed il Project Manager simulerà la figura del cliente.</p>
-         <h4>Installation Testing</h4>
-         <p>A causa del basso budget a disposizione, non si assicura l’esecuzione dell’installation testing.</p>
-         <h3>Testing di Integrazione</h3>
-         <p>Verrà utilizzato un approccio bottom-up, metodo ritenuto più adatto per un software basato sul paradigma Object Oriented. La definizione dei test case avverrà tramite il framework JUnit, mentre verrà usato Mockito per il mocking. Verrà valutato l’utilizzo di Github Actions per realizzare la Continuous Integration, in alternativa a Travis CI. L’automatizzazione del run dei test sarà gestita da Maven, ed infine come tool di misurazione e report coverage sarà utilizzato JaCoCo.</p>
-         <p>Il test di integrazione sarà il medesimo per tutte le componenti da testare. Nello specifico, si procederà prima con il test delle classi Service, e successivamente con il test delle classi Controller. Durante questa seconda esecuzione, la chiamata al controller sarà mockata usando Mockito.</p>
-         <p>Di seguito viene presentato un esempio grafico di test di integrazione diviso nei due steps.</p>
-         <h4>Primo step</h4>
-         <p><img style="width:74.8mm; height:16.3mm" src="C07.html_files/rId19.png" title="" alt="" align=""></p>
-         <h4>Secondo step</h4>
-         <p><img style="width:116.1mm; height:16.1mm" src="C07.html_files/rId20.png" title="" alt="" align=""></p>
-         <p>In generale, il test di integrazione sarà compreso nella stessa classe di test di quelli unitari. Solo per il sottosistema club del libro, si è scelto un approccio differente, separandoli.</p>
-         <p>Per ciò che concerne le dipendenze tra i sottosistemi, si riporta di seguito il diagramma architetturale.</p>
-         <p><img style="width:169.9mm; height:85.5mm" src="C07.html_files/rId21.jpg" title="" alt="" align=""></p>
-         <h3>Testing di Unità</h3>
-         <p>Per il testing di unità la strategia prevista consiste nel testare ogni metodo delle classi del sistema. Da esse, sono escluse le interfacce e le classi entity, poiché quest’ultime presentano solo metodi getters e setters. I casi di test saranno definiti attraverso un approccio black-box e saranno documentati direttamente nel codice, attraverso l’uso del framework per il testing di classi Java JUnit.</p>
-         <p>Per ogni Production Class sarà definita una Test Class che rispetterà il formato NomeProductionClassTest. Tali classi saranno scritte in parallelo alle Production class, per garantire una più facile copertura del codice. Le stesse classi saranno poi revisionate e modificate da sviluppatori differenti.</p>
-         <p>Altre tecnologie usate in tale fase saranno:</p>
-         <ul>
-            <li>Mockito: per la costruzione degli stub e l’isolamento della componente testata.</li>
-            <li>JaCoCo: per il calcolo di metriche tra le quali la Branch Coverage.</li>
-            <li>Maven: per la build e l’esecuzione automatica dei tests.</li>
-         </ul>
-         <h3>Ispezione del Codice</h3>
-         <p>Per aumentare la qualità del codice ci si affiderà principalmente ai controlli del tool Checkstyle e della CI/CD con Maven. Sebbene vi sia l’intenzione di fare ispezione del codice, anche se non costante e approfondita, a causa del basso budget non si può assicurare tale pratica.</p>
-         <h2 id=sospensione>7. Sospensione e Ripristino</h2>
-         <p><strong>Criteri di Sospensione</strong></p>
-         <p>Il testing non verrà sospeso fino alla sua terminazione, anche in caso di rilevazione di una failure. Il testing potrà essere momentaneamente sospeso nel caso venga restituito, al momento dell’esecuzione, un errore nella definizione di uno dei test stessi.</p>
-         <p><strong>Criteri di Ripristino</strong></p>
-         <p>Il testing verrà ripreso dopo aver risolto i fault individuati.</p>
-         <h2 id=materiale>8. Materiale di Testing</h2>
-         <p>L’hardware necessario per l’attività di test è un semplice computer, non necessariamente connesso ad internet, in quanto il sistema non è stato ancora rilasciato.</p>
-         <h2 id=testcases>9. Test Cases</h2>
-         <p>L’approccio per la definizione dei test frame sarà il category partition. Al fine di minimizzare il numero di test case, gli input saranno partizionati in classi di equivalenza. Per definire l'output atteso si userà un oracolo umano, per via dell'assenza di specifiche formali/semi-formali.</p>
+         <ol>
+            <li>CR1+3: Passaggio a monolite modulare e Realizzazione del front-end ex-novo con React JS</li>
+            <li>CR2: Realizzazione funzionalità di creazione Post e aggiunta di commenti ai Post di un Club Del Libro
+            </li>
+            <li style="display: none;">CR4</li>
+         </ol>
+         <p>Al termine dello sviluppo di ciascun passo è necessario effettuare il test di non regressione rispetto alla
+            versione precedente del sistema.</p>
+
+         <h2 id=approccio>6. Approccio</h2>
+
+         <p>Il test di non regressione al termine della prima CR (ovvero a seguito del passaggio all'architettura di
+            tipo monolite modulare del sistema) non può essere fatto semplicemente rieseguendo i test precedentemente
+            sviluppati per il sistema originale. Questo non è possibile perché le modifiche effettuate al sistema sono
+            tali da rendere impossibile l'esecuzione di tali test.
+
+            Dal momento che si tratta di un refactoring, però, sono rimaste (grosso modo) immutate quelle che sono le
+            specifiche originali dei test case, riportate nel precedente <a
+               href="https://github.com/StefanoLambiase/biblionet/blob/master/projectDocs/Prodotto/Documenti/4.%20Testing/1.%20Pianificazione/C07_TP_ver.2.0.pdf">Test
+               Plan</a>.
+
+            Abbiamo provveduto, quindi, a modificare la test suite per i test di unità e di integrazione in modo che
+            rispettassero le specifiche del precedente Test Plan e, contemporaneamente, fossero adeguati rispetto alle
+            modifiche apportate al sistema.</p>
+         <p>
+
+            Dall'analisi puntuale del Test Plan, dei test implementati e del sistema Biblionet per come originariamente
+            sviluppato è emerso che, per un numero esiguo di test, l'implementazione non corrispondeva perfettamente
+            alle specifiche. Prima di implementare i test, quindi, si è reso necessario modificare le specifiche
+            affinché rispecchiassero fedelmente i test sviluppati.</p>
+         <p>
+
+            Abbiamo preso questa decisione perché il codice sorgente è, di solito, la "fonte" più
+            aggiornata possibile che descrive il funzionamento del sistema.</p>
+         <p>
+
+            Allo stesso modo, guidati dall'analisi del codice sorgente, abbiamo provveduto a colmare alcune lacune nelle
+            specifiche del test plan.
+            Le modifiche sono state ulteriormente modificate tenendo conto delle difformità tra il sistema BiblioNet
+            originale e la sua evoluzione: per questo motivosi è reso necessario aggiungere alle specifiche le sezioni
+            relative ai token dal momento che BiblioNet evolution adotta un sistema basato su JWT Tokens per gestire
+            l'authorization degli utenti.
+            Le specifiche così ottenute sono consulatabili in <a href="#testcases">questa sezione</a> del documento.</p>
+
+            Il system testing sulla versione originale di Biblionet è stato effettuato utilizzando il tool Selenium IDE.
+            I test di sistema originali sono stati anch'essi presi in considerazione, modificando anche in questo caso quei test che non possono essere eseguiti sulla nuova versione del sistema (per via di modifiche, per esempio, nel navigation path).
+            
+
+         L'insieme di test di unità, di integrazione e di sistema ottenuti come descritto in questo paragrafo costituiscono, quindi, il test di regressione del sistema a valle della CR1. Essi costituiscono, contemporaneamente, anche una test suite completa per il nuovo sistema.
+         </p>
+         
          <h3>Gestione Utente</h3>
          <h4>Registrazione Lettore</h4>
          <table border="1">
@@ -449,7 +385,7 @@
             </tr>
             <tr>
                <td rowspan="2">Nome utente</td>
-               <td >Lunghezza [LN]</td>
+               <td>Lunghezza [LN]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 30 = false [error]</li>
@@ -468,7 +404,7 @@
                   </ol>
                </td>
             </tr>
-            
+
             <tr>
                <td rowspan="3">Email</td>
                <td>Formato [FE]</td>
@@ -608,7 +544,7 @@
                      <li>Rispetta il formato [FPRO] = true [PROPERTY FPRO_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Provincia</td>
                <td>Fornito [FO_PROVINCIA]</td>
@@ -628,7 +564,7 @@
                      <li>Rispetta il formato [FCIT] = true [PROPERTY FCIT_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Città</td>
                <td>Fornito [FO_CITTÀ]</td>
@@ -720,7 +656,7 @@
             </tr>
             <tr>
                <td rowspan="2">Nome utente</td>
-               <td >Lunghezza [LN]</td>
+               <td>Lunghezza [LN]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 30 = false [error]</li>
@@ -869,7 +805,7 @@
                   </ol>
                </td>
             </tr>
-              <tr>
+            <tr>
                <td rowspan="2" style="background-color: #EDA600;">Provincia</td>
                <td>Formato [FPRO]</td>
                <td>
@@ -878,7 +814,7 @@
                      <li>Rispetta il formato [FPRO] = true [PROPERTY FPRO_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Provincia</td>
                <td>Fornito [FO_PROVINCIA]</td>
@@ -898,7 +834,7 @@
                      <li>Rispetta il formato [FCIT] = true [PROPERTY FCIT_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Città</td>
                <td>Fornito [FO_CITTÀ]</td>
@@ -930,7 +866,7 @@
                </td>
             </tr>
             <tr>
-               <td rowspan= 2, style="background-color: #EDA600;">Email Biblioteca</td>
+               <td rowspan=2, style="background-color: #EDA600;">Email Biblioteca</td>
                <td>Match [MB]</td>
                <td>
                   <ol>
@@ -949,7 +885,7 @@
                   </ol>
                </td>
             </tr>
-           
+
          </table>
          <table border="1">
             <tr>
@@ -1125,7 +1061,7 @@
                   </ol>
                </td>
             </tr>
-               <tr>
+            <tr>
                <td rowspan="2" style="background-color: #EDA600;">Provincia</td>
                <td>Formato [FPRO]</td>
                <td>
@@ -1134,7 +1070,7 @@
                      <li>Rispetta il formato [FPRO] = true [PROPERTY FPRO_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Provincia</td>
                <td>Fornito [FO_PROVINCIA]</td>
@@ -1154,7 +1090,7 @@
                      <li>Rispetta il formato [FCIT] = true [PROPERTY FCIT_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Città</td>
                <td>Fornito [FO_CITTÀ]</td>
@@ -1287,7 +1223,7 @@
             </tr>
             <tr>
                <td rowspan="2">Nome utente</td>
-               <td >Lunghezza [LN]</td>
+               <td>Lunghezza [LN]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 30 = false [error]</li>
@@ -1406,7 +1342,7 @@
                   </ol>
                </td>
             </tr>
-              <tr>
+            <tr>
                <td rowspan="2" style="background-color: #EDA600;">Provincia</td>
                <td>Formato [FPRO]</td>
                <td>
@@ -1415,7 +1351,7 @@
                      <li>Rispetta il formato [FPRO] = true [PROPERTY FPRO_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Provincia</td>
                <td>Fornito [FO_PROVINCIA]</td>
@@ -1435,7 +1371,7 @@
                      <li>Rispetta il formato [FCIT] = true [PROPERTY FCIT_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Città</td>
                <td>Fornito [FO_CITTÀ]</td>
@@ -1476,7 +1412,7 @@
                   </ol>
                </td>
             </tr>
-         
+
          </table>
          <table border="1" style="color: #EDA600;">
             <tr>
@@ -1559,7 +1495,7 @@
             </tr>
             <tr>
                <td rowspan="2">Nome utente</td>
-               <td >Lunghezza [LN]</td>
+               <td>Lunghezza [LN]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 30 = false [error]</li>
@@ -1678,7 +1614,7 @@
                   </ol>
                </td>
             </tr>
-              <tr>
+            <tr>
                <td rowspan="2" style="background-color: #EDA600;">Provincia</td>
                <td>Formato [FPRO]</td>
                <td>
@@ -1687,7 +1623,7 @@
                      <li>Rispetta il formato [FPRO] = true [PROPERTY FPRO_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Provincia</td>
                <td>Fornito [FO_PROVINCIA]</td>
@@ -1707,7 +1643,7 @@
                      <li>Rispetta il formato [FCIT] = true [PROPERTY FCIT_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Città</td>
                <td>Fornito [FO_CITTÀ]</td>
@@ -1818,7 +1754,7 @@
                <th>Nome Categoria</th>
                <th>Scelte per la categoria</th>
             </tr>
-           
+
             <tr>
                <td rowspan="2">Password</td>
                <td>Lunghezza [LP]</td>
@@ -1899,7 +1835,7 @@
                   </ol>
                </td>
             </tr>
-               <tr>
+            <tr>
                <td rowspan="2" style="background-color: #EDA600;">Provincia</td>
                <td>Formato [FPRO]</td>
                <td>
@@ -1908,7 +1844,7 @@
                      <li>Rispetta il formato [FPRO] = true [PROPERTY FPRO_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Provincia</td>
                <td>Fornito [FO_PROVINCIA]</td>
@@ -1928,7 +1864,7 @@
                      <li>Rispetta il formato [FCIT] = true [PROPERTY FCIT_OK]</li>
                   </ol>
                </td>
-            </tr> 
+            </tr>
             <tr>
                <td style="display: none;">Città</td>
                <td>Fornito [FO_CITTÀ]</td>
@@ -2112,7 +2048,7 @@
             </tr>
             <tr>
                <td rowspan="3">Token</td>
-               <td >Token [TK]</td>
+               <td>Token [TK]</td>
                <td>
                   <ol>
                      <li>Il token inviato non è valido = false [error]</li>
@@ -2144,7 +2080,7 @@
 
             <tr>
                <td rowspan="2">Nome Club del Libro</td>
-               <td >Lunghezza [LN]</td>
+               <td>Lunghezza [LN]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 30 = false [error]</li>
@@ -2167,7 +2103,7 @@
 
             <tr>
                <td rowspan="2">Descrizione</td>
-               <td >Lunghezza [LN]</td>
+               <td>Lunghezza [LN]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 255 = false [error]</li>
@@ -2185,9 +2121,9 @@
                   </ol>
                </td>
             </tr>
-           
+
             <tr>
-               <td rowspan="3" style="background-color: #b50909;">Copertina</td>             
+               <td rowspan="3" style="background-color: #b50909;">Copertina</td>
 
                <td>Grandezza File [GFC]</td>
                <td>
@@ -2253,129 +2189,129 @@
          </table>
          <h4>Modifica dati Club del Libro</h4>
 
-            <table border="1">
-               <tr>
-                  <th>Parametro</th>
-                  <th>Nome Categoria</th>
-                  <th>Scelte per la categoria</th>
-               </tr>
-               <tr>
-                  <td rowspan="3">Token</td>
-                  <td >Token [TK]</td>
-                  <td>
-                     <ol>
-                        <li>Il token inviato non è valido = false [error]</li>
-                        <li>Il token inviati è valido = true [PROPERTY TK_OK]</li>
-                     </ol>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="display: none;">Token</td>
-                  <td>Fornito [FO_TK]</td>
-                  <td>
-                     <ol>
-                        <li>Fornito [FO_TK] = false [error]</li>
-                        <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
-                     </ol>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="display: none;">Token</td>
-                  <td>Tipologia Token [TIP_TK]</td>
-                  <td>
-                     <ol>
-                        <li>Token non Esperto = false [if PROPERTY TK_OK][error]</li>
-                        <li>Token Esperto = true [if PROPERTY TK_OK][PROPERTY TIP_TK]</li>
-                     </ol>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="display: none;">Token</td>
-                  <td>Match Token [MTC_TK]</td>
-                  <td>
-                     <ol>
-                        <li>Il Token non è associato all'esperto associato al club (non autorizzato) = false [error]</li>
-                        <li>Il Token è associato all'esperto associato al club (autorizzato) = true [PROPERTY MTC_TK]</li>
-                     </ol>
-                  </td>
-               </tr>
-               <tr>
-                  <td rowspan="2">Nome Club del Libro</td>
-                  <td >Lunghezza [LN]</td>
-                  <td>
-                     <ol>
-                        <li>Lunghezza &gt; 30 = false [error]</li>
-                        <li>Lunghezza &lt; 3 = false [error]</li>
-                        <li>Lunghezza &ge; 3 AND &le; 30 = true [PROPERTY LN_OK]</li>
-                     </ol>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="display: none;">Nome Club del Libro</td>
-                  <td>Fornito [FO_NOME_CLUB]</td>
-                  <td>
-                     <ol>
-                        <li>Fornito [FO_NOME_CLUB] = false [error]</li>
-                        <li>Fornito [FO_NOME_CLUB] = true [PROPERTY FO_NOME_CLUB]</li>
-                     </ol>
-                  </td>
-               </tr>
-   
-   
-               <tr>
-                  <td rowspan="2">Descrizione</td>
-                  <td >Lunghezza [LN]</td>
-                  <td>
-                     <ol>
-                        <li>Lunghezza &gt; 255 = false [error]</li>
-                        <li>Lunghezza &lt; 3 = false [error]</li>
-                        <li>Lunghezza &ge; 3 AND &le; 255 = true [PROPERTY LN_OK]</li>
-                     </ol>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="display: none;">Descrizione</td>
-                  <td>Fornito [FO_DESCRIZIONE_CLUB]</td>
-                  <td>
-                     <ol>
-                        <li>Fornito [FO_DESCRIZIONE_CLUB] = false [error]</li>
-                        <li>Fornito [FO_DESCRIZIONE_CLUB] = true [PROPERTY FO_DESCRIZIONE_CLUB]</li>
-                     </ol>
-                  </td>
-               </tr>
-              
-               <tr>
-                  <td rowspan="3" style="background-color: #b50909;">Copertina</td>             
-   
-                  <td>Grandezza File [GFC]</td>
-                  <td>
-                     <ol>
-                        <li>Grandezza &gt; 15MB = false [error]</li>
-                        <li>Grandezza &le; 15MB = true [PROPERTY GFC_OK]</li>
-                     </ol>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="display: none;">Copertina</td>
-                  <td>Dimensione [DC]</td>
-                  <td>
-                     <ol>
-                        <li>Larghezza &gt; 1024px OR Altezza &gt; 768 px = false [error]</li>
-                        <li>Larghezza &le; 1024px AND Altezza &le; 768px = true [PROPERTY DC_OK]</li>
-                     </ol>
-                  </td>
-               </tr>
-               <tr>
-                  <td style="display: none;">Copertina</td>
-   
-                  <td>Fornito File Copertina [FO_COPERTINA_CLUB]</td>
-                  <td>
-                     <ol>
-                        <li>Copertina non fornita = false [single]</li>
-                        <li>Copertina fornita = true [PROPERTY FO_COPERTINA_CLUB]</li>
-                     </ol>
-                  </td>
-               </tr>
+         <table border="1">
+            <tr>
+               <th>Parametro</th>
+               <th>Nome Categoria</th>
+               <th>Scelte per la categoria</th>
+            </tr>
+            <tr>
+               <td rowspan="3">Token</td>
+               <td>Token [TK]</td>
+               <td>
+                  <ol>
+                     <li>Il token inviato non è valido = false [error]</li>
+                     <li>Il token inviati è valido = true [PROPERTY TK_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Fornito [FO_TK]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_TK] = false [error]</li>
+                     <li>Fornito [FO_TK] = true [PROPERTY FO_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Tipologia Token [TIP_TK]</td>
+               <td>
+                  <ol>
+                     <li>Token non Esperto = false [if PROPERTY TK_OK][error]</li>
+                     <li>Token Esperto = true [if PROPERTY TK_OK][PROPERTY TIP_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Token</td>
+               <td>Match Token [MTC_TK]</td>
+               <td>
+                  <ol>
+                     <li>Il Token non è associato all'esperto associato al club (non autorizzato) = false [error]</li>
+                     <li>Il Token è associato all'esperto associato al club (autorizzato) = true [PROPERTY MTC_TK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td rowspan="2">Nome Club del Libro</td>
+               <td>Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza &gt; 30 = false [error]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &ge; 3 AND &le; 30 = true [PROPERTY LN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Nome Club del Libro</td>
+               <td>Fornito [FO_NOME_CLUB]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_NOME_CLUB] = false [error]</li>
+                     <li>Fornito [FO_NOME_CLUB] = true [PROPERTY FO_NOME_CLUB]</li>
+                  </ol>
+               </td>
+            </tr>
+
+
+            <tr>
+               <td rowspan="2">Descrizione</td>
+               <td>Lunghezza [LN]</td>
+               <td>
+                  <ol>
+                     <li>Lunghezza &gt; 255 = false [error]</li>
+                     <li>Lunghezza &lt; 3 = false [error]</li>
+                     <li>Lunghezza &ge; 3 AND &le; 255 = true [PROPERTY LN_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Descrizione</td>
+               <td>Fornito [FO_DESCRIZIONE_CLUB]</td>
+               <td>
+                  <ol>
+                     <li>Fornito [FO_DESCRIZIONE_CLUB] = false [error]</li>
+                     <li>Fornito [FO_DESCRIZIONE_CLUB] = true [PROPERTY FO_DESCRIZIONE_CLUB]</li>
+                  </ol>
+               </td>
+            </tr>
+
+            <tr>
+               <td rowspan="3" style="background-color: #b50909;">Copertina</td>
+
+               <td>Grandezza File [GFC]</td>
+               <td>
+                  <ol>
+                     <li>Grandezza &gt; 15MB = false [error]</li>
+                     <li>Grandezza &le; 15MB = true [PROPERTY GFC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Copertina</td>
+               <td>Dimensione [DC]</td>
+               <td>
+                  <ol>
+                     <li>Larghezza &gt; 1024px OR Altezza &gt; 768 px = false [error]</li>
+                     <li>Larghezza &le; 1024px AND Altezza &le; 768px = true [PROPERTY DC_OK]</li>
+                  </ol>
+               </td>
+            </tr>
+            <tr>
+               <td style="display: none;">Copertina</td>
+
+               <td>Fornito File Copertina [FO_COPERTINA_CLUB]</td>
+               <td>
+                  <ol>
+                     <li>Copertina non fornita = false [single]</li>
+                     <li>Copertina fornita = true [PROPERTY FO_COPERTINA_CLUB]</li>
+                  </ol>
+               </td>
+            </tr>
          </table>
          <table border="1">
             <tr>
@@ -2418,7 +2354,7 @@
             </tr>
             <tr>
                <td rowspan="3">Token</td>
-               <td >Token [TK]</td>
+               <td>Token [TK]</td>
                <td>
                   <ol>
                      <li>Il token inviato non è valido = false [error]</li>
@@ -2459,7 +2395,7 @@
             <tr>
             <tr>
                <td rowspan="2">Nome Evento</td>
-               <td >Lunghezza [LN]</td>
+               <td>Lunghezza [LN]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 30 = false [error]</li>
@@ -2478,7 +2414,7 @@
                   </ol>
                </td>
             </tr>
-            <tr > 
+            <tr>
                <td rowspan="2">Data e Ora</td>
                <td>Correttezza [CD]</td>
                <td>
@@ -2498,10 +2434,10 @@
                   </ol>
                </td>
             </tr>
-            
+
             <tr>
                <td rowspan="2">Descrizione</td>
-               <td >Lunghezza [LN]</td>
+               <td>Lunghezza [LN]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 255 = false [error]</li>
@@ -2617,7 +2553,7 @@
             </tr>
             <tr>
                <td rowspan="2">Nome Evento</td>
-               <td >Lunghezza [LN]</td>
+               <td>Lunghezza [LN]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 30 = false [error]</li>
@@ -2636,7 +2572,7 @@
                   </ol>
                </td>
             </tr>
-            <tr > 
+            <tr>
                <td rowspan="2">Data e Ora</td>
                <td>Correttezza [CD]</td>
                <td>
@@ -2656,10 +2592,10 @@
                   </ol>
                </td>
             </tr>
-            
+
             <tr>
                <td rowspan="2">Descrizione</td>
-               <td >Lunghezza [LN]</td>
+               <td>Lunghezza [LN]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 255 = false [error]</li>
@@ -2736,7 +2672,7 @@
             </tr>
             <tr>
                <td rowspan="3">Token</td>
-               <td >Token [TK]</td>
+               <td>Token [TK]</td>
                <td>
                   <ol>
                      <li>Il token inviato non è valido = false [error]</li>
@@ -2769,8 +2705,10 @@
                <td>Match Token [MTC_TK]</td>
                <td>
                   <ol>
-                     <li>Il Token non è associato alla Biblioteca a cui si vuole aggiungere il libro (non autorizzato) = false [error]</li>
-                     <li>Il Token è associato alla Biblioteca a cui si vuole aggiungere il libro (autorizzato) = true [PROPERTY MTC_TK]</li>
+                     <li>Il Token non è associato alla Biblioteca a cui si vuole aggiungere il libro (non autorizzato) =
+                        false [error]</li>
+                     <li>Il Token è associato alla Biblioteca a cui si vuole aggiungere il libro (autorizzato) = true
+                        [PROPERTY MTC_TK]</li>
                   </ol>
                </td>
             </tr>
@@ -2837,7 +2775,7 @@
             </tr>
             <tr>
                <td style="display: none;">Copertina Libro</td>
-               <td>Fornito File Copertina [EXC]	               </td>
+               <td>Fornito File Copertina [EXC] </td>
                <td>
                   <ol>
                      <li>Copertina non fornita [single]</li>
@@ -2955,7 +2893,7 @@
                   <ol>
                      <li>Forniti 0 generi = false [error]</li>
                      <li>Fornito 1 genere = true </li>
-                     <li>Fornito 2 (n) generi = true  [PROPERTY FO_GENERI_MULTIPLI]</li>
+                     <li>Fornito 2 (n) generi = true [PROPERTY FO_GENERI_MULTIPLI]</li>
                   </ol>
                </td>
                <td style="display: none;">Generi</td>
@@ -2963,9 +2901,10 @@
                <td>
                   <ol>
                      <li>Generi non esistenti = false [if FO_GENERE_SINGOLO or FO_GENERI_MULTIPLI] [error]</li>
-                     <li>Generi forniti non esistenti = false [if FO_GENERE_SINGOLO or FO_GENERI_MULTIPLI][PROPERTY FVN_OK]</li>
+                     <li>Generi forniti non esistenti = false [if FO_GENERE_SINGOLO or FO_GENERI_MULTIPLI][PROPERTY
+                        FVN_OK]</li>
                      <li>Generi forniti esistenti e non esisteni = false [if FO_GENERI_MULTIPLI]</li>
-                     <li>Generi forniti esistenti = true [PROPERTY FVN_OK]</li>                     
+                     <li>Generi forniti esistenti = true [PROPERTY FVN_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -2979,7 +2918,7 @@
             </tr>
             <tr>
                <td rowspan="3">Token</td>
-               <td >Token [TK]</td>
+               <td>Token [TK]</td>
                <td>
                   <ol>
                      <li>Il token inviato non è valido = false [error]</li>
@@ -3064,7 +3003,7 @@
                   <ol>
                      <li>Forniti 0 generi = false [error]</li>
                      <li>Fornito 1 genere = true </li>
-                     <li>Fornito 2 (n) generi = true  [PROPERTY FO_GENERI_MULTIPLI]</li>
+                     <li>Fornito 2 (n) generi = true [PROPERTY FO_GENERI_MULTIPLI]</li>
                   </ol>
                </td>
                <td style="display: none;">Generi</td>
@@ -3072,9 +3011,10 @@
                <td>
                   <ol>
                      <li>Generi non esistenti = false [if FO_GENERE_SINGOLO or FO_GENERI_MULTIPLI] [error]</li>
-                     <li>Generi forniti non esistenti = false [if FO_GENERE_SINGOLO or FO_GENERI_MULTIPLI][PROPERTY FVN_OK]</li>
+                     <li>Generi forniti non esistenti = false [if FO_GENERE_SINGOLO or FO_GENERI_MULTIPLI][PROPERTY
+                        FVN_OK]</li>
                      <li>Generi forniti esistenti e non esisteni = false [if FO_GENERI_MULTIPLI]</li>
-                     <li>Generi forniti esistenti = true [PROPERTY FVN_OK]</li>                     
+                     <li>Generi forniti esistenti = true [PROPERTY FVN_OK]</li>
                   </ol>
                </td>
             </tr>
@@ -3089,7 +3029,7 @@
             </tr>
             <tr>
                <td rowspan="3">Token</td>
-               <td >Token [TK]</td>
+               <td>Token [TK]</td>
                <td>
                   <ol>
                      <li>Il token inviato non è valido = false [error]</li>
@@ -3128,7 +3068,7 @@
                </td>
             </tr>
             <tr>
-               <td  style="display: none;">ID Libro</td>
+               <td style="display: none;">ID Libro</td>
                <td>Fornito [FO_ID]</td>
                <td>
                   <ol>
@@ -3157,7 +3097,7 @@
                   </ol>
                </td>
             </tr>
-            
+
          </table>
 
          <table border="1">
@@ -3223,7 +3163,7 @@
             </tr>
          </table>
          <h4>Accettazione ticket prestito ?????????????????????????????</h4>
-         <table border="1" >
+         <table border="1">
             <tr>
                <th>Parametro</th>
                <th>Nome Categoria</th>
@@ -3261,7 +3201,7 @@
 
          <h3>Gestione Post</h3>
          <h4>Creazione Post</h4>
-         <table border="1" >
+         <table border="1">
             <tr>
                <th>Parametro</th>
                <th>Nome Categoria</th>
@@ -3269,7 +3209,7 @@
             </tr>
             <tr>
                <td rowspan="3">Token</td>
-               <td >Token [TK]</td>
+               <td>Token [TK]</td>
                <td>
                   <ol>
                      <li>Il token inviato non è valido = false [error]</li>
@@ -3299,7 +3239,7 @@
             </tr>
             <tr>
                <td rowspan="2">Titolo</td>
-               <td >Lunghezza [LTIT]</td>
+               <td>Lunghezza [LTIT]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 255 = false [error]</li>
@@ -3320,7 +3260,7 @@
             </tr>
             <tr>
                <td rowspan="2">Contenuto</td>
-               <td >Lunghezza [LCON]</td>
+               <td>Lunghezza [LCON]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 255 = false [error]</li>
@@ -3349,7 +3289,7 @@
                   </ol>
                </td>
             </tr>
-            
+
             <tr style="background-color: palegreen;">
                <td style="display: none;">ID Club</td>
                <td>Match ID Club [MTC_CLUB_ESPERTO]</td>
@@ -3370,11 +3310,11 @@
                   </ol>
                </td>
             </tr>
-            
+
          </table>
 
          <h4>Aggiunta Commento</h4>
-         <table border="1" >
+         <table border="1">
             <tr>
                <th>Parametro</th>
                <th>Nome Categoria</th>
@@ -3382,7 +3322,7 @@
             </tr>
             <tr>
                <td rowspan="4">Token</td>
-               <td >Token [TK]</td>
+               <td>Token [TK]</td>
                <td>
                   <ol>
                      <li>Il token inviato non è valido = false [error]</li>
@@ -3416,15 +3356,16 @@
                <td>Tipologia Token [TIP_TK]</td>
                <td>
                   <ol>
-                     <li>Lettore appartiene al Club a cui è associato il post = true [if TIP_TK_Lettore][PROPERTY LETT_CLUB]</li>
+                     <li>Lettore appartiene al Club a cui è associato il post = true [if TIP_TK_Lettore][PROPERTY
+                        LETT_CLUB]</li>
                      <li>Lettore NON appartiene al Club a cui è associato il post = fale [if TIP_TK_Lettore][error]</li>
                   </ol>
                </td>
             </tr>
-           
+
             <tr>
                <td rowspan="2">Contenuto</td>
-               <td >Lunghezza [LCON]</td>
+               <td>Lunghezza [LCON]</td>
                <td>
                   <ol>
                      <li>Lunghezza &gt; 255 = false [error]</li>
@@ -3453,8 +3394,8 @@
                   </ol>
                </td>
             </tr>
-            
-          
+
+
             <tr>
                <td style="display: none;">ID Club</td>
                <td>Fornito [FO_ID_CLUB_POST]</td>
@@ -3465,13 +3406,17 @@
                   </ol>
                </td>
             </tr>
-            
+
          </table>
 
          <h2 id=schedule>10. Testing schedule</h2>
-         <p>Le attività di pianificazione del testing avverranno come definito nei capitoli precedenti, cioè subito dopo la fase di design necessaria per la pianificazione.</p>
+         <p>Le attività di pianificazione del testing avverranno come definito nei capitoli precedenti, cioè subito dopo
+            la fase di design necessaria per la pianificazione.</p>
          <p>La scrittura dei casi di test avverrà in contemporanea con lo sviluppo del codice.</p>
-         <p>L’esecuzione dei test avverrà sia durante che dopo l’implementazione del sistema. Una volta concluso lo sviluppo, tutti i test saranno rieseguiti per garantirne il corretto funzionamento e produrre i report finali. Per altre informazioni si rimanda ai documenti di management sullo schedule.</p>
-      </div>
-   </body>
+         <p>L’esecuzione dei test avverrà sia durante che dopo l’implementazione del sistema. Una volta concluso lo
+            sviluppo, tutti i test saranno rieseguiti per garantirne il corretto funzionamento e produrre i report
+            finali. Per altre informazioni si rimanda ai documenti di management sullo schedule.</p>
+   </div>
+</body>
+
 </html>
