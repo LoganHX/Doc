@@ -146,13 +146,11 @@
       <ol class="menu">
          <h1>Indice</h1>
          <li class="menu-item"><a href="#introduzione">Introduzione</a></li>
-         <li class="menu-item"><a href="#relazione">Relazione con altri documenti</a></li>
          <li class="menu-item"><a href="#panoramica">Panoramica del sistema</a></li>
          <li class="menu-item"><a href="#features">Features da testare/da non testare</a></li>
          <li class="menu-item"><a href="#passfail">Pass/Fail criteria</a></li>
          <li class="menu-item"><a href="#approccio">Approccio</a></li>
-         <li class="menu-item"><a href="#sospensione">Sospensione e ripristino</a></li>
-         <li class="menu-item"><a href="#materiale">Materiale di testing</a></li>
+     
          <li class="menu-item"><a href="#testcases">Test cases</a></li>
          <li class="menu-item"><a href="#schedule">Testing schedule</a></li>
       </ol>
@@ -225,19 +223,8 @@
             bibliotecario italiano creando uno strumento di comunicazione con persone interessate alla lettura.
          </p>
 
-         <h2 id=relazione>2. Relazione con altri documenti</h2>
-         <p>Per la corretta individuazione dei test case, si fa riferimento ad altri documenti prodotti.</p>
-         <h3>Relazioni con il Requirements Analysis Document (RAD)</h3>
-         <p>I test case pianificati nel Test Plan sono elaborati in relazione ai requisiti funzionali e non funzionali
-            presentati nel RAD.</p>
-         <h3>Relazioni con il System Design Document (SDD)</h3>
-         <p>I test case pianificati nel Test Plan devono rispettare la suddivisione in sottosistemi presentata nell’SDD.
-         </p>
-         <h3>Relazioni con il Object Design Document (ODD)</h3>
-         <p>Per ciò che concerne il test di unità e di integrazione, maggiormente legati allo ODD e alla divisione in
-            package del sistema, essi saranno scritti e documentati unicamente all’interno del codice dell’applicativo.
-            Per tale motivo, nel presente documento, non vi saranno riferimenti al loro design.</p>
-         <h2 id=panoramica>3. Panoramica del sistema</h2>
+         
+         <h2 id=panoramica>2. Panoramica del sistema</h2>
          <p>Il sistema Biblionet di partenza basa la sua architettura sul sistema three-tier, in particolare usando
             Spring MVC e quindi un sistema Model View Control.
             Verranno usati HTML5, CSS3 e Thymleaf per la parte di front-end e la generazione delle view.
@@ -257,7 +244,7 @@
 
 
 
-         <h2 id=features>4. Features da testare/da non testare</h2>
+         <h2 id=features>3. Features da testare/da non testare</h2>
          <p>Il documento di Test Plan ha l’obiettivo di descrivere ed analizzare le attività di Testing per la
             piattaforma BiblioNet Evolution.
             All’interno del documento sono riportate le strategie di testing adottate, quali funzionalità saranno
@@ -305,7 +292,7 @@
             bassa o media priorità; sono inoltre escluse le funzionalità che non prevedono input manuale da parte
             dell’utente - ad esempio attività riguardanti esclusivamente visualizzazioni di dati.
          </p>
-         <h2 id=passfail>5. Pass/Fail criteria</h2>
+         <h2 id=passfail>4. Pass/Fail criteria</h2>
          <p>Le attività di testing sono mirate ad identificare la presenza di faults (errori) all'interno del sistema,
             per effettuarne un successivo intervento di eliminazione.
             L’esito di un test case è valutato mediante un oracolo, inteso come il risultato atteso della sua
@@ -333,7 +320,7 @@
          <p>Al termine dello sviluppo di ciascun passo è necessario effettuare il test di non regressione rispetto alla
             versione precedente del sistema.</p>
 
-         <h2 id=approccio>6. Approccio</h2>
+         <h2 id=approccio>5. Approccio</h2>
 
          <p>Il test di non regressione al termine della prima CR (ovvero a seguito del passaggio all'architettura di
             tipo monolite modulare del sistema) non può essere fatto semplicemente rieseguendo i test precedentemente
@@ -345,7 +332,7 @@
                href="https://github.com/StefanoLambiase/biblionet/blob/master/projectDocs/Prodotto/Documenti/4.%20Testing/1.%20Pianificazione/C07_TP_ver.2.0.pdf">Test
                Plan</a>.
 
-            Abbiamo provveduto, quindi, a modificare la test suite per i test di unità e di integrazione in modo che
+            Si è provveduto, quindi, a modificare la test suite per i test di unità e di integrazione in modo che
             rispettassero le specifiche del precedente Test Plan e, contemporaneamente, fossero adeguati rispetto alle
             modifiche apportate al sistema.</p>
          <p>
@@ -356,14 +343,14 @@
             affinché rispecchiassero fedelmente i test sviluppati.</p>
          <p>
 
-            Abbiamo preso questa decisione perché il codice sorgente è, di solito, la "fonte" più
+            Si è deciso di operare in questo modo poiché il codice sorgente è, di solito, la "fonte" più
             aggiornata possibile che descrive il funzionamento del sistema.</p>
          <p>
 
-            Allo stesso modo, guidati dall'analisi del codice sorgente, abbiamo provveduto a colmare alcune lacune nelle
+            Allo stesso modo, dopo aver effettuato l'analisi del codice sorgente, si è provveduto a colmare alcune lacune nelle
             specifiche del test plan.
-            Le modifiche sono state ulteriormente modificate tenendo conto delle difformità tra il sistema BiblioNet
-            originale e la sua evoluzione: per questo motivosi è reso necessario aggiungere alle specifiche le sezioni
+            Le specifiche sono state ulteriormente modificate tenendo conto delle difformità tra il sistema BiblioNet
+            originale e la sua evoluzione: per questo motivo si è reso necessario aggiungere ai test case le sezioni
             relative ai token dal momento che BiblioNet evolution adotta un sistema basato su JWT Tokens per gestire
             l'authorization degli utenti.
             Le specifiche così ottenute sono consulatabili in <a href="#testcases">questa sezione</a> del documento.</p>
@@ -372,8 +359,13 @@
             I test di sistema originali sono stati anch'essi presi in considerazione, modificando anche in questo caso quei test che non possono essere eseguiti sulla nuova versione del sistema (per via di modifiche, per esempio, nel navigation path).
             
 
-         L'insieme di test di unità, di integrazione e di sistema ottenuti come descritto in questo paragrafo costituiscono, quindi, il test di regressione del sistema a valle della CR1. Essi costituiscono, contemporaneamente, anche una test suite completa per il nuovo sistema.
+         L'insieme di test di unità, di integrazione e di sistema ottenuti come descritto in questo paragrafo costituiscono, quindi, il test di regressione del sistema a valle della CR1. 
+         Essi costituiscono, contemporaneamente, anche una test suite completa per il nuovo sistema.
+
+         A valle della seconda CR implementata si è deciso di rieseguire ex-novo tutti i test (strategia re-test all), oltre ai test realizzati ad hoc per le componenti sviluppate nel contesto di tale CR.
          </p>
+
+         <h2 id=testcases>6. Test cases</h2>
          
          <h3>Gestione Utente</h3>
          <h4>Registrazione Lettore</h4>
@@ -2196,7 +2188,7 @@
                <th>Scelte per la categoria</th>
             </tr>
             <tr>
-               <td rowspan="3">Token</td>
+               <td rowspan="4">Token</td>
                <td>Token [TK]</td>
                <td>
                   <ol>
@@ -2353,7 +2345,7 @@
                <th>Scelte per la categoria</th>
             </tr>
             <tr>
-               <td rowspan="3">Token</td>
+               <td rowspan="4">Token</td>
                <td>Token [TK]</td>
                <td>
                   <ol>
@@ -2896,6 +2888,8 @@
                      <li>Fornito 2 (n) generi = true [PROPERTY FO_GENERI_MULTIPLI]</li>
                   </ol>
                </td>
+            </tr><tr>
+
                <td style="display: none;">Generi</td>
                <td>Esistenza Generi [ESI_GENERI]</td>
                <td>
@@ -3006,6 +3000,7 @@
                      <li>Fornito 2 (n) generi = true [PROPERTY FO_GENERI_MULTIPLI]</li>
                   </ol>
                </td>
+            </tr><tr>
                <td style="display: none;">Generi</td>
                <td>Esistenza Generi [ESI_GENERI]</td>
                <td>
@@ -3409,7 +3404,7 @@
 
          </table>
 
-         <h2 id=schedule>10. Testing schedule</h2>
+         <h2 id=schedule>7. Testing schedule</h2>
          <p>Le attività di pianificazione del testing avverranno come definito nei capitoli precedenti, cioè subito dopo
             la fase di design necessaria per la pianificazione.</p>
          <p>La scrittura dei casi di test avverrà in contemporanea con lo sviluppo del codice.</p>
