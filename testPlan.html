@@ -217,7 +217,8 @@
          </ul>
          <p>Il sistema Biblionet Evolution utilizza un'architettura di tipo monolite modulare. Il front-end è realizzato
             ex-novo usando React JS. La comunicazione tra back-end e front-end avviene tramite controller di tipo REST.
-            Sono state, inoltre, aggiunte funzionalità di comunicazione all'interno della community; nella fattispecie
+
+            Biblionet Evolution è stato dotato di funzionalità che favoriscono lo sviluppo di una community tra gli utenti del sito; nella fattispecie
             si è realizzato un sistema di creazione di post e aggiunta di commenti ai suddetti post all'interno dei
             singoli club del libro (a beneficio degli iscritti al club). Per la gestione del database continueranno a
             essere usati gli strumenti precedentemente indicati per la versione precedente di BiblioNet.</p>
@@ -229,8 +230,8 @@
             piattaforma BiblioNet Evolution.
             All’interno del documento sono riportate le strategie di testing adottate, quali funzionalità saranno
             testate e gli strumenti scelti per la rilevazione degli errori, con lo scopo di presentare al cliente finale
-            una piattaforma quando più possibile esente da malfunzionamenti. L'insieme di funzionalità da testare
-            espande le funzionalità testate al tempo del rilascio della prima versione di BiblioNet. La scelta delle
+            una piattaforma quanto più possibile esente da malfunzionamenti. L'insieme di funzionalità da testare comprende le funzionalità del sistema originale oltre quelle
+            implementate nella nuova versione. La scelta delle
             funzionalità da testare è ricaduta su quelle funzionalità che si presuppone rivestano un ruolo cruciale per
             gli utenti.
          </p>
@@ -307,7 +308,7 @@
             tali da rendere impossibile l'esecuzione di tali test. (A tal proposito si consiglia di consultare la sezione relativa all'impatto sui file di test 
             della CR01+CR03 riportate nel <a href="https://docs.google.com/document/d/1ad1D60CWLXWxm5Bf7toAhvpzvJQFefQ_qLAy5hI3xd4/edit?usp=sharing">Main Modification Report</a>).
 
-            Dal momento che si tratta di un refactoring, però, sono rimaste (grosso modo) immutate quelle che sono le
+            Dal momento che si tratta di un refactoring, però, sono rimaste sostanzialmente immutate quelle che sono le
             specifiche originali dei test case, riportate nel precedente <a
                href="https://github.com/StefanoLambiase/biblionet/blob/master/projectDocs/Prodotto/Documenti/4.%20Testing/1.%20Pianificazione/C07_TP_ver.2.0.pdf">Test
                Plan</a>.
@@ -320,17 +321,18 @@
             Dall'analisi puntuale del Test Plan, dei test implementati e del sistema Biblionet per come originariamente
             sviluppato è emerso che, per un numero esiguo di test, l'implementazione non corrispondeva perfettamente
             alle specifiche. Prima di implementare i test, quindi, si è reso necessario modificare le specifiche
-            affinché rispecchiassero fedelmente i test sviluppati.</p>
+            affinché fossero più aderenti possibile al sistema da testare.</p>
          <p>
 
-            Si è deciso di operare in questo modo poiché il codice sorgente è, di solito, la "fonte" più
-            aggiornata possibile che descrive il funzionamento del sistema.</p>
+            In particolare si è provveduto a modificare la category partition in alcuni punti. Tale modifica è stata effettuata in seguito all'analisi del codice del sistema; si è scelto di agire in questo modo poiché il codice sorgente è, di solito, la "fonte" più
+            aggiornata possibile che descrive il funzionamento del sistema.
+            Dopo aver effettuato l'analisi del codice sorgente, si è provveduto a colmare alcune lacune nelle
+            specifiche del test plan originale.</p>
          <p>
 
-            Allo stesso modo, dopo aver effettuato l'analisi del codice sorgente, si è provveduto a colmare alcune lacune nelle
-            specifiche del test plan.
+            
             Le specifiche sono state ulteriormente modificate tenendo conto delle difformità tra il sistema BiblioNet
-            originale e la sua evoluzione: per questo motivo si è reso necessario aggiungere ai test case le sezioni
+            originale e la sua evoluzione: per questo motivo si è reso necessario aggiungere ai test le sezioni
             relative ai token dal momento che BiblioNet evolution adotta un sistema basato su JWT Tokens per gestire
             l'authorization degli utenti.
             Le specifiche così ottenute sono consulatabili in <a href="#testcases">questa sezione</a> del documento.</p>
@@ -339,10 +341,10 @@
             I test di sistema originali sono stati anch'essi presi in considerazione, modificando anche in questo caso quei test che non possono essere eseguiti sulla nuova versione del sistema (per via di modifiche, per esempio, nel navigation path).
             
 
-         L'insieme di test di unità, di integrazione e di sistema ottenuti come descritto in questo paragrafo costituiscono, quindi, il test di regressione del sistema a valle della CR1. 
-         Essi costituiscono, contemporaneamente, anche una test suite completa per il nuovo sistema.
+         L'insieme di test di unità, di integrazione e di sistema ottenuti come descritto in questo paragrafo costituiscono, quindi, il test di regressione del sistema a valle della CR01+CR03. 
+         Essi costituiscono, contemporaneamente, anche una test suite per il nuovo sistema.
 
-         A valle della seconda CR implementata si è deciso di rieseguire ex-novo tutti i test (strategia re-test all), oltre ai test realizzati ad hoc per le componenti sviluppate nel contesto di tale CR.
+         A valle dell'implementazione della CR02 per quanto riguarda il regression testing si è deciso di rieseguire ex-novo tutti i test (strategia re-test all), oltre ai test realizzati ad hoc per le componenti sviluppate nel contesto di tale CR.
          </p>
 
          <h2 id=testcases>6. Test cases</h2>
@@ -2751,13 +2753,7 @@
 
          </table>
 
-         <h2 id=schedule>7. Testing schedule</h2>
-         <p>Le attività di pianificazione del testing avverranno come definito nei capitoli precedenti, cioè subito dopo
-            la fase di design necessaria per la pianificazione.</p>
-         <p>La scrittura dei casi di test avverrà in contemporanea con lo sviluppo del codice.</p>
-         <p>L’esecuzione dei test avverrà sia durante che dopo l’implementazione del sistema. Una volta concluso lo
-            sviluppo, tutti i test saranno rieseguiti per garantirne il corretto funzionamento e produrre i report
-            finali. Per altre informazioni si rimanda ai documenti di management sullo schedule.</p>
+        
    </div>
 </body>
 
